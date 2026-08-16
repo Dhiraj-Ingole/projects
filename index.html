@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Do I Need Radiation If I Have DCIS? | Learn Look Locate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --plum: #481e5b;
+      --plum-soft: #5c3a6e;
+      --heading: #4a205a;
+      --body: #4a3a52;
+      --lavender: #f6f1f8;
+      --lavender-2: #ece4f2;
+      --card: #e8dff2;
+      --white: #ffffff;
+      --green: #3d9b4a;
+      --page: 1024px;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
+      color: var(--body);
+      background: #2a1633;
+      line-height: 1.55;
+    }
+    .canvas {
+      max-width: var(--page);
+      margin: 0 auto;
+      background:
+        radial-gradient(ellipse at 20% 8%, rgba(180, 80, 160, 0.07), transparent 42%),
+        repeating-linear-gradient(60deg, rgba(255,255,255,.35) 0 1px, transparent 1px 72px),
+        repeating-linear-gradient(-60deg, rgba(255,255,255,.28) 0 1px, transparent 1px 72px),
+        var(--lavender);
+      overflow: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    .bleed img { width: 100%; }
+    h1, h2, h3, h4 { color: var(--heading); font-weight: 700; margin: 0 0 .5em; letter-spacing: -0.02em; }
+    p { margin: 0 0 1em; }
+    .wrap {
+      width: min(86%, 820px);
+      margin: 0 auto;
+    }
+    .wrap-wide {
+      width: min(90%, 900px);
+      margin: 0 auto;
+    }
+    .center { text-align: center; }
+    .muted { color: var(--plum-soft); }
+    .italic { font-style: italic; }
+    .hero {
+      position: relative;
+      line-height: 0;
+    }
+    .hero img { width: 100%; }
+    .hero-cut {
+      height: 42px;
+      background: linear-gradient(12deg, var(--lavender) 49%, #111 50% 62%, transparent 63%);
+      margin-top: -42px;
+      position: relative;
+      z-index: 1;
+    }
+    .title-block {
+      padding: 28px 24px 8px;
+      text-align: center;
+    }
+    .title-block h1 {
+      font-size: clamp(28px, 4.6vw, 44px);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .title-block .sub {
+      font-size: clamp(16px, 2.2vw, 22px);
+      font-weight: 700;
+      color: var(--heading);
+      margin-bottom: 22px;
+    }
+    .reviewed {
+      font-size: 14px;
+      color: var(--plum-soft);
+      font-weight: 500;
+      line-height: 1.45;
+    }
+    section { padding: 28px 0; }
+    .section-title {
+      text-align: center;
+      font-size: clamp(22px, 3.2vw, 32px);
+      padding: 12px 24px 20px;
+    }
+    ul { margin: 0 0 1.1em; padding-left: 1.35em; }
+    li { margin: .28em 0; }
+    .lede {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--heading);
+      margin: 1.1em 0 .7em;
+    }
+    .quote-center {
+      text-align: center;
+      font-style: italic;
+      color: var(--heading);
+      padding: 8px 8%;
+      font-size: 16px;
+    }
+    .banner {
+      position: relative;
+      color: #fff;
+      text-align: center;
+    }
+    .banner img { width: 100%; }
+    .banner .overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 24px;
+      text-shadow: 0 2px 12px rgba(0,0,0,.35);
+    }
+    .banner h2 { color: #fff; font-size: clamp(24px, 3.5vw, 36px); }
+    .card {
+      background: var(--card);
+      border-radius: 10px;
+      padding: 22px 26px;
+      color: var(--plum);
+    }
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: center;
+    }
+    @media (max-width: 720px) {
+      .split { grid-template-columns: 1fr; }
+      .wrap { width: 90%; }
+    }
+    .faq h3 {
+      font-size: 18px;
+      margin-top: 1.5em;
+    }
+    .faq p, .faq li { color: var(--plum); }
+    .faq-band { background: #e4d8ee; padding: 40px 0 56px; }
+    .final {
+      background: #fff;
+      padding: 56px 24px 36px;
+      text-align: center;
+    }
+    .final h2 { font-size: clamp(22px, 3vw, 30px); }
+    .final p { max-width: 720px; margin-left: auto; margin-right: auto; }
+    footer {
+      text-align: center;
+      padding: 28px 24px 48px;
+      background:
+        linear-gradient(to bottom, var(--lavender), transparent 40%),
+        url("assets/footer-texture.jpg") bottom center / cover no-repeat,
+        var(--lavender);
+      color: var(--heading);
+      font-size: 14px;
+    }
+    footer a { color: var(--heading); word-break: break-word; }
+    .flow {
+      text-align: center;
+      font-weight: 600;
+      color: var(--heading);
+      font-size: 16px;
+      margin: 18px 0;
+    }
+    .accent { font-weight: 700; color: var(--heading); }
+    .small { font-size: 14px; }
+    .cite { font-size: 13px; color: #6a5a72; }
+    .mosaic-strip img { width: 100%; height: 92px; object-fit: cover; object-position: center; }
+  </style>
+</head>
+<body>
+  <article class="canvas">
+    <div class="hero bleed">
+      <img src="assets/hero.jpg" alt="Mosaic portraits of women in purple, gold, and magenta tiles" />
+    </div>
+
+    <header class="title-block">
+      <h1>Do I Need Radiation<br />If I Have DCIS?</h1>
+      <p class="sub">A Complete, Patient-Centered Guide to<br />Making the Right Decision for You</p>
+      <p class="reviewed">Medically reviewed by Dr. Barry Rosen<br />Learn Look Locate Senior Medical Advisor</p>
+    </header>
+
+    <section>
+      <h2 class="section-title">Understanding This Moment</h2>
+      <div class="wrap">
+        <p>A diagnosis of DCIS (ductal carcinoma in situ) often leads quickly to conversations about treatment—especially radiation therapy after lumpectomy.</p>
+        <p>For many women, those conversations begin long before there has been time to fully understand what DCIS is, how it behaves, or how decisions about radiation for DCIS are made.</p>
+        <p class="accent">So it is natural to ask:</p>
+        <p class="lede">Do I need radiation after being diagnosed with DCIS?<br />Or more specifically:<br />Will radiation therapy actually help me?</p>
+        <p>This is one of the most important—and often most overwhelming—questions in DCIS treatment. Understanding your biology is the key so you can know if radiation will truly help you.</p>
+      </div>
+      <p class="quote-center">This page is here to help you understand that question clearly, in a way that feels steady and grounded, so you can move forward with more confidence and less uncertainty.</p>
+    </section>
+
+    <h2 class="section-title">Why This Decision Can Feel<br />So Complicated</h2>
+    <div class="bleed">
+      <img src="assets/mosaic-care.jpg" alt="Mosaic portrait in gold, brown, and purple tiles" />
+    </div>
+
+    <section>
+      <div class="wrap">
+        <h3>How Breast Cancer Care has evolved</h3>
+        <p>For years, radiation after lumpectomy for DCIS was considered standard of care along with using Clinical Pathology features (age, size, margin status, palpability) to assess initial DCIS risk.</p>
+        <p>The goal was always to reduce the risk of recurrence.<br />But today, we understand something more important:<br /><span class="accent">Not all DCIS behaves the same way.</span></p>
+        <h3>The Shift in Breast Cancer Care</h3>
+        <ul>
+          <li>Some cases carry a very low level of risk of recurrence</li>
+          <li>Others carry a higher level of risk of recurrence</li>
+          <li>And yet, they are all still called Stage 0 breast cancer</li>
+        </ul>
+        <p class="italic">This is where things can begin to feel confusing.</p>
+        <p>When your care team discusses radiation, they are weighing:</p>
+        <ul>
+          <li>The risk of cancer returning in the same breast</li>
+          <li>The risk of it returning as invasive breast cancer</li>
+        </ul>
+        <p class="center small">Radiation reduces these risks—but not equally, for every patient’s biology is different.</p>
+      </div>
+    </section>
+
+    <h2 class="section-title">What Is DCIS? Understanding the Biology<br />Before the Decision</h2>
+    <section>
+      <div class="wrap">
+        <h3>A Clear Look at What’s Happening</h3>
+        <p>Before deciding on treatment, it helps to clearly understand what DCIS is.<br />DCIS (ductal carcinoma in situ) means:</p>
+        <ul>
+          <li>Abnormal cells are present in the milk ducts of the breast</li>
+          <li>These cells are contained within the duct</li>
+          <li>They have not spread into the surrounding breast tissue</li>
+        </ul>
+        <p>For this reason, DCIS is classified as:</p>
+        <ul>
+          <li>Stage 0 breast cancer</li>
+          <li>Non-invasive breast cancer</li>
+        </ul>
+      </div>
+    </section>
+    <div class="bleed">
+      <img src="assets/diagrams-dcis.jpg" alt="Diagrams of a normal breast duct versus a duct filled with DCIS cells, beside mosaic artwork" />
+    </div>
+
+    <div class="bleed">
+      <img src="assets/banner-after-diagnosis.jpg" alt="What happens after a DCIS diagnosis" />
+    </div>
+
+    <section>
+      <div class="wrap">
+        <p>After a DCIS diagnosis, the next step is often a discussion about how to <span class="accent">remove the abnormal cells.</span></p>
+        <p>For many women, this involves a surgery called a lumpectomy.<br />At the same time, it is important to understand:</p>
+        <p class="accent">This is not a one-size-fits-all process.</p>
+        <p>Each step is based on your individual situation.</p>
+        <h3>What Is a Lumpectomy?</h3>
+        <p>A lumpectomy is the most common surgical treatment for DCIS. (Also referred to as Breast Conserving Surgery)</p>
+        <p>It involves:</p>
+        <ul>
+          <li>Removing the area where the DCIS is located</li>
+          <li>Removing a small margin of surrounding healthy tissue</li>
+          <li>Preserving the rest of the breast</li>
+        </ul>
+      </div>
+    </section>
+
+    <h2 class="section-title">Bringing This Back to the Decision</h2>
+    <div class="wrap center">
+      <p>This difference in an individual’s biology is the reason treatment is not the same for every patient.</p>
+      <p>It is not just about identifying DCIS.</p>
+      <p>It is about understanding:</p>
+      <p class="lede">What is my individual risk, and will radiation therapy benefit me to reduce my risk?</p>
+    </div>
+
+    <div class="bleed mosaic-strip">
+      <img src="assets/banner-personalized.jpg" alt="" />
+    </div>
+
+    <section>
+      <h2 class="section-title">A More Personalized Way<br />to Understand Your Risk</h2>
+      <div class="wrap">
+        <p class="center">At Learn Look Locate, we consistently hear:<br />
+          <em>“I didn’t even know there was a test that could help guide this decision.”</em><br />
+          <em>“I made my decision quickly—I wish I had understood my risk more clearly.”</em>
+        </p>
+        <p>Many patients:</p>
+        <ul>
+          <li>Are not aware that genomic testing exists for DCIS</li>
+          <li>Do not fully understand their personal recurrence risk</li>
+          <li>Feel pressure to make decisions quickly at the time of their consultation</li>
+        </ul>
+        <h3 class="center">Introducing the DCISionRT test by PreludeDx –<br />“A tool designed to look beyond what we can see.”</h3>
+        <p class="center italic">DCISionRT is a biology-based test for women diagnosed with DCIS.</p>
+        <p class="center italic">DCISionRT evaluates a patient’s individualized biology with other risk factors to provide a personalized risk assessment.</p>
+        <h3 class="center">It helps answer two critical questions:</h3>
+        <ul>
+          <li>Your likelihood of recurrence</li>
+          <li>Whether radiation therapy is likely to make a meaningful difference</li>
+        </ul>
+        <p>This allows the decision to move from generalized guidance… to personalized understanding.</p>
+        <h3>Why This Matters</h3>
+        <p>This test does not tell you what to do.</p>
+        <p>It helps you better understand:</p>
+        <ul>
+          <li>What your risk may be</li>
+          <li>How radiation may change that risk</li>
+          <li>Whether that change is meaningful for you</li>
+        </ul>
+        <h2 class="section-title" style="padding-left:0;padding-right:0;text-align:left;">How Does DCISionRT Work?</h2>
+        <p>DCISionRT looks at the biology of your DCIS tissue and assesses seven different Biomarkers along with key pathways responsible for the progression of Breast Cancer.</p>
+        <ul>
+          <li>It can be performed on the initial image assisted core biopsy prior to breast conserving surgery.</li>
+          <li>This will provide the earliest information about your cancer’s biology, and provide you and your healthcare providers a starting point for the best treatment options.</li>
+          <li>No additional procedures are needed to perform the test.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Understanding Your Results</h2>
+        <p>What the test provides:</p>
+        <ul>
+          <li>DCISionRT predicts the risk of future DCIS or Invasive Breast Cancer recurrence in the same breast over the next 10 years.</li>
+          <li>It also predicts the benefit from Radiation therapy in reducing the Risk of DCIS or Invasive Breast Cancer after Breast Conserving Surgery.</li>
+          <li>DCISionRT provides a summary of your risk as either “Low” or “Elevated” depending on your individualized tumor biology.</li>
+        </ul>
+        <h3>What Does “Low Risk” Mean?</h3>
+        <p class="accent">“Low risk” means:</p>
+        <ul>
+          <li>The likelihood of recurrence is low</li>
+          <li>Radiation therapy may provide little additional benefit</li>
+        </ul>
+        <p>This can feel counterintuitive. Many women feel that doing more treatment will always provide more protection. But in some cases:</p>
+        <p class="center accent">More treatment does not necessarily mean more benefit.</p>
+        <h3>What Does “Elevated Risk” Mean?</h3>
+        <p class="accent">“Elevated risk” means:</p>
+        <ul>
+          <li>There is a greater chance of recurrence</li>
+          <li>Radiation therapy is more likely to meaningfully reduce that risk</li>
+        </ul>
+        <p>This helps clarify when radiation may truly be beneficial.</p>
+        <h3 class="center">Why This Matters</h3>
+        <p class="center">Even though two women may both be told:</p>
+        <p class="center accent">“You have Stage 0 DCIS.”</p>
+        <p class="center">Their level of risk—and their benefit from radiation—may be very different.</p>
+        <p class="center">And that difference is what makes this decision feel so complex.</p>
+      </div>
+    </section>
+
+    <div class="bleed">
+      <img src="assets/score-header.jpg" alt="Your DCISionSCORE — mosaic profiles of women" />
+    </div>
+    <div class="bleed">
+      <img src="assets/score-low.jpg" alt="Example of a Low Risk DCISionRT report with 10-year risk bars" />
+    </div>
+    <div class="bleed">
+      <img src="assets/alexia.jpg" alt="Alexia Vernon, DCIS survivor, Low Risk DCISionSCORE testimonial" />
+    </div>
+    <div class="bleed">
+      <img src="assets/score-elevated.jpg" alt="Example of an Elevated Risk DCISionRT report" />
+    </div>
+    <div class="bleed">
+      <img src="assets/rachel.jpg" alt="Rachel, DCIS survivor, Elevated Risk DCISionSCORE testimonial" />
+    </div>
+    <div class="bleed">
+      <img src="assets/shared-decision.jpg" alt="Shared decision-making data from Vicini et al. on clinicopathologic factors versus DCISionRT" />
+    </div>
+    <div class="bleed">
+      <img src="assets/leeanne.jpg" alt="LeeAnne, DCIS survivor from Hawaii, on being your own advocate" />
+    </div>
+    <div class="bleed">
+      <img src="assets/banner-heart.jpg" alt="This is the heart of it" />
+    </div>
+
+    <section>
+      <p class="flow">Your biology → Your score → Your understanding → Your path</p>
+      <div class="wrap">
+        <ul>
+          <li>Your biology explains how your DCIS behaves</li>
+          <li>Your score helps translate that into something clearer</li>
+          <li>Your understanding allows you to feel more confident</li>
+          <li>Your path becomes more personal</li>
+        </ul>
+        <h2 class="section-title">A Quiet Takeaway</h2>
+        <p class="center">You do not need to interpret every detail perfectly.<br />You just need to understand:<br /><span class="accent">Is radiation likely to make a meaningful difference for me?</span></p>
+      </div>
+    </section>
+
+    <div class="bleed mosaic-strip">
+      <img src="assets/mosaic-ask.jpg" alt="" />
+    </div>
+
+    <section>
+      <h2 class="section-title">Moving Forward with More Clarity</h2>
+      <p class="center italic muted">Turning understanding into the next step</p>
+      <div class="wrap">
+        <p>At this point, you have a clearer understanding of how DCIS can behave, how risk is evaluated, and how tools like DCISionRT can help bring more personalized insight into your care.</p>
+        <p>But even with that understanding, it is completely normal to still feel unsure about what to do next.</p>
+        <p>This is where your next step begins—not by having all the answers, but by asking the right questions and understanding your options.</p>
+        <p>The goal is not to rush a decision.</p>
+        <p>It is to move forward with clarity, confidence, and a better understanding of what is right for you.</p>
+      </div>
+    </section>
+
+    <div class="bleed mosaic-strip">
+      <img src="assets/mosaic-care.jpg" alt="" style="height:88px;object-fit:cover;" />
+    </div>
+
+    <section>
+      <h2 class="section-title">What to Ask Your Doctor</h2>
+      <p class="center italic muted">Questions that can help guide your conversation</p>
+      <div class="wrap">
+        <p>But asking the right questions can help you feel more grounded, more informed, and more in control of your care.</p>
+        <h3>Understanding Your Risk</h3>
+        <ul>
+          <li>How likely is my DCIS to come back in the same breast?</li>
+          <li>What is my risk of it returning as invasive breast cancer?</li>
+          <li>What factors are being used to determine my risk?</li>
+        </ul>
+        <h3>About Radiation Therapy</h3>
+        <ul>
+          <li>How much would radiation therapy reduce my risk?</li>
+          <li>What are the potential side effects of radiation in my case?</li>
+          <li>What happens if I choose not to have radiation?</li>
+        </ul>
+        <h3>About Personalized Testing</h3>
+        <ul>
+          <li>Is there a way to better understand my individual risk?</li>
+          <li>Am I a candidate for DCISionRT?</li>
+          <li>Would this test help clarify whether radiation is beneficial for me?</li>
+        </ul>
+        <h3>About Timing and Decision-Making</h3>
+        <ul>
+          <li>Do I have time to consider my options?</li>
+          <li>When does this decision need to be made?</li>
+          <li>Can we review all of my results together before deciding?</li>
+        </ul>
+        <h3>A Grounded Reminder</h3>
+        <p>You are allowed to ask questions.<br />You are allowed to take time to understand.<br />And you are allowed to make a decision based on what is right for you.</p>
+      </div>
+    </section>
+
+    <div class="bleed">
+      <img src="assets/expert.jpg" alt="Dr. Barry Rosen, Learn Look Locate Senior Medical Advisor" />
+    </div>
+
+    <section class="faq-band faq">
+      <h2 class="section-title">Frequently Asked Questions:<br />DCIS and Radiation</h2>
+      <div class="wrap">
+        <div class="card" style="margin-bottom:28px;">
+          <p class="italic">“We tend to minimize radiation, because compared to chemotherapy it’s very simple. But the effects are real. If you could avoid unnecessary radiation, you’ll have a much better outcome.”</p>
+          <p class="accent" style="margin:0;">—Barry Rosen MD, FACS<br />Senior Medical Advisor</p>
+        </div>
+
+        <h3>Do all women with DCIS need radiation?</h3>
+        <p>No. Not all women with DCIS need radiation after surgery. While radiation has historically been recommended for many patients, we now understand that DCIS is not the same for everyone due to individual tumor biology. Some women have a low risk of recurrence and may not benefit significantly from radiation, while others may have a higher risk where radiation can play an important role. The key is understanding your individual risk so you can make the decision that is right for you.</p>
+
+        <h3>What happens if I don’t have radiation after DCIS?</h3>
+        <p>If you choose not to have radiation, there is a risk that DCIS—or in some cases invasive breast cancer—could return in the same breast. However, that risk varies widely depending on:</p>
+        <ul>
+          <li>Your tumor biology</li>
+          <li>Your surgical margins</li>
+          <li>Your individual recurrence risk</li>
+        </ul>
+        <p>For some women, the risk is already low, and radiation may not significantly change the outcome. For others, radiation can meaningfully reduce that risk.</p>
+
+        <h3>How much does radiation reduce the risk of DCIS coming back?</h3>
+        <p>Radiation can reduce the risk of recurrence. However, the actual benefit depends on your individual tumor biology.</p>
+        <ul>
+          <li>If your risk is already low, the benefit may be small</li>
+          <li>If your risk is higher, the benefit may be more significant</li>
+        </ul>
+        <p>This is why personalized tools, like DCISionRT, can be helpful in understanding what radiation may mean specifically for you.</p>
+
+        <h3>Can I safely skip radiation if my risk is low?</h3>
+        <p>For some women with low-risk DCIS, skipping radiation may be a reasonable option. This decision should be made carefully with your care team, based on:</p>
+        <ul>
+          <li>Your individual risk based on your individual biology</li>
+          <li>Your preferences</li>
+          <li>Your comfort level with potential recurrence risk</li>
+        </ul>
+        <p>The goal is not to avoid treatment—it is to choose the treatment that truly benefits you.</p>
+
+        <h3>What are the side effects of radiation therapy for DCIS?</h3>
+        <p>Radiation is generally well tolerated, but side effects can include:</p>
+        <ul>
+          <li>Skin irritation or redness</li>
+          <li>Fatigue</li>
+          <li>Breast swelling or tenderness</li>
+          <li>Long-term tissue changes in some cases</li>
+        </ul>
+        <p>Your experience can vary, and your care team will help you understand what to expect based on your individual treatment plan.</p>
+
+        <h3>What is the difference between DCIS and Invasive Breast Cancer?</h3>
+        <ul>
+          <li>DCIS is considered non-invasive, meaning the abnormal cells are contained within the milk ducts</li>
+          <li>Invasive breast cancer means the abnormal cells have spread beyond the ducts into the surrounding breast tissue</li>
+        </ul>
+        <p>While DCIS is highly treatable, understanding its potential behavior is important in preventing recurrence or progression.</p>
+
+        <h3>Can DCIS come back as invasive breast cancer?</h3>
+        <p>Yes, in some cases DCIS can return as invasive breast cancer. This is one of the main reasons radiation is considered after surgery—to reduce the chance of recurrence, including invasive recurrence. Understanding your individual risk helps guide how important radiation may be in your situation. (See DCISionRT Reports) What is my potential 10-Year Recurrence Risk for Invasive Breast Cancer?</p>
+
+        <h3>What is DCISionRT and how is it different from standard pathology?</h3>
+        <p>DCISionRT is a genomic test that looks at the biology of your tumor. It is a test that utilizes 7 Biomarkers along with key pathways responsible for the progression of Breast Cancer.</p>
+        <p>Standard pathology tells us:</p>
+        <ul>
+          <li>Size</li>
+          <li>Grade</li>
+          <li>Margins</li>
+        </ul>
+        <p>DCISionRT goes further by helping to predict:</p>
+        <ul>
+          <li>Your risk of recurrence over a 10-Year Period for both DCIS and Invasive Breast Cancer</li>
+          <li>Whether radiation is likely to benefit you</li>
+        </ul>
+        <p>It adds another layer of personalized information to support shared decision-making.</p>
+
+        <h3>Should I ask my doctor about DCISionRT?</h3>
+        <p>Yes. If you have been diagnosed with DCIS and are deciding about radiation, it is reasonable to ask your doctor if genomic testing like DCISionRT is appropriate for you. If you decide to ask your physician to run the DCISionRT test, it is most beneficial to ask for it to be run on the presurgical biopsy sample. Results can then be reviewed prior to additional procedures. Having a shared conversation regarding your DCISionRT result can help you better understand your options.</p>
+
+        <h3>Who is Eligible to have the DCISionRT test?</h3>
+        <ul>
+          <li>Female 30–85 years-old</li>
+          <li>Diagnosed with Ductal Carcinoma in Situ (DCIS)</li>
+          <li>All Grades accepted: Low, Intermediate, or High</li>
+          <li>All Hormone Statuses accepted: ER+ ER-, PR+, PR-</li>
+        </ul>
+
+        <h3>Is DCISionRT covered by insurance?</h3>
+        <ul>
+          <li>PreludeDx accepts all insurance plans including Medicare.</li>
+          <li>Coverage may vary depending on your plan, and you may still be responsible for deductibles or co-pays.</li>
+          <li>PreludeDx will work on your behalf to ensure your insurance company has processed the claim at the highest benefit level.</li>
+          <li>PreludeDx does offer financial support programs – Contact their Billing Team for more information.</li>
+        </ul>
+
+        <h3>How long does it take to get DCISionRT results?</h3>
+        <p>Results are typically available within 3–5 days after the laboratory receives your tissue sample. This allows the information to be used in real time when making treatment decisions.</p>
+
+        <h3>How do I know if I’m making the right decision?</h3>
+        <p>This is one of the most important and personal questions. The right decision is based on:</p>
+        <ul>
+          <li>Clear understanding of your risk</li>
+          <li>Open and honest conversations with your doctor</li>
+          <li>Your personal values and comfort level</li>
+        </ul>
+        <p>When you feel informed and supported, the decision often becomes clearer.</p>
+
+        <h3>Is this test validated?</h3>
+        <p>Over 3,500 patients have validated this test with over 10 publications. To see more go to: <a href="https://preludedx.com/our-publications/">https://preludedx.com/our-publications/</a></p>
+
+        <h3>Why haven’t I heard about this test before?</h3>
+        <p>Breast cancer care is evolving, and tools like DCISionRT are part of a growing movement toward more personalized treatment.</p>
+        <p>Not every patient is introduced to these options early in the process. Be sure to ask your physician about DCISionRT at your first consultation.</p>
+        <p>At Learn Look Locate, part of our mission is to ensure people are aware of all available tools—so they can make decisions with confidence, not uncertainty.</p>
+      </div>
+    </section>
+
+    <div class="bleed">
+      <img src="assets/banner-final.jpg" alt="A Final Thought" />
+    </div>
+
+    <section class="final">
+      <h2>This decision is not about doing everything.</h2>
+      <h2>It is about doing what is right for you.</h2>
+      <p>Understanding your options—including tools like DCISionRT—helps you move forward with clarity, not uncertainty.</p>
+      <p>At Learn Look Locate, we believe understanding your options should never feel out of reach—and that awareness of tools like DCISionRT is an essential part of more confident, personalized care.</p>
+    </section>
+
+    <footer>
+      <p>To learn more about DCISionRT and where can locate a physician near you, please visit our website page at: <a href="https://preludedx.com/patients/#Physicians-Ordering-DCISionRT">https://preludedx.com/patients/#Physicians-Ordering-DCISionRT</a></p>
+      <p>This guide is provided as educational information through a paid collaboration between Learn Look Locate and PreludeDx.</p>
+    </footer>
+  </article>
+</body>
+</html>

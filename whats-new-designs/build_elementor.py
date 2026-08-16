@@ -1,282 +1,311 @@
 #!/usr/bin/env python3
-"""Build an Elementor 0.4 page template from version-d2-refined.html."""
+"""Build an Elementor 0.4 page from the original What's New export.
+
+Keeps native widgets (containers, headings, text, buttons, images,
+Unlimited Elements magazine grids / spotlight slider, ConvertKit HTML)
+and only restyles them to match the D2 HTML preview.
+"""
 
 from __future__ import annotations
 
-import hashlib
+import copy
 import json
-import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-D2 = ROOT / "whats-new-preview.html"
-if not D2.exists():
-    D2 = ROOT / "version-d2-refined.html"
-CK = ROOT / "convertkit-form.html"
+ORIG = Path("/home/ubuntu/.cursor/projects/workspace/uploads/elementor-74696-2026-08-16_d9d5.json")
+if not ORIG.exists():
+    ORIG = ROOT / "elementor-whats-new-original.json"
 OUT = ROOT / "elementor-whats-new-d2.json"
 README = ROOT / "ELEMENTOR-IMPORT.md"
 
-N = 0
+PINK = "#C44B6A"
+CUSTOM_CSS = r"""
+selector .elementor-button {
+  border-radius: 999px !important;
+  padding: 12px 36px !important;
+  text-transform: uppercase !important;
+  letter-spacing: .06em !important;
+  font-family: Montserrat, sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  background-color: #C44B6A !important;
+  color: #fff !important;
+  box-shadow: none !important;
+  transition: transform .3s ease, box-shadow .3s ease, filter .3s ease;
+}
+selector .elementor-button:hover {
+  transform: translateY(-2px) scale(1.02);
+  filter: brightness(1.08);
+  box-shadow: 0 10px 22px rgba(196,75,106,.32) !important;
+  background-color: #C44B6A !important;
+  color: #fff !important;
+}
+selector .lll-partner-tile {
+  transition: transform .4s cubic-bezier(.22,1,.36,1), box-shadow .4s ease;
+}
+selector .lll-partner-tile:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(40,16,28,.22);
+}
+selector .lll-partner-cover img {
+  width: 100% !important;
+  height: 220px !important;
+  object-fit: cover !important;
+  border-radius: 12px;
+}
+selector .lll-partner-logo img {
+  height: 64px !important;
+  width: auto !important;
+  max-width: 240px !important;
+  object-fit: contain !important;
+  background: #fff;
+  padding: 10px 16px;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.12);
+}
+selector .lll-hero > .elementor-background-overlay,
+selector .lll-educate > .elementor-background-overlay {
+  background-image: linear-gradient(270deg, rgba(18,8,14,.94) 0%, rgba(18,8,14,.78) 36%, rgba(18,8,14,.28) 62%, transparent 86%) !important;
+  background-color: transparent !important;
+  opacity: 1 !important;
+}
+@media (max-width: 767px) {
+  selector .lll-hero > .elementor-background-overlay,
+  selector .lll-educate > .elementor-background-overlay {
+    background-image: linear-gradient(180deg, rgba(18,8,14,.2) 0%, rgba(18,8,14,.78) 38%, rgba(18,8,14,.94) 100%) !important;
+  }
+}
+"""
 
 
-def eid(label: str) -> str:
-    global N
-    N += 1
-    return hashlib.md5(f"lll-d2-{label}-{N}".encode()).hexdigest()[:7]
+def size(n, unit="px"):
+    return {"unit": unit, "size": n, "sizes": []}
 
 
-def widget(wtype: str, settings: dict, title: str = "") -> dict:
-    s = dict(settings)
-    if title:
-        s["_title"] = title
-    return {
-        "id": eid(wtype),
-        "elType": "widget",
-        "widgetType": wtype,
-        "isInner": False,
-        "settings": s,
-        "elements": [],
-    }
+def walk(o, fn):
+    if isinstance(o, dict):
+        fn(o)
+        for v in o.values():
+            walk(v, fn)
+    elif isinstance(o, list):
+        for v in o:
+            walk(v, fn)
 
 
-def container(settings: dict, children: list, inner: bool = False, title: str = "") -> dict:
-    s = dict(settings)
-    if title:
-        s["_title"] = title
-    return {
-        "id": eid("container"),
-        "elType": "container",
-        "isInner": inner,
-        "settings": s,
-        "elements": children,
-    }
+def style_text_editor(el):
+    s = el["settings"]
+    s["typography_typography"] = "custom"
+    s["typography_font_family"] = "Montserrat"
+    s["typography_font_size"] = size(22)
+    s["typography_font_size_tablet"] = size(22)
+    s["typography_font_size_mobile"] = size(20)
+    s["typography_font_weight"] = "300"
 
 
-def html_widget(html: str, title: str) -> dict:
-    return widget(
-        "html",
-        {
-            "html": html,
-            "ha_advanced_tooltip_content": "I am a tooltip",
-            "ha_cmc_text": "Happy Addons",
-        },
-        title,
-    )
+def style_button(el):
+    s = el["settings"]
+    s["background_color"] = PINK
+    s["button_text_color"] = "#FFFFFF"
+    s["button_background_hover_color"] = PINK
+    s["hover_color"] = "#FFFFFF"
+    s["border_radius"] = {"unit": "px", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": True}
+    s["typography_typography"] = "custom"
+    s["typography_font_family"] = "Montserrat"
+    s["typography_font_size"] = size(14)
+    s["typography_font_weight"] = "500"
+    s["typography_text_transform"] = "uppercase"
+    s["typography_letter_spacing"] = size(0.8)
+    g = s.get("__globals__") or {}
+    for k in ("button_text_color", "background_color", "button_background_hover_color", "hover_color"):
+        g[k] = ""
+    s["__globals__"] = g
 
 
-def prefix_selectors(selector_block: str, scope: str) -> str:
-    parts = []
-    for sel in selector_block.split(","):
-        sel = sel.strip()
-        if not sel:
-            continue
-        if sel.startswith("@") or sel.startswith(scope) or sel.startswith(":root"):
-            parts.append(sel)
-            continue
-        if sel in ("html", "body"):
-            parts.append(scope)
-            continue
-        if sel == "*" or sel.startswith("*::") or sel.startswith("*,"):
-            parts.append(f"{scope},{scope} *")
-            continue
-        if sel.startswith("*"):
-            parts.append(f"{scope} {sel}")
-            continue
-        parts.append(f"{scope} {sel}")
-    return ",".join(parts)
+def style_hero(sec):
+    s = sec["settings"]
+    s["background_position"] = "18% center"
+    s["background_size"] = "cover"
+    s["flex_justify_content"] = "flex-end"
+    s["flex_align_items"] = "center"
+    cls = (s.get("_css_classes") or "").split()
+    if "lll-hero" not in cls:
+        cls.append("lll-hero")
+    s["_css_classes"] = " ".join(cls).strip()
+    inner = sec["elements"][1] if len(sec["elements"]) > 1 else None
+    if inner and inner.get("elType") == "container":
+        inner["settings"]["flex_justify_content"] = "flex-end"
+        inner["settings"]["flex_align_items"] = "center"
 
 
-def scope_css_chunk(css: str, scope: str, add_base: bool) -> str:
-    css = re.sub(r"html\{scroll-behavior:smooth\}", "", css)
-    css = css.replace(":root{", f":root,{scope}{{")
-    out = []
-    i = 0
-    while i < len(css):
-        if css.startswith("@media", i) or css.startswith("@supports", i):
-            brace = css.find("{", i)
-            at = css[i : brace + 1]
-            depth = 1
-            j = brace + 1
-            while j < len(css) and depth:
-                if css[j] == "{":
-                    depth += 1
-                elif css[j] == "}":
-                    depth -= 1
-                j += 1
-            inner = css[brace + 1 : j - 1]
-            out.append(at + scope_css_chunk(inner, scope, False) + "}")
-            i = j
-            continue
-        nxt = css.find("{", i)
-        if nxt < 0:
-            out.append(css[i:])
-            break
-        selectors = css[i:nxt]
-        depth = 1
-        j = nxt + 1
-        while j < len(css) and depth:
-            if css[j] == "{":
-                depth += 1
-            elif css[j] == "}":
-                depth -= 1
-            j += 1
-        body = css[nxt:j]
-        stripped = selectors.strip()
-        if not stripped or stripped.startswith("@") or stripped.startswith("/*"):
-            out.append(selectors + body)
-        else:
-            comment = ""
-            if "*/" in selectors:
-                cend = selectors.rfind("*/")
-                comment = selectors[: cend + 2]
-                selectors = selectors[cend + 2 :]
-            out.append(comment + prefix_selectors(selectors, scope) + body)
-        i = j
-    extra = ""
-    if add_base:
-        extra = (
-            f"{scope}{{margin:0;color:var(--ink);background:var(--bg);"
-            f"font-family:var(--sans);line-height:1.65;font-size:22px;font-weight:300}}"
-            f"{scope} img{{max-width:100%;height:auto;display:block}}"
-            f"{scope} a{{color:inherit}}"
-        )
-    return extra + "".join(out)
+def style_educate(sec):
+    s = sec["settings"]
+    s["background_position"] = "18% center"
+    s["background_size"] = "cover"
+    s["flex_justify_content"] = "flex-end"
+    cls = (s.get("_css_classes") or "").split()
+    if "lll-educate" not in cls:
+        cls.append("lll-educate")
+    s["_css_classes"] = " ".join(cls).strip()
+    if len(sec["elements"]) > 1:
+        row = sec["elements"][1]
+        row["settings"]["flex_justify_content"] = "flex-end"
 
 
-def scope_css(css: str, scope: str = ".lll-whats-new") -> str:
-    return scope_css_chunk(css, scope, True)
+def style_partner_tiles(sec):
+    try:
+        tiles = sec["elements"][0]["elements"][0]["elements"]
+    except (IndexError, KeyError, TypeError):
+        return
+    for tile in tiles:
+        ts = tile["settings"]
+        ts["_css_classes"] = ((ts.get("_css_classes") or "") + " lll-partner-tile").strip()
+        ts["min_height"] = size(280)
+        ts["border_radius"] = {"unit": "px", "top": "18", "right": "18", "bottom": "18", "left": "18", "isLinked": True}
+        link = ts.get("ha_element_link") or {}
+        url = (link.get("url") or "").rstrip("/") + "/"
+        if url.startswith("http"):
+            link["url"] = url
+            ts["ha_element_link"] = link
+        images = [e for e in tile.get("elements") or [] if e.get("widgetType") == "image"]
+        headings = [e for e in tile.get("elements") or [] if e.get("widgetType") == "heading"]
+        if images:
+            cover = images[0]
+            cover["settings"]["_css_classes"] = "lll-partner-cover"
+            cover["settings"]["image_size"] = "full"
+            cover["settings"]["image_border_radius"] = {
+                "unit": "px",
+                "top": "12",
+                "right": "12",
+                "bottom": "12",
+                "left": "12",
+                "isLinked": True,
+            }
+        if len(images) > 1:
+            logo = images[1]
+            logo["settings"]["_css_classes"] = "lll-partner-logo"
+            logo["settings"]["image_size"] = "custom"
+            logo["settings"]["image_custom_dimension"] = {"width": "240", "height": "64"}
+        if headings:
+            h = headings[0]["settings"]
+            h["align"] = "left"
+            h["header_size"] = "h3"
+            h["title_color"] = "#2A1C22"
+            h["typography_typography"] = "custom"
+            h["typography_font_family"] = "Libre Baskerville"
+            h["typography_font_size"] = size(20)
+            h["typography_font_weight"] = "600"
+            h["typography_line_height"] = {"unit": "em", "size": 1.3, "sizes": []}
 
 
-def extract_d2():
-    html = D2.read_text()
-    css = re.search(r"<style>(.*?)</style>", html, re.S).group(1)
-    body = re.search(r"<body>(.*)</body>", html, re.S).group(1)
-    body = re.sub(r'<div class="design-switcher">.*?</div>', "", body, flags=re.S)
-    body = re.sub(r"<footer class=\"wrap footer\">.*?</footer>", "", body, flags=re.S)
-    ck = CK.read_text() if CK.exists() else ""
-    if ck:
-        body = re.sub(
-            r'<form class="form" onsubmit="return false">.*?</form>',
-            ck,
-            body,
-            count=1,
-            flags=re.S,
-        )
-    sections = re.findall(r"<section\b.*?</section>", body, flags=re.S)
-    return css, sections
-
-
-SECTION_TITLES = [
-    "Hero",
-    "Intro",
-    "Spotlight",
-    "Partners",
-    "Education header",
-    "Education grid",
-    "Newsletter",
-    "Discussions header",
-    "Discussions grid",
-    "Survivors",
-    "Blogs",
-]
-
-
-def boxed() -> dict:
-    return {
-        "content_width": "full",
-        "flex_direction": "column",
-        "flex_gap": {
-            "size": 0,
-            "unit": "px",
-            "column": "0",
-            "row": "0",
-            "isLinked": True,
-        },
-        "padding": {
-            "unit": "px",
-            "top": "0",
-            "right": "0",
-            "bottom": "0",
-            "left": "0",
-            "isLinked": True,
-        },
-        "_css_classes": "lll-whats-new-section",
-    }
+def style_magazine_grid(el):
+    s = el["settings"]
+    s["title_typography_font_family"] = "Libre Baskerville"
+    s["title_typography_font_size"] = size(20)
+    s["title_typography_font_weight"] = 600
+    extra = s.get("custom_css") or ""
+    hover = """
+selector .ue-grid-item {
+  transition: transform .4s cubic-bezier(.22,1,.36,1), box-shadow .4s ease;
+}
+selector .ue-grid-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 36px rgba(80,30,40,.16);
+}
+selector .ue-grid-item img {
+  transition: transform .6s cubic-bezier(.22,1,.36,1);
+}
+selector .ue-grid-item:hover img {
+  transform: scale(1.06);
+}
+"""
+    if "ue-grid-item:hover" not in extra:
+        s["custom_css"] = extra + hover
 
 
 def main() -> None:
-    css, sections = extract_d2()
-    scoped = scope_css(css)
-    fonts = (
-        "@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');"
-    )
-    style_block = f'<style id="lll-whats-new-d2">{fonts}{scoped}</style>'
+    data = copy.deepcopy(json.loads(ORIG.read_text()))
+    data["title"] = "What's New — D2 Cinematic"
+    data["page_settings"] = data.get("page_settings") or {}
+    data["page_settings"]["hide_title"] = "yes"
+    data["page_settings"]["custom_css"] = CUSTOM_CSS
 
-    content = [
-        container(
-            {**boxed(), "background_background": "classic", "background_color": "#F6EFE8"},
-            [html_widget(style_block, "D2 styles + fonts")],
-            title="D2 styles",
-        )
-    ]
+    def apply(el):
+        if not isinstance(el, dict) or el.get("elType") not in ("widget", "container"):
+            return
+        wt = el.get("widgetType")
+        if wt == "text-editor":
+            style_text_editor(el)
+        elif wt == "button":
+            style_button(el)
+        elif wt == "ucaddon_post_magazine_grid":
+            style_magazine_grid(el)
 
-    for i, section in enumerate(sections):
-        title = SECTION_TITLES[i] if i < len(SECTION_TITLES) else f"Section {i+1}"
-        wrapped = f'<div class="lll-whats-new">{section}</div>'
-        content.append(
-            container(
-                boxed(),
-                [html_widget(wrapped, title)],
-                title=title,
-            )
-        )
+    walk(data["content"], apply)
 
-    payload = {
-        "content": content,
-        "page_settings": {
-            "hide_title": "yes",
-            "ha_grid_zindex": "1000",
-            "custom_css": scoped,
-        },
-        "version": "0.4",
-        "title": "What's New — D2 Cinematic",
-        "type": "page",
-    }
-    OUT.write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")))
+    content = data["content"]
+    if len(content) > 1:
+        style_hero(content[1])
+    if len(content) > 4:
+        style_partner_tiles(content[4])
+    if len(content) > 5:
+        style_educate(content[5])
+
+    OUT.write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")))
     README.write_text(
         """# Import the D2 What’s New page into Elementor
 
 File: `elementor-whats-new-d2.json`
 
-This is an Elementor **page template** (export format `0.4`), rebuilt from the finalized HTML preview. Card and partner links go to the live article permalinks. Hover, Montserrat body type, pill buttons, larger partner logos, and the stronger Education overlay are included. The ConvertKit newsletter form from the current What’s New page is embedded.
+This file is built from the **original What’s New Elementor export**, not from a single HTML blob.
 
-## Images — do not re-upload
+It keeps the same native structure:
 
-Every photo and logo already uses a `learnlooklocate.com/wp-content/uploads/...` URL from the live Media Library. The template does **not** bundle image files. After import, Elementor loads those existing files. You do not need to import a media zip or upload the images again.
+- Containers (hero, educate, discussions, survivors, blog)
+- Heading / animated headline widgets
+- Text editor widgets
+- Button widgets
+- Image widgets (partner photos + logos)
+- Unlimited Elements **post magazine grid** (Education, Discussions, Survivors, Blogs)
+- Unlimited Elements **post slider** (Spotlight)
+- ConvertKit form HTML widget (newsletter only)
+- Decorative HTML (waves / lines) from the original page
 
-If the importer asks “Import images?”, you can leave that off. These are HTML widgets pointing at URLs already on the site, not new attachments.
+D2 visual updates applied on those widgets:
+
+- Montserrat body copy at 22px (20px on mobile)
+- Pill buttons in the current pink, with hover
+- Larger partner logos
+- Stronger right-side overlay on Hero and Education
+- Hover lift on partner tiles and magazine cards
+
+## Images
+
+Photos and logos keep the same Media Library URLs and attachment IDs as the live page. Do **not** re-upload images. If the importer asks “Import images?”, leave that off.
 
 ## How to import
 
-1. In WordPress, open **Templates → Saved Templates** (or **Elementor → Saved Templates**).
-2. Click **Import Templates**.
-3. Upload `elementor-whats-new-d2.json`.
-4. Open the **What’s New** page with Elementor (or create a new page).
-5. Insert **What's New — D2 Cinematic**.
-6. Publish. Hide the default page title if the theme still shows one.
+1. **Templates → Saved Templates → Import Templates**
+2. Upload `elementor-whats-new-d2.json`
+3. Insert **What's New — D2 Cinematic** on the page
+4. Publish
 
-## After import
+After import you can edit headings, buttons, and images in Elementor like the old page. Grids still pull posts dynamically.
 
-- Grids are HTML widgets so the D2 magazine layout and hover motion stay intact without Unlimited Elements.
-- To swap a card, edit the HTML widget for that section and change the `href`, image, date, or title.
-- The live ConvertKit form (`forms/8767355`) is in the newsletter section.
+## HTML preview
 
-## Preview HTML
-
-`whats-new-preview.html` — same layout as this import.
+`whats-new-preview.html` is only for layout review in a browser. The import file is the Elementor version of that design.
 """
     )
-    print(f"Wrote {OUT} ({OUT.stat().st_size} bytes), {len(sections)} sections")
+    widgets = {}
+
+    def count(el):
+        if isinstance(el, dict) and el.get("elType") == "widget":
+            widgets[el.get("widgetType")] = widgets.get(el.get("widgetType"), 0) + 1
+
+    walk(data["content"], count)
+    print(f"Wrote {OUT} ({OUT.stat().st_size} bytes)")
+    print("widgets", widgets)
 
 
 if __name__ == "__main__":

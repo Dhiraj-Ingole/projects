@@ -2,29 +2,41 @@
 
 File: `elementor-whats-new-d2.json`
 
-This is an Elementor **page template** (export format `0.4`), rebuilt from the finalized HTML preview. Card and partner links go to the live article permalinks. Hover, Montserrat body type, pill buttons, larger partner logos, and the stronger Education overlay are included. The ConvertKit newsletter form from the current What’s New page is embedded.
+This file is built from the **original What’s New Elementor export**, not from a single HTML blob.
 
-## Images — do not re-upload
+It keeps the same native structure:
 
-Every photo and logo already uses a `learnlooklocate.com/wp-content/uploads/...` URL from the live Media Library. The template does **not** bundle image files. After import, Elementor loads those existing files. You do not need to import a media zip or upload the images again.
+- Containers (hero, educate, discussions, survivors, blog)
+- Heading / animated headline widgets
+- Text editor widgets
+- Button widgets
+- Image widgets (partner photos + logos)
+- Unlimited Elements **post magazine grid** (Education, Discussions, Survivors, Blogs)
+- Unlimited Elements **post slider** (Spotlight)
+- ConvertKit form HTML widget (newsletter only)
+- Decorative HTML (waves / lines) from the original page
 
-If the importer asks “Import images?”, you can leave that off. These are HTML widgets pointing at URLs already on the site, not new attachments.
+D2 visual updates applied on those widgets:
+
+- Montserrat body copy at 22px (20px on mobile)
+- Pill buttons in the current pink, with hover
+- Larger partner logos
+- Stronger right-side overlay on Hero and Education
+- Hover lift on partner tiles and magazine cards
+
+## Images
+
+Photos and logos keep the same Media Library URLs and attachment IDs as the live page. Do **not** re-upload images. If the importer asks “Import images?”, leave that off.
 
 ## How to import
 
-1. In WordPress, open **Templates → Saved Templates** (or **Elementor → Saved Templates**).
-2. Click **Import Templates**.
-3. Upload `elementor-whats-new-d2.json`.
-4. Open the **What’s New** page with Elementor (or create a new page).
-5. Insert **What's New — D2 Cinematic**.
-6. Publish. Hide the default page title if the theme still shows one.
+1. **Templates → Saved Templates → Import Templates**
+2. Upload `elementor-whats-new-d2.json`
+3. Insert **What's New — D2 Cinematic** on the page
+4. Publish
 
-## After import
+After import you can edit headings, buttons, and images in Elementor like the old page. Grids still pull posts dynamically.
 
-- Grids are HTML widgets so the D2 magazine layout and hover motion stay intact without Unlimited Elements.
-- To swap a card, edit the HTML widget for that section and change the `href`, image, date, or title.
-- The live ConvertKit form (`forms/8767355`) is in the newsletter section.
+## HTML preview
 
-## Preview HTML
-
-`whats-new-preview.html` — same layout as this import.
+`whats-new-preview.html` is only for layout review in a browser. The import file is the Elementor version of that design.

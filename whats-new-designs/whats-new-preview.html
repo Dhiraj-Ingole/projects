@@ -6,7 +6,7 @@
 <title>What's New in Breast Cancer Education | Preview</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -17,9 +17,10 @@ a{color:inherit}
 
 
 
-.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;border-radius:999px;padding:14px 22px;font-weight:600;font-size:16px;transition:transform .3s ease,box-shadow .3s ease,filter .3s ease}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;border:0;border-radius:999px;padding:12px 36px;font-family:var(--sans);font-weight:500;font-size:14px;letter-spacing:.06em;text-transform:uppercase;line-height:1.2;box-shadow:none;transition:transform .3s ease,box-shadow .3s ease,filter .3s ease,background-color .3s ease}
 .btn-primary{background:var(--accent);color:#fff}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(196,75,106,.35);filter:brightness(1.05)}
+.btn-primary:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 10px 22px rgba(196,75,106,.32);filter:brightness(1.08)}
+.btn-primary:active{transform:translateY(0) scale(1)}
 .section{padding:72px 0}
 h1,h2,h3{line-height:1.25;margin:0 0 .45em;font-weight:500}
 .lead{max-width:62ch}
@@ -36,8 +37,8 @@ h1,h2,h3{line-height:1.25;margin:0 0 .45em;font-weight:500}
 .card:hover .more::after,.spot-card:hover .more::after{transform:translateX(4px)}
 .form{display:flex;gap:8px;flex-wrap:wrap}
 .form input{flex:1;min-width:220px;padding:14px 16px;border:1px solid #d8cfd3;border-radius:10px;font:inherit}
-.form button{border:0;background:var(--accent);color:#fff;padding:14px 20px;border-radius:10px;font-weight:700;cursor:pointer;transition:transform .3s ease,box-shadow .3s ease,filter .3s ease}
-.form button:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(196,75,106,.35);filter:brightness(1.05)}
+.form button{border:0;background:var(--accent);color:#fff;padding:12px 36px;border-radius:999px;font-family:var(--sans);font-weight:500;font-size:14px;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;box-shadow:none;transition:transform .3s ease,box-shadow .3s ease,filter .3s ease}
+.form button:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 10px 22px rgba(196,75,106,.32);filter:brightness(1.08)}
 .quote-frame img{transition:transform .6s cubic-bezier(.22,1,.36,1)}
 .quote-frame:hover img{transform:scale(1.04)}
 .wash-panel{transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s ease}
@@ -57,10 +58,10 @@ h1,h2,h3{line-height:1.25;margin:0 0 .45em;font-weight:500}
 .cover-grad{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;padding:18px;background:linear-gradient(180deg,rgba(40,16,28,.05),rgba(40,16,28,.78));transition:background .4s ease}
 .cover:hover .cover-grad{background:linear-gradient(180deg,rgba(40,16,28,.02),rgba(40,16,28,.88))}
 .cover h3{font-size:20px;margin:8px 0 0;font-family:"Libre Baskerville",Georgia,serif;font-weight:600}
-.cover .partner-logo{height:40px;width:auto;max-width:160px;object-fit:contain;background:#fff;border-radius:8px;padding:6px 10px;align-self:flex-start;flex:none}
+.cover .partner-logo{height:64px;width:auto;max-width:240px;object-fit:contain;background:#fff;border-radius:10px;padding:10px 16px;align-self:flex-start;flex:none;box-shadow:0 6px 16px rgba(0,0,0,.12)}
 :root{
   --bg:#f6efe8; --ink:#2a1c22; --accent:#c44b6a; --card:#fff;
-  --sans:"Poppins",system-ui,sans-serif; --serif:"Libre Baskerville",Georgia,serif;
+  --sans:"Montserrat",system-ui,sans-serif; --serif:"Libre Baskerville",Georgia,serif;
 }
 body{font-size:22px;font-weight:300;line-height:1.65}
 h1,h2,h3,.serif{font-family:var(--sans);font-weight:500}

@@ -55,7 +55,7 @@ PARTNERS = [
 ]
 
 EDU = [
-    {"date": "29 Jul, 2026", "title": "Medical Menopause—SERIOUSLY???", "img": DIAGNOSIS, "href": "https://learnlooklocate.com/educate/"},
+    {"date": "29 Jul, 2026", "title": "Medical Menopause—SERIOUSLY???", "img": DIAGNOSIS, "href": "https://learnlooklocate.com/medical-menopause-after-breast-cancer/"},
     {"date": "14 Jun, 2026", "title": "Do I Need Radiation If I Have DCIS", "img": f"{IMG}/2026/06/image.avif", "href": "https://learnlooklocate.com/do-i-need-radiation-if-i-have-dcis"},
     {"date": "28 May, 2026", "title": "Metastatic Breast Cancer: First-Line & Maintenance Therapy", "img": f"{IMG}/2025/02/Header-image-Stage-4-Breast-Cancer.webp", "href": "https://learnlooklocate.com/understanding-treatment-options-for-stage-4-breast-cancer"},
     {"date": "23 Apr, 2026", "title": "Goldilocks Mastectomy", "img": f"{IMG}/2025/11/Lumpectomy-18.png", "href": "https://learnlooklocate.com/educate/"},
@@ -134,6 +134,8 @@ SWITCHER = """
   <a href="version-a-editorial.html"{a}>A · Editorial</a>
   <a href="version-b-clinical.html"{b}>B · Clinical</a>
   <a href="version-c-warm.html"{c}>C · Warm</a>
+  <a href="version-d-cinematic.html"{d}>D · Cinematic</a>
+  <a href="version-e-lush.html"{e}>E · Lush</a>
 </div>
 """
 
@@ -143,13 +145,15 @@ def switcher(active):
         a=' class="is-active"' if active == "a" else "",
         b=' class="is-active"' if active == "b" else "",
         c=' class="is-active"' if active == "c" else "",
+        d=' class="is-active"' if active == "d" else "",
+        e=' class="is-active"' if active == "e" else "",
     )
 
 
 def cards(items, extra=""):
     html = []
     for i, it in enumerate(items):
-        feat = " is-feature" if extra == "edu" and i == 0 else ""
+        feat = " is-feature" if extra in ("edu", "mag") and i == 0 else ""
         html.append(
             f'''
         <a class="card{feat}" href="{it["href"]}">
@@ -158,6 +162,22 @@ def cards(items, extra=""):
             <time>{it["date"]}</time>
             <h3>{it["title"]}</h3>
             <span class="more">Read more</span>
+          </div>
+        </a>'''
+        )
+    return "\n".join(html)
+
+
+def cover_partners():
+    html = []
+    for p in PARTNERS:
+        html.append(
+            f'''
+        <a class="cover" href="{p["href"]}">
+          <img src="{p["img"]}" alt="">
+          <div class="cover-grad">
+            <img class="partner-logo" src="{p["logo"]}" alt="">
+            <h3>{p["title"]}</h3>
           </div>
         </a>'''
         )
@@ -708,6 +728,316 @@ def page_c():
 """
 
 
+CSS_MAG = """
+.mag{display:grid;grid-template-columns:1.45fr 1fr 1fr;grid-template-rows:auto auto;gap:18px}
+.mag .card{border-radius:16px;background:#fff;box-shadow:0 14px 36px rgba(80,30,40,.08)}
+.mag .card.is-feature{grid-column:1;grid-row:1 / span 2}
+.mag .card.is-feature .card-media{aspect-ratio:auto;flex:1;min-height:280px}
+.mag .card.is-feature{display:flex;flex-direction:column;height:100%}
+.mag .card.is-feature h3{font-size:1.55rem;font-family:var(--serif)}
+.cover{position:relative;min-height:280px;border-radius:18px;overflow:hidden;display:block;text-decoration:none;color:#fff}
+.cover>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cover-grad{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:18px;background:linear-gradient(180deg,rgba(40,16,28,.05),rgba(40,16,28,.78))}
+.cover h3{font-size:1rem;margin:8px 0 0;font-family:var(--serif)}
+.cover .partner-logo{height:34px;width:auto;object-fit:contain;background:#fff;border-radius:8px;padding:4px 8px}
+.cine{position:relative;min-height:420px;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+.cine-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cine::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(44,20,30,.12),rgba(44,20,30,.72))}
+.cine .wrap,.cine .cine-copy{position:relative;z-index:1;padding:48px 0}
+@media (max-width:900px){
+  .mag{grid-template-columns:1fr 1fr}
+  .mag .card.is-feature{grid-column:1 / -1;grid-row:auto}
+}
+@media (max-width:640px){.mag{grid-template-columns:1fr}}
+"""
+
+CSS_D = CSS_SHARED + CSS_MAG + """
+:root{
+  --bg:#f6efe8; --ink:#2a1c22; --accent:#c44b6a; --card:#fff;
+  --sans:"Source Sans 3",system-ui,sans-serif; --serif:"Libre Baskerville",Georgia,serif;
+}
+h1,h2,.serif{font-family:var(--serif);font-weight:400}
+.hero-cine{min-height:88vh;position:relative;display:flex;align-items:flex-end;color:#fff}
+.hero-cine .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-cine::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(32,14,22,.78) 8%, rgba(32,14,22,.28) 70%)}
+.hero-cine .wrap{position:relative;z-index:1;padding:40px 0 72px}
+.hero-cine h1{font-size:clamp(2.8rem,7vw,5.6rem);max-width:12ch;line-height:.95}
+.hero-cine h1 em{font-style:italic;color:#f3c2ce}
+.hero-cine .kicker{color:#f3c2ce}
+.guided{font-size:14px;opacity:.9;margin:10px 0 22px}
+.paper{background:#fffaf6;border-radius:28px;padding:40px;margin-top:-56px;position:relative;z-index:2;box-shadow:0 24px 50px rgba(60,20,30,.12)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.quote-frame{display:grid;grid-template-columns:200px 1fr;gap:28px;align-items:center;background:#2a1c22;color:#fff;border-radius:28px;padding:28px}
+.quote-frame img{width:200px;height:240px;object-fit:cover;border-radius:18px}
+.quote-frame blockquote{font-family:var(--serif);font-size:1.7rem;font-style:italic;margin:0}
+.covers{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:900px){
+  .split,.quote-frame,.covers{grid-template-columns:1fr}
+  .hero-cine{min-height:72vh}
+}
+"""
+
+CSS_E = CSS_SHARED + CSS_MAG + """
+:root{
+  --bg:#1f1418; --ink:#f7efe8; --accent:#e07a8a; --card:#2a1c22;
+  --sans:"Nunito",system-ui,sans-serif; --serif:"Playfair Display",Georgia,serif;
+}
+body{background:#1f1418;color:#f7efe8}
+h1,h2,.serif{font-family:var(--serif)}
+.design-switcher{background:rgba(31,20,24,.92);color:#fff;border-bottom-color:rgba(255,255,255,.08)}
+.hero-cine{min-height:92vh;position:relative;display:grid;place-items:center;text-align:center;color:#fff}
+.hero-cine .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-cine::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 40%, rgba(31,20,24,.15), rgba(31,20,24,.78))}
+.hero-cine .wrap{position:relative;z-index:1;padding:80px 0}
+.hero-cine h1{font-size:clamp(3rem,8vw,6.4rem);line-height:.9}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:520px}
+.story img{width:100%;height:100%;object-fit:cover;min-height:420px}
+.story .copy{padding:48px;display:flex;flex-direction:column;justify-content:center;background:#2a1c22}
+.story.reverse{direction:rtl}
+.story.reverse>*{direction:ltr}
+.mag .card{background:#2a1c22;color:#f7efe8;box-shadow:none}
+.covers{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.covers .cover:first-child{grid-column:span 2;min-height:360px}
+.quote-frame{text-align:center;padding:48px 20px}
+.quote-frame img{width:140px;height:140px;border-radius:50%;object-fit:cover;margin:0 auto 16px;border:3px solid #e07a8a}
+.quote-frame blockquote{font-family:var(--serif);font-size:2rem;font-style:italic;max-width:22ch;margin:0 auto}
+.form input{background:#3a2830;border-color:#5a3d48;color:#fff}
+@media (max-width:900px){
+  .story,.covers{grid-template-columns:1fr}
+  .covers .cover:first-child{grid-column:auto}
+  .story.reverse{direction:ltr}
+}
+"""
+
+
+def page_d():
+    c = COPY
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+{COMMON_HEAD.format(title="What's New — Design D Cinematic Editorial | Learn Look Locate", fonts="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap", css=CSS_D)}
+</head>
+<body>
+{switcher("d")}
+<section class="hero-cine">
+  <img class="hero-bg" src="{HERO_BG}" alt="">
+  <div class="wrap">
+    <p class="kicker">What's New in Breast Cancer</p>
+    <h1>What's New <em>in breast cancer</em></h1>
+    <p class="guided">Education · Discussions · Survivors · Doctors · Blogs · Innovations<br>Medically vetted with Learn Look Locate advisors — where compassion meets science.</p>
+    <p style="max-width:52ch">{c['hero_p']}</p>
+    <p><a class="btn btn-primary" href="#education">Explore What’s New</a></p>
+  </div>
+</section>
+<section class="wrap">
+  <div class="paper">
+    <div class="split">
+      <div>
+        <h2>{c['fresh_h']}</h2>
+        <p>{c['fresh_p1']}</p>
+        <p>{c['fresh_p2']}</p>
+      </div>
+      <div>
+        <p>{c['mission']}</p>
+        <p>{c['explore']}</p>
+        <p>{c['fresh_p3']}</p>
+        <p>{c['fresh_p4']}</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="spotlight" class="cine" style="margin-top:48px">
+  <img class="cine-bg" src="{SPOTLIGHT_IMG}" alt="">
+  <div class="wrap cine-copy">
+    <p class="kicker" style="color:#f3c2ce">Spotlight</p>
+    <h2 style="font-size:clamp(1.8rem,4vw,3rem);max-width:18ch">{c['spot_h']}</h2>
+    <p style="max-width:46ch;font-family:var(--serif);font-style:italic;font-size:1.25rem">{c['spot_q']}</p>
+    <h3>{c['spot_card_title']}</h3>
+    <p style="max-width:52ch">{c['spot_card_ex']}</p>
+    <a class="btn btn-primary" href="https://learnlooklocate.com/do-i-need-radiation-if-i-have-dcis">Read the spotlight</a>
+  </div>
+</section>
+<section id="partners" class="wrap section">
+  <p class="kicker">United to Empower and Educate</p>
+  <h2>{c['united_h']}</h2>
+  <p class="lead">{c['united_p1']} {c['united_p2']}</p>
+  <div class="covers" style="margin-top:28px">{cover_partners()}</div>
+</section>
+<section id="education" class="wrap section">
+  <p class="kicker">Education</p>
+  <h2>{c['edu_h']}</h2>
+  <p>{c['edu_p1']}</p>
+  <p>{c['edu_p2']}</p>
+  <p>{c['edu_p3']}</p>
+  <p><a class="btn btn-primary" href="https://learnlooklocate.com/educate/">Explore What’s New</a></p>
+  <div class="mag" style="margin-top:28px">{cards(EDU, "mag")}</div>
+</section>
+<section class="wrap section">
+  <div class="quote-frame">
+    <img src="{YARA}" alt="Dr. Yara Robertson">
+    <div>
+      <h2 style="color:#fff">{c['know_h']}</h2>
+      <blockquote>{c['quote']}</blockquote>
+      <p>{c['quote_by']}</p>
+      <p>{c['nl_p']}</p>
+      <form class="form" onsubmit="return false">
+        <input type="email" placeholder="Email address" aria-label="Email">
+        <button type="submit">Get the latest</button>
+      </form>
+    </div>
+  </div>
+</section>
+<section class="cine" id="doctors">
+  <img class="cine-bg" src="{HERO_BG2}" alt="">
+  <div class="wrap cine-copy">
+    <p class="kicker" style="color:#f3c2ce">{c['docs_h']}</p>
+    <h2 style="font-size:clamp(1.8rem,4vw,3rem)">{c['docs_q']}</h2>
+    <p style="max-width:60ch">{c['docs_overview']}</p>
+    <a class="btn btn-primary" href="https://learnlooklocate.com/educate/patient-education/">Watch now</a>
+  </div>
+</section>
+<section class="wrap section">
+  <p>{c['docs_why']}</p>
+  <p>{c['docs_global']}</p>
+  <div class="mag" style="margin-top:24px">{cards(DOCS, "mag")}</div>
+</section>
+<section class="cine" id="survivors">
+  <img class="cine-bg" src="{DIAGNOSIS}" alt="">
+  <div class="wrap cine-copy">
+    <p class="kicker" style="color:#f3c2ce">Survivors</p>
+    <h2 style="font-size:clamp(1.8rem,4vw,3rem)">{c['surv_h']}</h2>
+    <p style="max-width:60ch">{c['surv_p1']}</p>
+    <a class="btn btn-primary" href="https://learnlooklocate.com/survivor-stories/">Learn more</a>
+  </div>
+</section>
+<section class="wrap section">
+  <p>{c['surv_p2']}</p>
+  <p>{c['surv_p3']}</p>
+  <p>{c['surv_p4']}</p>
+  <div class="mag" style="margin-top:24px">{cards(SURV, "mag")}</div>
+</section>
+<section class="cine" id="blogs">
+  <img class="cine-bg" src="{IMG}/2025/11/Lumpectomy-18.png" alt="">
+  <div class="wrap cine-copy">
+    <p class="kicker" style="color:#f3c2ce">{c['blog_h']}</p>
+    <h2 style="font-size:clamp(1.8rem,4vw,3rem)">{c['blog_sub']}</h2>
+    <p style="max-width:60ch">{c['blog_p']}</p>
+    <a class="btn btn-primary" href="https://learnlooklocate.com/blog/">Learn more</a>
+  </div>
+</section>
+<section class="wrap section">
+  <div class="mag">{cards(BLOGS, "mag")}</div>
+</section>
+<footer class="wrap footer">Learn Look Locate · Design D (Cinematic Editorial). Editorial Quiet + Clinical featured grid + full-bleed photo sections in the style of Goldilocks, DCIS, Medical Menopause, and Fertility pages.</footer>
+</body></html>
+"""
+
+
+def page_e():
+    c = COPY
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+{COMMON_HEAD.format(title="What's New — Design E Lush Gallery | Learn Look Locate", fonts="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap", css=CSS_E)}
+</head>
+<body>
+{switcher("e")}
+<section class="hero-cine">
+  <img class="hero-bg" src="{HERO_BG}" alt="">
+  <div class="wrap">
+    <p class="kicker">Learn Look Locate</p>
+    <h1>What's New<br>in Breast Cancer</h1>
+    <p style="max-width:42ch;margin-inline:auto">{c['kicker']}</p>
+    <p style="max-width:50ch;margin-inline:auto">{c['hero_p']}</p>
+    <p><a class="btn btn-primary" href="#education">Explore What’s New</a></p>
+  </div>
+</section>
+<section class="story">
+  <img src="{SPOTLIGHT_IMG}" alt="">
+  <div class="copy">
+    <p class="kicker">{c['spot_h']}</p>
+    <h2>{c['spot_q']}</h2>
+    <h3>{c['spot_card_title']}</h3>
+    <p>{c['spot_card_ex']}</p>
+    <a class="btn btn-primary" href="https://learnlooklocate.com/do-i-need-radiation-if-i-have-dcis">Read more</a>
+  </div>
+</section>
+<section class="story reverse">
+  <img src="{DIAGNOSIS}" alt="">
+  <div class="copy">
+    <h2>{c['fresh_h']}</h2>
+    <p>{c['fresh_p1']}</p>
+    <p>{c['mission']}</p>
+    <p>{c['explore']}</p>
+  </div>
+</section>
+<section id="partners" class="wrap section">
+  <h2>{c['united_h']}</h2>
+  <p>{c['united_p1']} {c['united_p2']}</p>
+  <div class="covers" style="margin-top:24px">{cover_partners()}</div>
+</section>
+<section id="education" class="wrap section">
+  <h2>{c['edu_h']}</h2>
+  <p>{c['edu_p1']}</p>
+  <p>{c['edu_p3']}</p>
+  <p><a class="btn btn-primary" href="https://learnlooklocate.com/educate/">Explore What’s New</a></p>
+  <div class="mag" style="margin-top:24px">{cards(EDU, "mag")}</div>
+</section>
+<section class="wrap section">
+  <div class="quote-frame">
+    <img src="{YARA}" alt="Dr. Yara Robertson">
+    <h2>{c['know_h']}</h2>
+    <blockquote>{c['quote']}</blockquote>
+    <p>{c['quote_by']}</p>
+    <p>{c['nl_p']}</p>
+    <form class="form" onsubmit="return false" style="justify-content:center;margin-top:16px">
+      <input type="email" placeholder="Email address" aria-label="Email">
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+<section class="story" id="doctors">
+  <img src="{HERO_BG2}" alt="">
+  <div class="copy">
+    <p class="kicker">{c['docs_h']}</p>
+    <h2>{c['docs_q']}</h2>
+    <p>{c['docs_overview']}</p>
+    <a class="btn btn-primary" href="https://learnlooklocate.com/educate/patient-education/">Watch now</a>
+  </div>
+</section>
+<section class="wrap section">
+  <p>{c['docs_why']}</p>
+  <div class="mag">{cards(DOCS, "mag")}</div>
+</section>
+<section class="story reverse" id="survivors">
+  <img src="{IMG}/2025/02/Header-image-Stage-4-Breast-Cancer.webp" alt="">
+  <div class="copy">
+    <h2>{c['surv_h']}</h2>
+    <p>{c['surv_p1']}</p>
+    <p>{c['surv_p4']}</p>
+    <a class="btn btn-primary" href="https://learnlooklocate.com/survivor-stories/">Learn more</a>
+  </div>
+</section>
+<section class="wrap section">
+  <div class="mag">{cards(SURV, "mag")}</div>
+</section>
+<section class="story" id="blogs">
+  <img src="{IMG}/2025/11/Lumpectomy-18.png" alt="">
+  <div class="copy">
+    <h2>{c['blog_h']}</h2>
+    <p class="kicker">{c['blog_sub']}</p>
+    <p>{c['blog_p']}</p>
+    <a class="btn btn-primary" href="https://learnlooklocate.com/blog/">Learn more</a>
+  </div>
+</section>
+<section class="wrap section">
+  <div class="mag">{cards(BLOGS, "mag")}</div>
+</section>
+<footer class="wrap footer">Learn Look Locate · Design E (Lush Gallery). Dark cinematic bands in the spirit of Taxol/Herceptin, Lymph Node Surgery, and Dr. Staci pages, with the Clinical featured-card grid.</footer>
+</body></html>
+"""
+
+
 INDEX = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -719,14 +1049,17 @@ INDEX = f"""<!DOCTYPE html>
 body{{margin:0;font-family:"DM Sans",system-ui,sans-serif;background:#f6f3ef;color:#241c20;line-height:1.6}}
 .wrap{{width:min(1080px,calc(100% - 40px));margin:48px auto 80px}}
 h1{{font-family:Fraunces,Georgia,serif;font-size:clamp(2rem,4vw,3.2rem);line-height:1.15}}
-.grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:32px}}
+.grid{{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:32px}}
 a.opt{{display:block;background:#fff;border-radius:18px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 12px 30px rgba(0,0,0,.06)}}
 .swatch{{height:160px}}
 .a{{background:linear-gradient(135deg,#f7f1ea,#b44a66)}}
 .b{{background:linear-gradient(135deg,#13203a,#c43b63)}}
 .c{{background:linear-gradient(135deg,#5b2744,#d46a4c)}}
+.d{{background:linear-gradient(135deg,#2a141c,#c44b6a)}}
+.e{{background:linear-gradient(135deg,#1f1418,#e07a8a)}}
 .opt div{{padding:18px 20px 22px}}
 .opt h2{{margin:0 0 8px;font-size:1.2rem}}
+.badge{{display:inline-block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;background:#c44b6a;color:#fff;padding:3px 8px;border-radius:999px;margin-bottom:8px}}
 .note{{background:#fff;border-radius:16px;padding:20px 24px;margin-top:28px}}
 @media(max-width:800px){{.grid{{grid-template-columns:1fr}}}}
 </style>
@@ -734,17 +1067,19 @@ a.opt{{display:block;background:#fff;border-radius:18px;overflow:hidden;text-dec
 <body>
 <div class="wrap">
   <p style="letter-spacing:.16em;text-transform:uppercase;font-size:12px;font-weight:700;color:#b44a66">Learn Look Locate · client review</p>
-  <h1>Three section redesigns for What’s New in Breast Cancer Education</h1>
-  <p>These mockups keep the live page copy, partner stories, newsletter quote, and images. Only layout, type, color, and section rhythm change. Open a version, scroll the full page, then reply with A, B, C, or a mix (for example: “B hero + C partners”). After you confirm, we can rebuild it in Elementor.</p>
+  <h1>New attractive versions, based on Editorial Quiet + the Clinical cards</h1>
+  <p>Start with <strong>D</strong> and <strong>E</strong>. They keep the cream editorial voice you preferred, use the featured-card grid from Clinical (wide lead story + smaller cards), and borrow the cinematic photo bands from pages such as Goldilocks Mastectomy, Fertility Preservation, DCIS radiation, Medical Menopause, Taxol &amp; Herceptin, and Lymph Node Surgery.</p>
   <div class="grid">
-    <a class="opt" href="version-a-editorial.html"><div class="swatch a"></div><div><h2>A · Editorial Quiet</h2><p>Magazine layout: serif headlines, cream paper, two-column essays, rounded photo crop. Calm and literary.</p></div></a>
-    <a class="opt" href="version-b-clinical.html"><div class="swatch b"></div><div><h2>B · Clinical Clarity</h2><p>Navy hero, sticky section chips, high-contrast cards, featured education tile. Feels like a trusted medical resource.</p></div></a>
-    <a class="opt" href="version-c-warm.html"><div class="swatch c"></div><div><h2>C · Warm Connection</h2><p>Full-bleed photo hero, overlapping story cards, pill ribbons, circular portrait quote. Community-forward.</p></div></a>
+    <a class="opt" href="version-d-cinematic.html"><div class="swatch d"></div><div><span class="badge">New · recommended</span><h2>D · Cinematic Editorial</h2><p>Full-bleed photo hero like the education pages, cream paper intro, photo-cover partner tiles, and the Clinical magazine grid for Education / Doctors / Survivors / Blogs.</p></div></a>
+    <a class="opt" href="version-e-lush.html"><div class="swatch e"></div><div><span class="badge">New</span><h2>E · Lush Gallery</h2><p>Darker, more dramatic split-screen photo chapters (Taxol/Herceptin energy) with the same featured-card module. More immersive, still the same content.</p></div></a>
+    <a class="opt" href="version-a-editorial.html"><div class="swatch a"></div><div><h2>A · Editorial Quiet</h2><p>Earlier favorite. Calmer magazine page without the cinematic bands.</p></div></a>
+    <a class="opt" href="version-b-clinical.html"><div class="swatch b"></div><div><h2>B · Clinical Clarity</h2><p>Source of the featured education cards you liked in the screenshot.</p></div></a>
   </div>
+  <p style="margin-top:18px"><a href="version-c-warm.html">C · Warm Connection</a> is still available for comparison.</p>
   <div class="note">
-    <strong>Unchanged on purpose:</strong> hero copy, mission paragraphs, Spotlight DCIS story, seven partner/education tiles (Tumor Localization, Walgreens, Genomic Testing, Stage 4, Lumpectomy, DCIS radiation, ctDNA recurrence), Dr. Yara Robertson quote, ConvertKit signup, Discussions / Survivors / Blogs sections and their post titles.
+    <strong>Same content:</strong> What’s New copy, Spotlight DCIS, seven partner tiles, Dr. Yara quote, newsletter, Discussions / Survivors / Blogs.
     <br><br>
-    <strong>Live reference:</strong> <a href="https://learnlooklocate.com/whats-new-breast-cancer-education/">learnlooklocate.com/whats-new-breast-cancer-education</a>
+    Preview locally: open any HTML file, or use the local server at <code>http://localhost:3000</code>.
   </div>
 </div>
 </body>
@@ -759,6 +1094,8 @@ def main():
     (root / "version-a-editorial.html").write_text(page_a(), encoding="utf-8")
     (root / "version-b-clinical.html").write_text(page_b(), encoding="utf-8")
     (root / "version-c-warm.html").write_text(page_c(), encoding="utf-8")
+    (root / "version-d-cinematic.html").write_text(page_d(), encoding="utf-8")
+    (root / "version-e-lush.html").write_text(page_e(), encoding="utf-8")
     print("wrote", root)
 
 

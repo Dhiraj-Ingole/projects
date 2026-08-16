@@ -2,7 +2,13 @@
 
 File: `elementor-whats-new-d2.json`
 
-This is an Elementor **page template** (export format `0.4`), rebuilt from the approved D2 cinematic layout. Card and partner links go to the live article permalinks. Hover lift / image zoom is included. The ConvertKit newsletter form from the current What’s New page is embedded.
+This is an Elementor **page template** (export format `0.4`), rebuilt from the finalized HTML preview. Card and partner links go to the live article permalinks. Hover, Montserrat body type, pill buttons, larger partner logos, and the stronger Education overlay are included. The ConvertKit newsletter form from the current What’s New page is embedded.
+
+## Images — do not re-upload
+
+Every photo and logo already uses a `learnlooklocate.com/wp-content/uploads/...` URL from the live Media Library. The template does **not** bundle image files. After import, Elementor loads those existing files. You do not need to import a media zip or upload the images again.
+
+If the importer asks “Import images?”, you can leave that off. These are HTML widgets pointing at URLs already on the site, not new attachments.
 
 ## How to import
 
@@ -10,23 +16,15 @@ This is an Elementor **page template** (export format `0.4`), rebuilt from the a
 2. Click **Import Templates**.
 3. Upload `elementor-whats-new-d2.json`.
 4. Open the **What’s New** page with Elementor (or create a new page).
-5. Add a template / insert **What's New — D2 Cinematic**.
+5. Insert **What's New — D2 Cinematic**.
 6. Publish. Hide the default page title if the theme still shows one.
-
-Alternative: **Elementor → Tools → Import / Export** if your Elementor version lists JSON page exports there.
 
 ## After import
 
 - Grids are HTML widgets so the D2 magazine layout and hover motion stay intact without Unlimited Elements.
 - To swap a card, edit the HTML widget for that section and change the `href`, image, date, or title.
 - The live ConvertKit form (`forms/8767355`) is in the newsletter section.
-- Partner tiles, Spotlight, Education, Discussions, Survivors, and Blogs keep the same copy and photos as D2.
 
-## Preview mockup
+## Preview HTML
 
-Open this single HTML file before importing:
-
-- `whats-new-preview.html`
-- Local: `http://localhost:3000/whats-new-preview.html`
-
-It is the same layout, links, and hover as the Elementor JSON.
+`whats-new-preview.html` — same layout as this import.

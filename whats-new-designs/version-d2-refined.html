@@ -6,7 +6,7 @@
 <title>What's New — Design D2 Refined | Learn Look Locate</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -18,18 +18,17 @@ a{color:inherit}
   padding:10px 18px;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,0,0,.08);font-size:13px}
 .design-switcher a{padding:6px 10px;border-radius:999px;text-decoration:none;border:1px solid transparent}
 .design-switcher a.is-active{background:var(--accent);color:#fff}
-.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;border-radius:999px;padding:14px 22px;font-weight:600}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;border-radius:999px;padding:14px 22px;font-weight:600;font-size:16px}
 .btn-primary{background:var(--accent);color:#fff}
 .section{padding:72px 0}
-.kicker{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:700}
-h1,h2,h3{line-height:1.2;margin:0 0 .5em}
-.lead{font-size:1.08rem;max-width:62ch}
+h1,h2,h3{line-height:1.25;margin:0 0 .45em;font-weight:500}
+.lead{max-width:62ch}
 .card{text-decoration:none;display:flex;flex-direction:column;overflow:hidden;background:var(--card);color:var(--ink)}
 .card-media{aspect-ratio:16/10;overflow:hidden}
 .card-media img{width:100%;height:100%;object-fit:cover}
 .card-body{padding:16px 18px 20px}
 .card time{font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:.65}
-.card h3{font-size:1.05rem;margin:.35em 0 .6em}
+.card h3{font-family:"Libre Baskerville",Georgia,serif;font-size:20px;font-weight:600;margin:.35em 0 .6em;line-height:1.3}
 .more{font-size:13px;font-weight:700;color:var(--accent)}
 .form{display:flex;gap:8px;flex-wrap:wrap}
 .form input{flex:1;min-width:220px;padding:14px 16px;border:1px solid #d8cfd3;border-radius:10px;font:inherit}
@@ -39,17 +38,21 @@ h1,h2,h3{line-height:1.2;margin:0 0 .5em}
 .mag .card{border-radius:16px;background:#fff;box-shadow:0 14px 36px rgba(80,30,40,.08)}
 .mag .card.is-feature{grid-column:1;grid-row:1 / span 2;display:flex;flex-direction:column;height:100%}
 .mag .card.is-feature .card-media{aspect-ratio:auto;flex:1;min-height:280px}
-.mag .card.is-feature h3{font-size:1.55rem;font-family:var(--serif)}
+.mag .card.is-feature h3{font-size:20px;font-family:"Libre Baskerville",Georgia,serif;font-weight:600}
 .cover{position:relative;min-height:280px;border-radius:18px;overflow:hidden;display:block;text-decoration:none;color:#fff}
 .cover>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.cover-grad{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:18px;background:linear-gradient(180deg,rgba(40,16,28,.05),rgba(40,16,28,.78))}
-.cover h3{font-size:1rem;margin:8px 0 0;font-family:var(--serif)}
-.cover .partner-logo{height:34px;width:auto;object-fit:contain;background:#fff;border-radius:8px;padding:4px 8px}
+.cover-grad{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;padding:18px;background:linear-gradient(180deg,rgba(40,16,28,.05),rgba(40,16,28,.78))}
+.cover h3{font-size:20px;margin:8px 0 0;font-family:"Libre Baskerville",Georgia,serif;font-weight:600}
+.cover .partner-logo{height:40px;width:auto;max-width:160px;object-fit:contain;background:#fff;border-radius:8px;padding:6px 10px;align-self:flex-start;flex:none}
 :root{
   --bg:#f6efe8; --ink:#2a1c22; --accent:#c44b6a; --card:#fff;
-  --sans:"Source Sans 3",system-ui,sans-serif; --serif:"Libre Baskerville",Georgia,serif;
+  --sans:"Poppins",system-ui,sans-serif; --serif:"Libre Baskerville",Georgia,serif;
 }
-h1,h2,.serif{font-family:var(--serif);font-weight:400}
+body{font-size:22px;font-weight:300;line-height:1.65}
+h1,h2,h3,.serif{font-family:var(--sans);font-weight:500}
+h2{font-size:clamp(28px,3vw,42px)}
+h3{font-size:clamp(22px,2vw,32px)}
+p{font-size:22px;font-weight:300;margin:0 0 1em}
 
 /* 1) Hero: text on the right so the face stays clear */
 .hero-cine{min-height:88vh;position:relative;display:flex;align-items:flex-end;color:#fff}
@@ -57,10 +60,9 @@ h1,h2,.serif{font-family:var(--serif);font-weight:400}
 .hero-cine::after{content:"";position:absolute;inset:0;background:linear-gradient(270deg,rgba(32,14,22,.86) 0%, rgba(32,14,22,.55) 38%, rgba(32,14,22,.08) 62%, transparent 78%)}
 .hero-cine .wrap{position:relative;z-index:1;padding:48px 0 80px;display:flex;justify-content:flex-end}
 .hero-copy{width:min(540px,100%)}
-.hero-cine h1{font-size:clamp(2.6rem,6vw,5.2rem);line-height:.95}
-.hero-cine h1 em{font-style:italic;color:#f3c2ce}
-.hero-cine .kicker{color:#f3c2ce}
-.guided{font-size:14px;opacity:.9;margin:10px 0 22px}
+.hero-cine h1{font-size:60px;line-height:1.15;text-transform:uppercase;font-weight:500}
+.hero-cine h1 em{font-style:normal;color:#f3c2ce}
+.hero-sub{font-size:25px;font-weight:500;margin:0 0 18px}
 
 .paper{background:#fffaf6;border-radius:28px;padding:40px;margin-top:-56px;position:relative;z-index:2;box-shadow:0 24px 50px rgba(60,20,30,.12)}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:36px}
@@ -71,26 +73,28 @@ h1,h2,.serif{font-family:var(--serif);font-weight:400}
 .spotlight .cine-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .spotlight::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(32,14,22,.78) 0%, rgba(32,14,22,.45) 48%, rgba(32,14,22,.2) 100%)}
 .spotlight .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center;padding:56px 0}
-.spot-copy h2{font-size:clamp(1.8rem,4vw,2.8rem);max-width:16ch}
-.spot-copy .quote{font-family:var(--serif);font-style:italic;font-size:1.2rem;max-width:40ch}
+.spot-copy h2{font-size:clamp(28px,3vw,42px);max-width:18ch}
+.spot-copy .quote{font-size:clamp(22px,2vw,32px);font-weight:500;max-width:40ch}
 .spot-card{background:#fff;color:var(--ink);border-radius:20px;overflow:hidden;text-decoration:none;box-shadow:0 20px 50px rgba(0,0,0,.28);display:block}
 .spot-card img{width:100%;height:260px;object-fit:cover}
 .spot-card .body{padding:18px 20px 22px}
 .spot-card time{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:700}
-.spot-card h3{font-family:var(--serif);font-size:1.45rem;margin:.35em 0 .5em}
+.spot-card h3{font-family:"Libre Baskerville",Georgia,serif;font-size:20px;font-weight:600;margin:.35em 0 .5em}
+.spot-card p{font-size:16px}
 
 /* 3) Education: original section background as a photo header */
-.photo-header{position:relative;min-height:420px;color:#fff;overflow:hidden}
-.photo-header img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
-.photo-header::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(32,14,22,.15),rgba(32,14,22,.72))}
-.photo-header .wrap{position:relative;z-index:1;padding:64px 0 48px}
-.photo-header h2{font-size:clamp(1.8rem,4vw,2.8rem);max-width:18ch}
+.photo-header{position:relative;min-height:520px;color:#fff;overflow:hidden}
+.photo-header img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:18% center}
+.photo-header::after{content:"";position:absolute;inset:0;background:linear-gradient(270deg,rgba(32,14,22,.88) 0%, rgba(32,14,22,.55) 42%, rgba(32,14,22,.08) 68%, transparent 82%)}
+.photo-header .wrap{position:relative;z-index:1;padding:64px 0 48px;display:flex;justify-content:flex-end}
+.photo-header .edu-copy{width:min(620px,100%)}
+.photo-header h2{font-size:clamp(28px,2vw,40px);max-width:18ch}
 
 /* 4) Discussions: original photo as a left portrait pane */
 .chapter{display:grid;grid-template-columns:.92fr 1.08fr;min-height:480px;background:#2a1c22;color:#fff}
 .chapter .pane{min-height:420px;object-fit:cover;width:100%;height:100%}
 .chapter .copy{padding:56px 48px;display:flex;flex-direction:column;justify-content:center}
-.chapter .kicker{color:#f3c2ce}
+.chapter h2{font-size:clamp(28px,2vw,40px)}
 
 /* 5) Survivors: original photo as a soft full-bleed wash behind a cream panel */
 .wash{position:relative;padding:72px 0;overflow:hidden}
@@ -106,14 +110,15 @@ h1,h2,.serif{font-family:var(--serif);font-weight:400}
 
 .quote-frame{display:grid;grid-template-columns:200px 1fr;gap:28px;align-items:center;background:#2a1c22;color:#fff;border-radius:28px;padding:28px}
 .quote-frame img{width:200px;height:240px;object-fit:cover;border-radius:18px}
-.quote-frame blockquote{font-family:var(--serif);font-size:1.7rem;font-style:italic;margin:0}
+.quote-frame blockquote{font-family:"Libre Baskerville",Georgia,serif;font-size:22px;font-weight:500;font-style:italic;margin:0}
 
 @media (max-width:900px){
   .split,.covers,.spotlight .wrap,.chapter,.blog-open,.quote-frame,.mag{grid-template-columns:1fr}
   .mag .card.is-feature{grid-column:1 / -1;grid-row:auto}
   .hero-cine{min-height:72vh}
-  .hero-cine .wrap{justify-content:flex-start}
-  .hero-cine::after{background:linear-gradient(180deg,transparent 20%, rgba(32,14,22,.82))}
+  .hero-cine h1{font-size:36px}
+  .hero-cine .wrap,.photo-header .wrap{justify-content:flex-start}
+  .hero-cine::after,.photo-header::after{background:linear-gradient(180deg,transparent 18%, rgba(32,14,22,.86))}
   .chapter{grid-template-columns:1fr}
   .chapter .pane{min-height:280px}
 }
@@ -131,9 +136,8 @@ h1,h2,.serif{font-family:var(--serif);font-weight:400}
   <img class="hero-bg" src="https://learnlooklocate.com/wp-content/uploads/2025/04/Whats-New-at-Learn-Look-Locate-%E2%80%94-Fresh-Voices-Breakthroughs-and-Global-Connections-At-Learn-Look-Locate-were-always-evolving-to-bring-you-the-latest-in-trusted-breast-cancer-education-and-hea.jpg" alt="">
   <div class="wrap">
     <div class="hero-copy">
-      <p class="kicker">What's New in Breast Cancer</p>
       <h1>What's New <em>in breast cancer</em></h1>
-      <p class="guided">Education · Discussions · Survivors · Doctors · Blogs · Innovations<br>Medically vetted with Learn Look Locate advisors — where compassion meets science.</p>
+      <p class="hero-sub">Education • Discussions • Survivors • Doctors • Blogs • Breast Cancer Innovations</p>
       <p>Stay informed with the newest educational pages, global interviews, and inspiring survivor stories from Learn Look Locate — where compassion meets science. Our What’s New section showcases the latest medically vetted resources created with our trusted medical advisors, leading experts in oncology, surgery, radiology, pharmacy, and women’s health.</p>
       <p><a class="btn btn-primary" href="#education">Explore What’s New</a></p>
     </div>
@@ -162,12 +166,11 @@ h1,h2,.serif{font-family:var(--serif);font-weight:400}
   <img class="cine-bg" src="https://learnlooklocate.com/wp-content/uploads/2025/09/spotlight-innovations-in-breast-cancer-care-progress-breakthroughs-learn-look-locate.jpg.png" alt="">
   <div class="wrap">
     <div class="spot-copy">
-      <p class="kicker" style="color:#f3c2ce">Spotlight</p>
       <h2>Spotlight: Where Progress Meets Patients and Breakthroughs Move Forward</h2>
       <p class="quote">“Shining a light on the innovations that are redefining breast cancer care and guiding patients on their journey.”</p>
     </div>
-    <a class="spot-card" href="https://learnlooklocate.com/do-i-need-radiation-if-i-have-dcis">
-      <img src="https://learnlooklocate.com/wp-content/uploads/2026/06/image.avif" alt="Do All Women with DCIS Need Radiation?">
+    <a class="spot-card" href="https://learnlooklocate.com/do-all-women-with-dcis-need-radiation/">
+      <img src="https://learnlooklocate.com/wp-content/uploads/2026/06/do-all-women-with-DCIS-Need-Radiation-768x768.jpg" alt="Do All Women with DCIS Need Radiation?">
       <div class="body">
         <time>Featured</time>
         <h3>Do All Women with DCIS Need Radiation?</h3>
@@ -179,7 +182,6 @@ h1,h2,.serif{font-family:var(--serif);font-weight:400}
 </section>
 
 <section id="partners" class="wrap section">
-  <p class="kicker">United to Empower and Educate</p>
   <h2>United to Empower and Educate</h2>
   <p class="lead">Learn Look Locate and leading voices in breast health, driving our global mission to bring you clear, empowering guidance. Together, we’re sharing trusted knowledge and meaningful support to help you navigate your breast health journey with clarity and confidence</p>
   <div class="covers" style="margin-top:28px">
@@ -238,34 +240,35 @@ h1,h2,.serif{font-family:var(--serif);font-weight:400}
 <section class="photo-header" id="education">
   <img class="bg" src="https://learnlooklocate.com/wp-content/uploads/2025/04/Whats-New-at-Learn-Look-Locate-%E2%80%94-Fresh-Voices-Breakthroughs-and-Global-Connections-At-Learn-Look-Locate-were-always-evolving-to-bring-you-the-latest-in-trusted-breast-cancer-education-and-hea-2.jpg" alt="Original Education section background">
   <div class="wrap">
-    <p class="kicker" style="color:#f3c2ce">Education</p>
+    <div class="edu-copy">
     <h2>New Medically Vetted Breast Cancer Education: Where Compassion Meets Science</h2>
     <p style="max-width:62ch">We’re bringing new, medically vetted breast cancer education pages to the forefront every day — created in collaboration with trusted oncologists, surgeons, radiologists, pharmacists, and survivors who share our mission to educate and empower people worldwide. Each new page reflects the evolving landscape of breast cancer care, uniting medical expertise with the heartfelt voices of real survivors. From early detection and genetic testing to dense breast screening, diagnosis, and treatment innovations — every page is designed to meet you wherever you are on your journey.</p>
     <p style="max-width:62ch">You’ll find expert insights on chemotherapy and hair changes, breast imaging, pathology, surgery and reconstruction, hormone therapy, and survivorship — all written in patient-friendly language and reviewed by our medical advisors for accuracy and trust.</p>
     <p style="max-width:62ch">These pages represent more than information; they are living connections between patients and experts — building a compassionate, global community of understanding, one new page at a time.</p>
     <p><a class="btn btn-primary" href="https://learnlooklocate.com/educate/">Explore What’s New</a></p>
+    </div>
   </div>
 </section>
 <section class="wrap section" style="padding-top:36px">
   <div class="mag">
     <a class="card is-feature" href="https://learnlooklocate.com/medical-menopause-after-breast-cancer/">
-      <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2024/09/diagnosis-img-1.webp" alt=""></div>
+      <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2026/07/medical-menopause-after-breast-cancer.avif" alt=""></div>
       <div class="card-body"><time>29 Jul, 2026</time><h3>Medical Menopause—SERIOUSLY???</h3><span class="more">Read more</span></div>
     </a>
-    <a class="card" href="https://learnlooklocate.com/do-i-need-radiation-if-i-have-dcis">
-      <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2026/06/image.avif" alt=""></div>
+    <a class="card" href="https://learnlooklocate.com/do-i-need-radiation-if-i-have-dcis/">
+      <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2026/06/dcis-radiation-treatment-options-learn-look-locate.jpg" alt=""></div>
       <div class="card-body"><time>14 Jun, 2026</time><h3>Do I Need Radiation If I Have DCIS</h3><span class="more">Read more</span></div>
     </a>
-    <a class="card" href="https://learnlooklocate.com/understanding-treatment-options-for-stage-4-breast-cancer">
-      <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2025/02/Header-image-Stage-4-Breast-Cancer.webp" alt=""></div>
+    <a class="card" href="https://learnlooklocate.com/first-line-maintenance-therapy-stage-iv-breast-cancer/">
+      <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2026/05/Maintenance-Therapy.png" alt=""></div>
       <div class="card-body"><time>28 May, 2026</time><h3>Metastatic Breast Cancer: First-Line & Maintenance Therapy</h3><span class="more">Read more</span></div>
     </a>
     <a class="card" href="https://learnlooklocate.com/goldilocks-mastectomy/">
-      <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2025/11/Lumpectomy-18.png" alt=""></div>
+      <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2026/04/goldilocks-masectomy.webp" alt=""></div>
       <div class="card-body"><time>23 Apr, 2026</time><h3>Goldilocks Mastectomy</h3><span class="more">Read more</span></div>
     </a>
-    <a class="card" href="https://learnlooklocate.com/educate/">
-      <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2025/09/spotlight-innovations-in-breast-cancer-care-progress-breakthroughs-learn-look-locate.jpg.png" alt=""></div>
+    <a class="card" href="https://learnlooklocate.com/late-night-breast-health-breast-cancer-questions-trusted-answers/">
+      <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2026/04/Late-Night-Breast-Health-1536x838.jpg" alt=""></div>
       <div class="card-body"><time>30 Mar, 2026</time><h3>Late-Night Breast Cancer Questions, Answered</h3><span class="more">Read more</span></div>
     </a>
   </div>
@@ -290,8 +293,8 @@ h1,h2,.serif{font-family:var(--serif);font-weight:400}
 <section class="chapter" id="doctors">
   <img class="pane" src="https://learnlooklocate.com/wp-content/uploads/2025/04/Whats-New-at-Learn-Look-Locate-%E2%80%94-Fresh-Voices-Breakthroughs-and-Global-Connections-At-Learn-Look-Locate-were-always-evolving-to-bring-you-the-latest-in-trusted-breast-cancer-education-and-hea-6.jpg" alt="Original Discussions section background">
   <div class="copy">
-    <p class="kicker">Discussions with Doctors</p>
-    <h2>“Real Conversations. Trusted Experts. Deeper Answers.”</h2>
+    <h2>Discussions with Doctors</h2>
+    <h3>“Real Conversations. Trusted Experts. Deeper Answers.”</h3>
     <p>At Learn Look Locate, Discussions with Doctors is more than an interview series — it’s a global platform for education, compassion, and connection. As a breast cancer survivor and founder, I know how valuable it is to hear directly from trusted medical experts. That’s why every discussion is personally conducted by me with leading oncologists, surgeons, radiologists, pharmacists, and researchers. Together, we explore the latest in breast cancer detection, diagnosis, treatment, and survivorship in a way that’s clear, caring, and easy to understand.</p>
     <p>What makes this series different is its authenticity and accessibility. Each episode is medically vetted and globally accessible, so patients everywhere can feel informed and supported.</p>
     <p><a class="btn btn-primary" href="https://learnlooklocate.com/educate/patient-education/">Watch now</a></p>
@@ -301,23 +304,23 @@ h1,h2,.serif{font-family:var(--serif);font-weight:400}
   <p>We talk openly about dense breast screening, imaging, treatment side effects, new technologies, and life after cancer — giving you answers that truly matter. These conversations go beyond surface-level information. They are heartfelt exchanges designed to empower patients, build trust, and offer hope. Discussions with Doctors connects people worldwide with reliable, patient-friendly breast cancer education. Each episode strengthens the bridge between medical expertise and emotional understanding, helping viewers feel confident in their journey.</p>
   <div class="mag" style="margin-top:24px">
     <a class="card is-feature" href="https://learnlooklocate.com/educate/patient-education/">
-      <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2024/07/img-2.webp" alt=""></div>
+      <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2025/11/breast-cancer-in-the-military-major-lindsey-parsons-dr-anjali-malik-learn-look-locate-1.jpg" alt=""></div>
       <div class="card-body"><time>03 Nov, 2025</time><h3>Breast Cancer in the Military</h3><span class="more">Read more</span></div>
     </a>
     <a class="card" href="https://learnlooklocate.com/educate/patient-education/">
-      <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2024/09/diagnosis-img-1.webp" alt=""></div>
+      <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2025/04/1-1.jpg" alt=""></div>
       <div class="card-body"><time>03 Apr, 2025</time><h3>Understanding Inflammatory Breast Cancer: Symptoms, Risks And Treatments</h3><span class="more">Read more</span></div>
     </a>
     <a class="card" href="https://learnlooklocate.com/educate/patient-education/">
-      <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2025/02/Header-image-Stage-4-Breast-Cancer.webp" alt=""></div>
+      <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2025/02/Dr.-Rajendran.webp" alt=""></div>
       <div class="card-body"><time>22 Feb, 2025</time><h3>Discover Expert Insights on Stage 4 Breast Cancer from Dr. Ramji Rajendran</h3><span class="more">Read more</span></div>
     </a>
     <a class="card" href="https://learnlooklocate.com/educate/patient-education/">
-      <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2024/04/banner-new.webp" alt=""></div>
+      <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2025/06/Allison-DiPasquale.jpg" alt=""></div>
       <div class="card-body"><time>14 Feb, 2025</time><h3>Breast Cancer Screening & Treatment: What You Need to Know</h3><span class="more">Read more</span></div>
     </a>
     <a class="card" href="https://learnlooklocate.com/educate/patient-education/">
-      <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2024/08/Dr.-Yara-Robertson-.jpg" alt=""></div>
+      <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2025/01/header_kelly.webp" alt=""></div>
       <div class="card-body"><time>15 Jan, 2025</time><h3>Comprehensive Insights: Dr. William Audeh and Breast Cancer Survivor Kelly on Aromatase Inhibitors</h3><span class="more">Read more</span></div>
     </a>
   </div>
@@ -327,8 +330,8 @@ h1,h2,.serif{font-family:var(--serif);font-weight:400}
   <img class="bg" src="https://learnlooklocate.com/wp-content/uploads/2025/04/Whats-New-at-Learn-Look-Locate-%E2%80%94-Fresh-Voices-Breakthroughs-and-Global-Connections-At-Learn-Look-Locate-were-always-evolving-to-bring-you-the-latest-in-trusted-breast-cancer-education-and-hea-4.jpg" alt="Original Survivors section background">
   <div class="wrap">
     <div class="wash-panel">
-      <p class="kicker">Survivors</p>
       <h2>Survivor Conversations</h2>
+      <h3>New Medically Vetted Breast Cancer Education: Where Compassion Meets Science</h3>
       <p>Explore the newest breast cancer education resources from Learn Look Locate — all medically vetted and created with our trusted oncologists, surgeons, radiologists, pharmacists, and survivors. Together, we’re bringing accurate, compassionate, and globally accessible information to everyone navigating breast health.</p>
       <p>Each page blends trusted medical expertise with real survivor voices, offering guidance across every stage of the journey — from early detection, genetic testing, and dense breast screening to diagnosis, treatment innovations, and survivorship.</p>
       <p>Find expert insights on chemotherapy and hair changes, breast imaging, pathology, surgery and reconstruction, hormone therapy, and recovery — all written in patient-friendly language and reviewed by medical professionals for accuracy and trust.</p>
@@ -336,24 +339,24 @@ h1,h2,.serif{font-family:var(--serif);font-weight:400}
       <p><a class="btn btn-primary" href="https://learnlooklocate.com/survivor-stories/">Learn more</a></p>
     </div>
     <div class="mag">
-      <a class="card is-feature" href="https://learnlooklocate.com/survivor-stories/">
-        <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2026/06/image.avif" alt=""></div>
+      <a class="card is-feature" href="https://learnlooklocate.com/knowledge-brings-confidence-with-dcisionrt/">
+        <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2026/05/leeanne-stage-0-dcis-survivor-story-hawaii-learn-look-locate.jpg" alt=""></div>
         <div class="card-body"><time>17 Jun, 2026</time><h3>Knowledge Brings Confidence with DCISionRT</h3><span class="more">Read more</span></div>
       </a>
-      <a class="card" href="https://learnlooklocate.com/survivor-stories/">
-        <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2026/06/prelude.png" alt=""></div>
+      <a class="card" href="https://learnlooklocate.com/how-dcisionrt-helped-a-cancer-survivor-avoid-over-treatment/">
+        <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2026/05/alexia-vernon-stage-0-dcis-survivor-story-nevada.jpg" alt=""></div>
         <div class="card-body"><time>17 Jun, 2026</time><h3>How DCISionRT Helped a Cancer Survivor Avoid Over-Treatment</h3><span class="more">Read more</span></div>
       </a>
       <a class="card" href="https://learnlooklocate.com/survivor-stories/">
-        <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2024/09/diagnosis-img-1.webp" alt=""></div>
+        <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2026/02/surviving-cancer-complications-strength-and-healing.jpg" alt=""></div>
         <div class="card-body"><time>25 Feb, 2026</time><h3>Stronger Than I Ever Knew: A Breast Cancer Survivor’s Journey</h3><span class="more">Read more</span></div>
       </a>
       <a class="card" href="https://learnlooklocate.com/survivor-stories/">
-        <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2025/09/spotlight-innovations-in-breast-cancer-care-progress-breakthroughs-learn-look-locate.jpg.png" alt=""></div>
+        <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2025/12/dcis-survivor-story-from-routine-mri-to-resilience.jpg" alt=""></div>
         <div class="card-body"><time>12 Dec, 2025</time><h3>DCIS Survivor Story: From Routine MRI to Resilience</h3><span class="more">Read more</span></div>
       </a>
       <a class="card" href="https://learnlooklocate.com/survivor-stories/">
-        <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2024/08/Dr.-Yara-Robertson-.jpg" alt=""></div>
+        <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2025/11/dr-leona-hamrick-breast-cancer-survivor-story-learn-look-locate.jpg" alt=""></div>
         <div class="card-body"><time>06 Nov, 2025</time><h3>Dr. Leona Hamrick, Physician Associate & Breast Cancer Survivor</h3><span class="more">Read more</span></div>
       </a>
     </div>
@@ -363,8 +366,8 @@ h1,h2,.serif{font-family:var(--serif);font-weight:400}
 <section class="wrap section" id="blogs">
   <div class="blog-open">
     <div>
-      <p class="kicker">Latest Breast Cancer Blogs</p>
-      <h2>Breakthroughs in Breast Care</h2>
+      <h2>Latest Breast Cancer Blogs</h2>
+      <h3>Breakthroughs in Breast Care</h3>
       <p>These are the newest blogs on Learn Look Locate — created to support you with the latest breast cancer research, expert insights, and survivor stories. Each post is medically vetted and written with compassion to help you navigate every stage of your breast cancer journey — from early detection and diagnosis to treatment, recovery, and life after cancer. Our goal is to keep you informed, empowered, and connected to the latest breakthroughs in breast cancer care and support.</p>
       <p><a class="btn btn-primary" href="https://learnlooklocate.com/blog/">Learn more</a></p>
     </div>
@@ -374,23 +377,23 @@ h1,h2,.serif{font-family:var(--serif);font-weight:400}
   </div>
   <div class="mag" style="margin-top:36px">
     <a class="card is-feature" href="https://learnlooklocate.com/blog/">
-      <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2024/09/diagnosis-img-1.webp" alt=""></div>
+      <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2026/07/your-pathology-report-key-to-understanding-your-breast-cancer-diagnosis-dr-hannah-gilmore-learn-look-locate.avif" alt=""></div>
       <div class="card-body"><time>13 Aug, 2026</time><h3>Your Pathology Report: The Key to Understanding Your Breast Cancer Diagnosis</h3><span class="more">Read more</span></div>
     </a>
     <a class="card" href="https://learnlooklocate.com/blog/">
-      <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2025/02/Header-image-Stage-4-Breast-Cancer.webp" alt=""></div>
+      <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2026/07/red-devil-alternatives-doxil-learn-look-locate.avif" alt=""></div>
       <div class="card-body"><time>12 Aug, 2026</time><h3>Red Devil Alternatives & Doxil</h3><span class="more">Read more</span></div>
     </a>
     <a class="card" href="https://learnlooklocate.com/blog/">
-      <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2025/11/Lumpectomy-18.png" alt=""></div>
+      <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2026/01/Breast-Cancer-Reconstruction_Options.jpg" alt=""></div>
       <div class="card-body"><time>07 Aug, 2026</time><h3>Breast Reconstruction After Breast Cancer: Your Options, Your Sensation, Your Choice</h3><span class="more">Read more</span></div>
     </a>
     <a class="card" href="https://learnlooklocate.com/blog/">
-      <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2024/04/banner-new.webp" alt=""></div>
+      <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2026/07/red-devil-immunotherapy-road-ahead-learn-look-locate.avif" alt=""></div>
       <div class="card-body"><time>03 Aug, 2026</time><h3>The Red Devil and What Comes Next: Immunotherapy and the Road Ahead</h3><span class="more">Read more</span></div>
     </a>
     <a class="card" href="https://learnlooklocate.com/blog/">
-      <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2025/09/spotlight-innovations-in-breast-cancer-care-progress-breakthroughs-learn-look-locate.jpg.png" alt=""></div>
+      <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2026/07/Why_Emotional_Support_Is_a_Vital_Part_of_Metastatic_Breast_Cancer_Care.avif" alt=""></div>
       <div class="card-body"><time>31 Jul, 2026</time><h3>Why Emotional Support Is a Vital Part of Metastatic Breast Cancer Care</h3><span class="more">Read more</span></div>
     </a>
   </div>

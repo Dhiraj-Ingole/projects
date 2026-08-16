@@ -24,4 +24,9 @@ Alternative: **Elementor → Tools → Import / Export** if your Elementor versi
 
 ## Preview mockup
 
-Local review file: `version-d2-refined.html`
+Open this single HTML file before importing:
+
+- `whats-new-preview.html`
+- Local: `http://localhost:3000/whats-new-preview.html`
+
+It is the same layout, links, and hover as the Elementor JSON.

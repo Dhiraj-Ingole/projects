@@ -103,9 +103,9 @@ p{font-size:22px;font-weight:300;margin:0 0 1em}
 /* 3) Education: original section background as a photo header */
 .photo-header{position:relative;min-height:520px;color:#fff;overflow:hidden}
 .photo-header img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:18% center}
-.photo-header::after{content:"";position:absolute;inset:0;background:linear-gradient(270deg,rgba(32,14,22,.88) 0%, rgba(32,14,22,.55) 42%, rgba(32,14,22,.08) 68%, transparent 82%)}
+.photo-header::after{content:"";position:absolute;inset:0;background:linear-gradient(270deg,rgba(18,8,14,.96) 0%, rgba(18,8,14,.92) 28%, rgba(18,8,14,.78) 46%, rgba(18,8,14,.28) 68%, rgba(18,8,14,.06) 82%, transparent 94%)}
 .photo-header .wrap{position:relative;z-index:1;padding:64px 0 48px;display:flex;justify-content:flex-end}
-.photo-header .edu-copy{width:min(620px,100%)}
+.photo-header .edu-copy{width:min(620px,100%);text-shadow:0 2px 16px rgba(10,4,8,.45)}
 .photo-header h2{font-size:clamp(28px,2vw,40px);max-width:18ch}
 
 /* 4) Discussions: original photo as a left portrait pane */
@@ -143,9 +143,13 @@ p{font-size:22px;font-weight:300;margin:0 0 1em}
   .hero-cine{min-height:72vh}
   .hero-cine h1{font-size:36px}
   .hero-cine .wrap,.photo-header .wrap{justify-content:flex-start}
-  .hero-cine::after,.photo-header::after{background:linear-gradient(180deg,transparent 18%, rgba(32,14,22,.86))}
+  .hero-cine::after{background:linear-gradient(180deg,transparent 18%, rgba(32,14,22,.86))}
+  .photo-header::after{background:linear-gradient(180deg,rgba(18,8,14,.2) 0%, rgba(18,8,14,.72) 32%, rgba(18,8,14,.94) 100%)}
   .chapter{grid-template-columns:1fr}
   .chapter .pane{min-height:280px}
+}
+@media (max-width:767px){
+  body,p,.lead{font-size:20px}
 }
 </style>
 </head>

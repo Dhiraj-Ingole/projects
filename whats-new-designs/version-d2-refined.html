@@ -18,18 +18,23 @@ a{color:inherit}
   padding:10px 18px;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,0,0,.08);font-size:13px}
 .design-switcher a{padding:6px 10px;border-radius:999px;text-decoration:none;border:1px solid transparent}
 .design-switcher a.is-active{background:var(--accent);color:#fff}
-.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;border-radius:999px;padding:14px 22px;font-weight:600;font-size:16px}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;border-radius:999px;padding:14px 22px;font-weight:600;font-size:16px;transition:transform .3s ease,box-shadow .3s ease,filter .3s ease}
 .btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(196,75,106,.35);filter:brightness(1.05)}
 .section{padding:72px 0}
 h1,h2,h3{line-height:1.25;margin:0 0 .45em;font-weight:500}
 .lead{max-width:62ch}
-.card{text-decoration:none;display:flex;flex-direction:column;overflow:hidden;background:var(--card);color:var(--ink)}
+.card{text-decoration:none;display:flex;flex-direction:column;overflow:hidden;background:var(--card);color:var(--ink);transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s ease}
+.card:hover{transform:translateY(-10px);box-shadow:0 22px 48px rgba(80,30,40,.16)}
 .card-media{aspect-ratio:16/10;overflow:hidden}
-.card-media img{width:100%;height:100%;object-fit:cover}
+.card-media img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.22,1,.36,1)}
+.card:hover .card-media img{transform:scale(1.08)}
 .card-body{padding:16px 18px 20px}
 .card time{font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:.65}
 .card h3{font-family:"Libre Baskerville",Georgia,serif;font-size:20px;font-weight:600;margin:.35em 0 .6em;line-height:1.3}
-.more{font-size:13px;font-weight:700;color:var(--accent)}
+.more{font-size:13px;font-weight:700;color:var(--accent);display:inline-flex;align-items:center;gap:6px}
+.more::after{content:"→";transition:transform .3s ease}
+.card:hover .more::after,.spot-card:hover .more::after{transform:translateX(4px)}
 .form{display:flex;gap:8px;flex-wrap:wrap}
 .form input{flex:1;min-width:220px;padding:14px 16px;border:1px solid #d8cfd3;border-radius:10px;font:inherit}
 .form button{border:0;background:var(--accent);color:#fff;padding:14px 20px;border-radius:10px;font-weight:700;cursor:pointer}
@@ -39,9 +44,12 @@ h1,h2,h3{line-height:1.25;margin:0 0 .45em;font-weight:500}
 .mag .card.is-feature{grid-column:1;grid-row:1 / span 2;display:flex;flex-direction:column;height:100%}
 .mag .card.is-feature .card-media{aspect-ratio:auto;flex:1;min-height:280px}
 .mag .card.is-feature h3{font-size:20px;font-family:"Libre Baskerville",Georgia,serif;font-weight:600}
-.cover{position:relative;min-height:280px;border-radius:18px;overflow:hidden;display:block;text-decoration:none;color:#fff}
-.cover>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.cover-grad{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;padding:18px;background:linear-gradient(180deg,rgba(40,16,28,.05),rgba(40,16,28,.78))}
+.cover{position:relative;min-height:280px;border-radius:18px;overflow:hidden;display:block;text-decoration:none;color:#fff;transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s ease}
+.cover:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(40,16,28,.22)}
+.cover>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.22,1,.36,1)}
+.cover:hover>img{transform:scale(1.08)}
+.cover-grad{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;padding:18px;background:linear-gradient(180deg,rgba(40,16,28,.05),rgba(40,16,28,.78));transition:background .4s ease}
+.cover:hover .cover-grad{background:linear-gradient(180deg,rgba(40,16,28,.02),rgba(40,16,28,.88))}
 .cover h3{font-size:20px;margin:8px 0 0;font-family:"Libre Baskerville",Georgia,serif;font-weight:600}
 .cover .partner-logo{height:40px;width:auto;max-width:160px;object-fit:contain;background:#fff;border-radius:8px;padding:6px 10px;align-self:flex-start;flex:none}
 :root{
@@ -75,8 +83,10 @@ p{font-size:22px;font-weight:300;margin:0 0 1em}
 .spotlight .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center;padding:56px 0}
 .spot-copy h2{font-size:clamp(28px,3vw,42px);max-width:18ch}
 .spot-copy .quote{font-size:clamp(22px,2vw,32px);font-weight:500;max-width:40ch}
-.spot-card{background:#fff;color:var(--ink);border-radius:20px;overflow:hidden;text-decoration:none;box-shadow:0 20px 50px rgba(0,0,0,.28);display:block}
-.spot-card img{width:100%;height:260px;object-fit:cover}
+.spot-card{background:#fff;color:var(--ink);border-radius:20px;overflow:hidden;text-decoration:none;box-shadow:0 20px 50px rgba(0,0,0,.28);display:block;transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s ease}
+.spot-card:hover{transform:translateY(-8px);box-shadow:0 28px 56px rgba(0,0,0,.35)}
+.spot-card img{width:100%;height:260px;object-fit:cover;transition:transform .6s cubic-bezier(.22,1,.36,1)}
+.spot-card:hover img{transform:scale(1.06)}
 .spot-card .body{padding:18px 20px 22px}
 .spot-card time{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:700}
 .spot-card h3{font-family:"Libre Baskerville",Georgia,serif;font-size:20px;font-weight:600;margin:.35em 0 .5em}
@@ -91,8 +101,9 @@ p{font-size:22px;font-weight:300;margin:0 0 1em}
 .photo-header h2{font-size:clamp(28px,2vw,40px);max-width:18ch}
 
 /* 4) Discussions: original photo as a left portrait pane */
-.chapter{display:grid;grid-template-columns:.92fr 1.08fr;min-height:480px;background:#2a1c22;color:#fff}
-.chapter .pane{min-height:420px;object-fit:cover;width:100%;height:100%}
+.chapter{display:grid;grid-template-columns:.92fr 1.08fr;min-height:480px;background:#2a1c22;color:#fff;overflow:hidden}
+.chapter .pane{min-height:420px;object-fit:cover;width:100%;height:100%;transition:transform 1.2s ease}
+.chapter:hover .pane{transform:scale(1.04)}
 .chapter .copy{padding:56px 48px;display:flex;flex-direction:column;justify-content:center}
 .chapter h2{font-size:clamp(28px,2vw,40px)}
 
@@ -106,7 +117,13 @@ p{font-size:22px;font-weight:300;margin:0 0 1em}
 /* 6) Blogs: original photo as a framed magazine opener beside the title */
 .blog-open{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
 .blog-open .frame{border-radius:28px 4px 28px 4px;overflow:hidden;min-height:380px}
-.blog-open .frame img{width:100%;height:100%;object-fit:cover;min-height:380px}
+.blog-open .frame img{width:100%;height:100%;object-fit:cover;min-height:380px;transition:transform .8s ease}
+.blog-open:hover .frame img{transform:scale(1.05)}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition:none !important}
+  .card:hover,.cover:hover,.spot-card:hover{transform:none}
+  .card:hover .card-media img,.cover:hover>img,.spot-card:hover img,.chapter:hover .pane,.blog-open:hover .frame img{transform:none}
+}
 
 .quote-frame{display:grid;grid-template-columns:200px 1fr;gap:28px;align-items:center;background:#2a1c22;color:#fff;border-radius:28px;padding:28px}
 .quote-frame img{width:200px;height:240px;object-fit:cover;border-radius:18px}
@@ -303,23 +320,23 @@ p{font-size:22px;font-weight:300;margin:0 0 1em}
 <section class="wrap section">
   <p>We talk openly about dense breast screening, imaging, treatment side effects, new technologies, and life after cancer — giving you answers that truly matter. These conversations go beyond surface-level information. They are heartfelt exchanges designed to empower patients, build trust, and offer hope. Discussions with Doctors connects people worldwide with reliable, patient-friendly breast cancer education. Each episode strengthens the bridge between medical expertise and emotional understanding, helping viewers feel confident in their journey.</p>
   <div class="mag" style="margin-top:24px">
-    <a class="card is-feature" href="https://learnlooklocate.com/educate/patient-education/">
+    <a class="card is-feature" href="https://learnlooklocate.com/breast-cancer-in-the-military/">
       <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2025/11/breast-cancer-in-the-military-major-lindsey-parsons-dr-anjali-malik-learn-look-locate-1.jpg" alt=""></div>
       <div class="card-body"><time>03 Nov, 2025</time><h3>Breast Cancer in the Military</h3><span class="more">Read more</span></div>
     </a>
-    <a class="card" href="https://learnlooklocate.com/educate/patient-education/">
+    <a class="card" href="https://learnlooklocate.com/inflammatory-breast-cancer/">
       <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2025/04/1-1.jpg" alt=""></div>
       <div class="card-body"><time>03 Apr, 2025</time><h3>Understanding Inflammatory Breast Cancer: Symptoms, Risks And Treatments</h3><span class="more">Read more</span></div>
     </a>
-    <a class="card" href="https://learnlooklocate.com/educate/patient-education/">
+    <a class="card" href="https://learnlooklocate.com/discover-expert-insights-on-stage-4-breast-cancer-from-dr-ramji-rajendran/">
       <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2025/02/Dr.-Rajendran.webp" alt=""></div>
       <div class="card-body"><time>22 Feb, 2025</time><h3>Discover Expert Insights on Stage 4 Breast Cancer from Dr. Ramji Rajendran</h3><span class="more">Read more</span></div>
     </a>
-    <a class="card" href="https://learnlooklocate.com/educate/patient-education/">
+    <a class="card" href="https://learnlooklocate.com/breast-cancer-screening-treatment-what-you-need-to-know/">
       <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2025/06/Allison-DiPasquale.jpg" alt=""></div>
       <div class="card-body"><time>14 Feb, 2025</time><h3>Breast Cancer Screening & Treatment: What You Need to Know</h3><span class="more">Read more</span></div>
     </a>
-    <a class="card" href="https://learnlooklocate.com/educate/patient-education/">
+    <a class="card" href="https://learnlooklocate.com/comprehensive-insights-dr-william-audeh-and-breast-cancer-survivor-kelly-on-aromatase-inhibitors/">
       <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2025/01/header_kelly.webp" alt=""></div>
       <div class="card-body"><time>15 Jan, 2025</time><h3>Comprehensive Insights: Dr. William Audeh and Breast Cancer Survivor Kelly on Aromatase Inhibitors</h3><span class="more">Read more</span></div>
     </a>
@@ -347,15 +364,15 @@ p{font-size:22px;font-weight:300;margin:0 0 1em}
         <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2026/05/alexia-vernon-stage-0-dcis-survivor-story-nevada.jpg" alt=""></div>
         <div class="card-body"><time>17 Jun, 2026</time><h3>How DCISionRT Helped a Cancer Survivor Avoid Over-Treatment</h3><span class="more">Read more</span></div>
       </a>
-      <a class="card" href="https://learnlooklocate.com/survivor-stories/">
+      <a class="card" href="https://learnlooklocate.com/stronger-than-i-ever-knew-a-breast-cancer-survivors-journey/">
         <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2026/02/surviving-cancer-complications-strength-and-healing.jpg" alt=""></div>
         <div class="card-body"><time>25 Feb, 2026</time><h3>Stronger Than I Ever Knew: A Breast Cancer Survivor’s Journey</h3><span class="more">Read more</span></div>
       </a>
-      <a class="card" href="https://learnlooklocate.com/survivor-stories/">
+      <a class="card" href="https://learnlooklocate.com/dcis-survivor-story-from-routine-mri-to-resilience/">
         <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2025/12/dcis-survivor-story-from-routine-mri-to-resilience.jpg" alt=""></div>
         <div class="card-body"><time>12 Dec, 2025</time><h3>DCIS Survivor Story: From Routine MRI to Resilience</h3><span class="more">Read more</span></div>
       </a>
-      <a class="card" href="https://learnlooklocate.com/survivor-stories/">
+      <a class="card" href="https://learnlooklocate.com/dr-leona-hamrick-physician-associate-breast-cancer-survivor/">
         <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2025/11/dr-leona-hamrick-breast-cancer-survivor-story-learn-look-locate.jpg" alt=""></div>
         <div class="card-body"><time>06 Nov, 2025</time><h3>Dr. Leona Hamrick, Physician Associate & Breast Cancer Survivor</h3><span class="more">Read more</span></div>
       </a>
@@ -376,23 +393,23 @@ p{font-size:22px;font-weight:300;margin:0 0 1em}
     </div>
   </div>
   <div class="mag" style="margin-top:36px">
-    <a class="card is-feature" href="https://learnlooklocate.com/blog/">
+    <a class="card is-feature" href="https://learnlooklocate.com/your-pathology-report-the-key-to-understanding-your-breast-cancer-diagnosis/">
       <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2026/07/your-pathology-report-key-to-understanding-your-breast-cancer-diagnosis-dr-hannah-gilmore-learn-look-locate.avif" alt=""></div>
       <div class="card-body"><time>13 Aug, 2026</time><h3>Your Pathology Report: The Key to Understanding Your Breast Cancer Diagnosis</h3><span class="more">Read more</span></div>
     </a>
-    <a class="card" href="https://learnlooklocate.com/blog/">
+    <a class="card" href="https://learnlooklocate.com/red-devil-alternatives-doxil/">
       <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2026/07/red-devil-alternatives-doxil-learn-look-locate.avif" alt=""></div>
       <div class="card-body"><time>12 Aug, 2026</time><h3>Red Devil Alternatives & Doxil</h3><span class="more">Read more</span></div>
     </a>
-    <a class="card" href="https://learnlooklocate.com/blog/">
+    <a class="card" href="https://learnlooklocate.com/breast-reconstruction-after-breast-cancer-your-options-your-sensation-your-choice/">
       <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2026/01/Breast-Cancer-Reconstruction_Options.jpg" alt=""></div>
       <div class="card-body"><time>07 Aug, 2026</time><h3>Breast Reconstruction After Breast Cancer: Your Options, Your Sensation, Your Choice</h3><span class="more">Read more</span></div>
     </a>
-    <a class="card" href="https://learnlooklocate.com/blog/">
+    <a class="card" href="https://learnlooklocate.com/the-red-devil-and-what-comes-next-immunotherapy-and-the-road-ahead/">
       <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2026/07/red-devil-immunotherapy-road-ahead-learn-look-locate.avif" alt=""></div>
       <div class="card-body"><time>03 Aug, 2026</time><h3>The Red Devil and What Comes Next: Immunotherapy and the Road Ahead</h3><span class="more">Read more</span></div>
     </a>
-    <a class="card" href="https://learnlooklocate.com/blog/">
+    <a class="card" href="https://learnlooklocate.com/why-emotional-support-is-a-vital-part-of-metastatic-breast-cancer-care/">
       <div class="card-media"><img src="https://learnlooklocate.com/wp-content/uploads/2026/07/Why_Emotional_Support_Is_a_Vital_Part_of_Metastatic_Breast_Cancer_Care.avif" alt=""></div>
       <div class="card-body"><time>31 Jul, 2026</time><h3>Why Emotional Support Is a Vital Part of Metastatic Breast Cancer Care</h3><span class="more">Read more</span></div>
     </a>

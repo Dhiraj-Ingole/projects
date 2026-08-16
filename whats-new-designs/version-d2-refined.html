@@ -37,7 +37,14 @@ h1,h2,h3{line-height:1.25;margin:0 0 .45em;font-weight:500}
 .card:hover .more::after,.spot-card:hover .more::after{transform:translateX(4px)}
 .form{display:flex;gap:8px;flex-wrap:wrap}
 .form input{flex:1;min-width:220px;padding:14px 16px;border:1px solid #d8cfd3;border-radius:10px;font:inherit}
-.form button{border:0;background:var(--accent);color:#fff;padding:14px 20px;border-radius:10px;font-weight:700;cursor:pointer}
+.form button{border:0;background:var(--accent);color:#fff;padding:14px 20px;border-radius:10px;font-weight:700;cursor:pointer;transition:transform .3s ease,box-shadow .3s ease,filter .3s ease}
+.form button:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(196,75,106,.35);filter:brightness(1.05)}
+.quote-frame img{transition:transform .6s cubic-bezier(.22,1,.36,1)}
+.quote-frame:hover img{transform:scale(1.04)}
+.wash-panel{transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s ease}
+.wash-panel:hover{transform:translateY(-4px);box-shadow:0 24px 48px rgba(60,20,30,.14)}
+.paper{transition:box-shadow .4s ease}
+.cover:focus-visible,.card:focus-visible,.spot-card:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
 .footer{padding:40px 0;font-size:13px;opacity:.7}
 .mag{display:grid;grid-template-columns:1.45fr 1fr 1fr;grid-template-rows:auto auto;gap:18px}
 .mag .card{border-radius:16px;background:#fff;box-shadow:0 14px 36px rgba(80,30,40,.08)}
@@ -121,8 +128,8 @@ p{font-size:22px;font-weight:300;margin:0 0 1em}
 .blog-open:hover .frame img{transform:scale(1.05)}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{transition:none !important}
-  .card:hover,.cover:hover,.spot-card:hover{transform:none}
-  .card:hover .card-media img,.cover:hover>img,.spot-card:hover img,.chapter:hover .pane,.blog-open:hover .frame img{transform:none}
+  .card:hover,.cover:hover,.spot-card:hover,.wash-panel:hover,.btn:hover,.form button:hover{transform:none}
+  .card:hover .card-media img,.cover:hover>img,.spot-card:hover img,.chapter:hover .pane,.blog-open:hover .frame img,.quote-frame:hover img{transform:none}
 }
 
 .quote-frame{display:grid;grid-template-columns:200px 1fr;gap:28px;align-items:center;background:#2a1c22;color:#fff;border-radius:28px;padding:28px}
@@ -202,49 +209,49 @@ p{font-size:22px;font-weight:300;margin:0 0 1em}
   <h2>United to Empower and Educate</h2>
   <p class="lead">Learn Look Locate and leading voices in breast health, driving our global mission to bring you clear, empowering guidance. Together, we’re sharing trusted knowledge and meaningful support to help you navigate your breast health journey with clarity and confidence</p>
   <div class="covers" style="margin-top:28px">
-    <a class="cover" href="https://learnlooklocate.com/breast-cancer-tumor-localization">
+    <a class="cover" href="https://learnlooklocate.com/breast-cancer-tumor-localization/">
       <img src="https://learnlooklocate.com/wp-content/uploads/2024/07/img-2.webp" alt="">
       <div class="cover-grad">
         <img class="partner-logo" src="https://learnlooklocate.com/wp-content/uploads/2025/09/5.png" alt="">
         <h3>Tumor Localization for Early-Stage Breast Cancer: Surgical Marker Navigation</h3>
       </div>
     </a>
-    <a class="cover" href="https://learnlooklocate.com/walgreens">
+    <a class="cover" href="https://learnlooklocate.com/walgreens/">
       <img src="https://learnlooklocate.com/wp-content/uploads/2023/02/walgreensLLL-img.png" alt="">
       <div class="cover-grad">
         <img class="partner-logo" src="https://learnlooklocate.com/wp-content/uploads/2025/09/4.png" alt="">
         <h3>Walgreens oncology-specialized pharmacy care team can support you beyond medication</h3>
       </div>
     </a>
-    <a class="cover" href="https://learnlooklocate.com/your-tumor">
+    <a class="cover" href="https://learnlooklocate.com/your-tumor/">
       <img src="https://learnlooklocate.com/wp-content/uploads/2024/04/banner-new.webp" alt="">
       <div class="cover-grad">
         <img class="partner-logo" src="https://learnlooklocate.com/wp-content/uploads/2025/09/2.png" alt="">
         <h3>The Role Of Genomic Testing: Unpacking A Treasure Chest Of Knowledge In Breast Cancer</h3>
       </div>
     </a>
-    <a class="cover" href="https://learnlooklocate.com/understanding-treatment-options-for-stage-4-breast-cancer">
+    <a class="cover" href="https://learnlooklocate.com/understanding-treatment-options-for-stage-4-breast-cancer/">
       <img src="https://learnlooklocate.com/wp-content/uploads/2025/02/Header-image-Stage-4-Breast-Cancer.webp" alt="">
       <div class="cover-grad">
         <img class="partner-logo" src="https://learnlooklocate.com/wp-content/uploads/2025/09/1.png" alt="">
         <h3>Understanding Treatment Options For Stage 4 Breast Cancer With Dr. Rahul Singh</h3>
       </div>
     </a>
-    <a class="cover" href="https://learnlooklocate.com/lumpectomy">
+    <a class="cover" href="https://learnlooklocate.com/lumpectomy/">
       <img src="https://learnlooklocate.com/wp-content/uploads/2025/11/Lumpectomy-18.png" alt="">
       <div class="cover-grad">
         <img class="partner-logo" src="https://learnlooklocate.com/wp-content/uploads/2026/01/LumicellLogo.png" alt="">
         <h3>Lumpectomy: Understanding Your Options and Lighting the Path Forward</h3>
       </div>
     </a>
-    <a class="cover" href="https://learnlooklocate.com/do-i-need-radiation-if-i-have-dcis">
+    <a class="cover" href="https://learnlooklocate.com/do-i-need-radiation-if-i-have-dcis/">
       <img src="https://learnlooklocate.com/wp-content/uploads/2026/06/image.avif" alt="">
       <div class="cover-grad">
         <img class="partner-logo" src="https://learnlooklocate.com/wp-content/uploads/2026/06/prelude.png" alt="">
         <h3>Do I need Radiation if I have DCIS?</h3>
       </div>
     </a>
-    <a class="cover" href="https://learnlooklocate.com/breast-cancer-recurrence-ctdna-dr-rosen">
+    <a class="cover" href="https://learnlooklocate.com/breast-cancer-recurrence-ctdna-dr-rosen/">
       <img src="https://learnlooklocate.com/wp-content/uploads/2023/12/img-2.webp" alt="">
       <div class="cover-grad">
         <img class="partner-logo" src="https://learnlooklocate.com/wp-content/uploads/2025/09/3.png" alt="">
@@ -416,6 +423,6 @@ p{font-size:22px;font-weight:300;margin:0 0 1em}
   </div>
 </section>
 
-<footer class="wrap footer">Learn Look Locate · Design D2 (Cinematic refined). Hero text on the right, Spotlight card on the right, original section photos for Education, Discussions, Survivors, and Blogs. Grids unchanged.</footer>
+<footer class="wrap footer">Learn Look Locate · Design D2 (Cinematic refined). Grid cards link to each article. Hover lift and image zoom on sections. Elementor import: elementor-whats-new-d2.json</footer>
 </body>
 </html>

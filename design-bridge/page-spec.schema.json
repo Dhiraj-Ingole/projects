@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://learnlooklocate.com/design-bridge/page-spec.schema.json",
+  "title": "LLL page spec",
+  "description": "Source of truth between Canva/HTML design and a native Elementor page import.",
+  "type": "object",
+  "required": ["title", "tokens", "sections"],
+  "properties": {
+    "title": { "type": "string" },
+    "tokens": {
+      "type": "object",
+      "properties": {
+        "bg": { "type": "string" },
+        "ink": { "type": "string" },
+        "accent": { "type": "string" },
+        "sans": { "type": "string" },
+        "serif": { "type": "string" },
+        "bodySize": { "type": "number" },
+        "bodySizeMobile": { "type": "number" }
+      }
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type"],
+        "properties": {
+          "id": { "type": "string" },
+          "type": {
+            "type": "string",
+            "enum": [
+              "hero",
+              "split",
+              "spotlight",
+              "html",
+              "photo-header",
+              "chapter",
+              "wash",
+              "stack",
+              "magazine-grid"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

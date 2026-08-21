@@ -1,0 +1,81 @@
+{
+  "title": "Example — cinematic hero",
+  "tokens": {
+    "bg": "#f6efe8",
+    "ink": "#2a1c22",
+    "accent": "#c44b6a",
+    "sans": "Montserrat",
+    "serif": "Libre Baskerville",
+    "bodySize": 22,
+    "bodySizeMobile": 20
+  },
+  "canva": {
+    "note": "Paste a Canva design URL here when the Canva MCP is connected. The agent maps pages/frames onto sections below."
+  },
+  "sections": [
+    {
+      "id": "Hero",
+      "type": "hero",
+      "background": "https://learnlooklocate.com/wp-content/uploads/2025/04/Whats-New-at-Learn-Look-Locate-%E2%80%94-Fresh-Voices-Breakthroughs-and-Global-Connections-At-Learn-Look-Locate-were-always-evolving-to-bring-you-the-latest-in-trusted-breast-cancer-education-and-hea.jpg",
+      "objectPosition": "18% center",
+      "align": "flex-end",
+      "copyWidth": 540,
+      "minHeight": 88,
+      "blocks": [
+        {
+          "type": "heading",
+          "tag": "h1",
+          "text": "What's New <em style='font-style:normal;color:#f3c2ce'>in breast cancer</em>",
+          "size": 60,
+          "color": "#ffffff",
+          "transform": "uppercase"
+        },
+        {
+          "type": "heading",
+          "tag": "h2",
+          "text": "Education • Discussions • Survivors • Doctors • Blogs • Breast Cancer Innovations",
+          "size": 25,
+          "color": "#ffffff"
+        },
+        {
+          "type": "text",
+          "text": "Stay informed with the newest educational pages, global interviews, and inspiring survivor stories from Learn Look Locate."
+        },
+        {
+          "type": "button",
+          "text": "Explore What's New",
+          "url": "#education"
+        }
+      ]
+    },
+    {
+      "id": "Intro",
+      "type": "split",
+      "columns": [
+        {
+          "title": "Left",
+          "blocks": [
+            {
+              "type": "heading",
+              "text": "What’s New at Learn Look Locate — Fresh Voices, Breakthroughs, and Global Connections",
+              "size": 32
+            },
+            {
+              "type": "text",
+              "text": "At Learn Look Locate, we’re always evolving to bring you the latest in trusted breast cancer education and heartfelt survivor connection."
+            }
+          ]
+        },
+        {
+          "title": "Right",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "Each new addition reflects our mission to empower people worldwide through trusted, inclusive breast cancer education."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

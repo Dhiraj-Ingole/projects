@@ -1,0 +1,10 @@
+{
+  "bg": "#f6efe8",
+  "ink": "#2a1c22",
+  "accent": "#c44b6a",
+  "card": "#ffffff",
+  "sans": "Montserrat",
+  "serif": "Libre Baskerville",
+  "bodySize": 22,
+  "bodySizeMobile": 20
+}

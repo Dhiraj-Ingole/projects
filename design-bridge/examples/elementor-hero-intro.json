@@ -1,0 +1,415 @@
+{
+  "version": "0.4",
+  "title": "Example — cinematic hero",
+  "type": "page",
+  "page_settings": {
+    "hide_title": "yes"
+  },
+  "content": [
+    {
+      "id": "ac6f0aa",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "layout": "full_width",
+        "content_width": "full",
+        "flex_align_items": "center",
+        "flex_justify_content": "flex-end",
+        "flex_gap": {
+          "size": 0,
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        },
+        "background_background": "classic",
+        "background_image": {
+          "url": "https://learnlooklocate.com/wp-content/uploads/2025/04/Whats-New-at-Learn-Look-Locate-%E2%80%94-Fresh-Voices-Breakthroughs-and-Global-Connections-At-Learn-Look-Locate-were-always-evolving-to-bring-you-the-latest-in-trusted-breast-cancer-education-and-hea.jpg",
+          "id": "",
+          "size": "",
+          "alt": "",
+          "source": "library"
+        },
+        "background_size": "cover",
+        "background_position": "18% center",
+        "background_repeat": "no-repeat",
+        "min_height": {
+          "unit": "vh",
+          "size": 88,
+          "sizes": []
+        },
+        "background_overlay_background": "classic",
+        "background_overlay_color": "rgba(32,14,22,0.6)",
+        "custom_css": "\nselector::after {\n  content: \"\";\n  position: absolute;\n  inset: 0;\n  background: linear-gradient(270deg, rgba(32,14,22,.86) 0%, rgba(32,14,22,.55) 38%, rgba(32,14,22,.08) 62%, transparent 78%);\n  z-index: 0;\n}\nselector .e-con-inner { position: relative; z-index: 1; }\n",
+        "_title": "Hero"
+      },
+      "elements": [
+        {
+          "id": "45189f4",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "boxed",
+            "width": {
+              "unit": "px",
+              "size": 540,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_gap": {
+              "size": 16,
+              "unit": "px",
+              "column": "16",
+              "row": "16",
+              "isLinked": true
+            },
+            "padding": {
+              "unit": "px",
+              "top": "80",
+              "right": "40",
+              "bottom": "80",
+              "left": "20",
+              "isLinked": false
+            },
+            "_title": "Hero Copy"
+          },
+          "elements": [
+            {
+              "id": "0a9304d",
+              "elType": "widget",
+              "isInner": false,
+              "settings": {
+                "title": "What's New <em style='font-style:normal;color:#f3c2ce'>in breast cancer</em>",
+                "header_size": "h1",
+                "align": "left",
+                "title_color": "#ffffff",
+                "typography_typography": "custom",
+                "typography_font_family": "Montserrat",
+                "typography_font_weight": "500",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 60,
+                  "sizes": []
+                },
+                "ha_advanced_tooltip_content": "I am a tooltip",
+                "ha_cmc_text": "Happy Addons",
+                "typography_text_transform": "uppercase"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "98aa6e1",
+              "elType": "widget",
+              "isInner": false,
+              "settings": {
+                "title": "Education • Discussions • Survivors • Doctors • Blogs • Breast Cancer Innovations",
+                "header_size": "h2",
+                "align": "left",
+                "title_color": "#ffffff",
+                "typography_typography": "custom",
+                "typography_font_family": "Montserrat",
+                "typography_font_weight": "500",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 25,
+                  "sizes": []
+                },
+                "ha_advanced_tooltip_content": "I am a tooltip",
+                "ha_cmc_text": "Happy Addons"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "62e9aeb",
+              "elType": "widget",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>Stay informed with the newest educational pages, global interviews, and inspiring survivor stories from Learn Look Locate.</p>",
+                "text_color": "#ffffff",
+                "typography_typography": "custom",
+                "typography_font_family": "Montserrat",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 22,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 20,
+                  "sizes": []
+                },
+                "typography_font_weight": "300"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            },
+            {
+              "id": "6ef8bb3",
+              "elType": "widget",
+              "isInner": false,
+              "settings": {
+                "text": "Explore What's New",
+                "link": {
+                  "url": "#education",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "align": "left",
+                "background_color": "#c44b6a",
+                "button_text_color": "#FFFFFF",
+                "button_background_hover_color": "#c44b6a",
+                "hover_color": "#FFFFFF",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "50",
+                  "right": "50",
+                  "bottom": "50",
+                  "left": "50",
+                  "isLinked": true
+                },
+                "typography_typography": "custom",
+                "typography_font_family": "Montserrat",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 14,
+                  "sizes": []
+                },
+                "typography_font_weight": "500",
+                "typography_text_transform": "uppercase",
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": 0.8,
+                  "sizes": []
+                },
+                "__globals__": {
+                  "button_text_color": "",
+                  "background_color": "",
+                  "button_background_hover_color": "",
+                  "hover_color": ""
+                },
+                "ha_advanced_tooltip_content": "I am a tooltip",
+                "ha_cmc_text": "Happy Addons"
+              },
+              "elements": [],
+              "widgetType": "button"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cfaaa75",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "layout": "full_width",
+        "content_width": "full",
+        "background_background": "classic",
+        "background_color": "#f6efe8",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "20",
+          "bottom": "40",
+          "left": "20",
+          "isLinked": false
+        },
+        "_title": "Intro"
+      },
+      "elements": [
+        {
+          "id": "b14da57",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "boxed",
+            "boxed_width": {
+              "unit": "px",
+              "size": 1180,
+              "sizes": []
+            },
+            "background_background": "classic",
+            "background_color": "#fffaf6",
+            "border_radius": {
+              "unit": "px",
+              "top": "28",
+              "right": "28",
+              "bottom": "28",
+              "left": "28",
+              "isLinked": true
+            },
+            "padding": {
+              "unit": "px",
+              "top": "40",
+              "right": "40",
+              "bottom": "40",
+              "left": "40",
+              "isLinked": false
+            },
+            "margin": {
+              "unit": "px",
+              "top": "-56",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            },
+            "_title": "Paper Card"
+          },
+          "elements": [
+            {
+              "id": "903dd80",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "row",
+                "flex_gap": {
+                  "size": 36,
+                  "unit": "px",
+                  "column": "36",
+                  "row": "36",
+                  "isLinked": true
+                },
+                "flex_wrap": "wrap",
+                "_title": "Split Row"
+              },
+              "elements": [
+                {
+                  "id": "9b37c65",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "content_width": "full",
+                    "width": {
+                      "unit": "%",
+                      "size": 50,
+                      "sizes": []
+                    },
+                    "flex_direction": "column",
+                    "flex_gap": {
+                      "size": 12,
+                      "unit": "px",
+                      "column": "12",
+                      "row": "12",
+                      "isLinked": true
+                    },
+                    "_title": "Left"
+                  },
+                  "elements": [
+                    {
+                      "id": "a7dfc6e",
+                      "elType": "widget",
+                      "isInner": false,
+                      "settings": {
+                        "title": "What’s New at Learn Look Locate — Fresh Voices, Breakthroughs, and Global Connections",
+                        "header_size": "h2",
+                        "align": "left",
+                        "title_color": "#2a1c22",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_weight": "500",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 32,
+                          "sizes": []
+                        },
+                        "ha_advanced_tooltip_content": "I am a tooltip",
+                        "ha_cmc_text": "Happy Addons"
+                      },
+                      "elements": [],
+                      "widgetType": "heading"
+                    },
+                    {
+                      "id": "f63f883",
+                      "elType": "widget",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>At Learn Look Locate, we’re always evolving to bring you the latest in trusted breast cancer education and heartfelt survivor connection.</p>",
+                        "text_color": "#2a1c22",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 22,
+                          "sizes": []
+                        },
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 20,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "300"
+                      },
+                      "elements": [],
+                      "widgetType": "text-editor"
+                    }
+                  ]
+                },
+                {
+                  "id": "c2ca06a",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "content_width": "full",
+                    "width": {
+                      "unit": "%",
+                      "size": 50,
+                      "sizes": []
+                    },
+                    "flex_direction": "column",
+                    "flex_gap": {
+                      "size": 12,
+                      "unit": "px",
+                      "column": "12",
+                      "row": "12",
+                      "isLinked": true
+                    },
+                    "_title": "Right"
+                  },
+                  "elements": [
+                    {
+                      "id": "67a3b52",
+                      "elType": "widget",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "<p>Each new addition reflects our mission to empower people worldwide through trusted, inclusive breast cancer education.</p>",
+                        "text_color": "#2a1c22",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 22,
+                          "sizes": []
+                        },
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 20,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "300"
+                      },
+                      "elements": [],
+                      "widgetType": "text-editor"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

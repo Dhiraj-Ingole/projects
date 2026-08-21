@@ -1,0 +1,2504 @@
+{
+  "version": "0.4",
+  "title": "What's New — D2 Refined",
+  "type": "page",
+  "page_settings": {
+    "ha_grid_zindex": "1000",
+    "hide_title": "yes"
+  },
+  "content": [
+    {
+      "elType": "container",
+      "id": "954d3e5",
+      "settings": {
+        "layout": "full_width",
+        "content_width": "full",
+        "flex_align_items": "center",
+        "flex_justify_content": "flex-end",
+        "flex_gap": {
+          "size": 0,
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+        },
+        "ha_advanced_tooltip_content": "I am a tooltip",
+        "ha_cmc_text": "Happy Addons",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        },
+        "background_background": "classic",
+        "background_image": {
+          "url": "https://learnlooklocate.com/wp-content/uploads/2025/04/Whats-New-at-Learn-Look-Locate-%E2%80%94-Fresh-Voices-Breakthroughs-and-Global-Connections-At-Learn-Look-Locate-were-always-evolving-to-bring-you-the-latest-in-trusted-breast-cancer-education-and-hea.jpg",
+          "id": "",
+          "size": "",
+          "alt": "",
+          "source": "library"
+        },
+        "background_size": "cover",
+        "background_position": "18% center",
+        "background_repeat": "no-repeat",
+        "min_height": {
+          "unit": "vh",
+          "size": 88,
+          "sizes": []
+        },
+        "min_height_mobile": {
+          "unit": "vh",
+          "size": 61,
+          "sizes": []
+        },
+        "_title": "Hero",
+        "background_overlay_background": "classic",
+        "background_overlay_color": "rgba(32,14,22,0.6)",
+        "custom_css": "\nselector::after {\n  content: \"\";\n  position: absolute;\n  inset: 0;\n  background: linear-gradient(270deg, rgba(32,14,22,.86) 0%, rgba(32,14,22,.55) 38%, rgba(32,14,22,.08) 62%, transparent 78%);\n  z-index: 0;\n}\nselector .e-con-inner { position: relative; z-index: 1; }\n"
+      },
+      "elements": [
+        {
+          "elType": "container",
+          "id": "c830a91",
+          "settings": {
+            "content_width": "boxed",
+            "width": {
+              "unit": "px",
+              "size": 540,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_gap": {
+              "size": 16,
+              "unit": "px",
+              "column": "16",
+              "row": "16",
+              "isLinked": true
+            },
+            "padding": {
+              "unit": "px",
+              "top": "80",
+              "right": "40",
+              "bottom": "80",
+              "left": "20",
+              "isLinked": false
+            },
+            "padding_mobile": {
+              "unit": "px",
+              "top": "40",
+              "right": "20",
+              "bottom": "40",
+              "left": "20",
+              "isLinked": false
+            },
+            "_title": "Hero Copy"
+          },
+          "elements": [
+            {
+              "elType": "widget",
+              "id": "360597b",
+              "widgetType": "heading",
+              "settings": {
+                "title": "What's New <em style='font-style:normal;color:#f3c2ce'>in breast cancer</em>",
+                "header_size": "h1",
+                "align": "left",
+                "typography_typography": "custom",
+                "typography_font_family": "Montserrat",
+                "typography_font_weight": "500",
+                "ha_advanced_tooltip_content": "I am a tooltip",
+                "ha_cmc_text": "Happy Addons",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 60,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 36,
+                  "sizes": []
+                },
+                "title_color": "#ffffff",
+                "typography_text_transform": "uppercase"
+              },
+              "elements": []
+            },
+            {
+              "elType": "widget",
+              "id": "4f2868e",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Education • Discussions • Survivors • Doctors • Blogs • Breast Cancer Innovations",
+                "header_size": "h2",
+                "align": "left",
+                "typography_typography": "custom",
+                "typography_font_family": "Montserrat",
+                "typography_font_weight": "500",
+                "ha_advanced_tooltip_content": "I am a tooltip",
+                "ha_cmc_text": "Happy Addons",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 25,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 20,
+                  "sizes": []
+                },
+                "title_color": "#ffffff"
+              },
+              "elements": []
+            },
+            {
+              "elType": "widget",
+              "id": "bc3e7fe",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>Stay informed with the newest educational pages, global interviews, and inspiring survivor stories from Learn Look Locate — where compassion meets science. Our What's New section showcases the latest medically vetted resources created with our trusted medical advisors, leading experts in oncology, surgery, radiology, pharmacy, and women's health.</p>",
+                "text_color": "#ffffff",
+                "typography_typography": "custom",
+                "typography_font_family": "Montserrat",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": "22",
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": "18",
+                  "sizes": []
+                },
+                "typography_font_weight": "300"
+              },
+              "elements": []
+            },
+            {
+              "elType": "widget",
+              "id": "d6e391b",
+              "widgetType": "button",
+              "settings": {
+                "text": "Explore What's New",
+                "link": {
+                  "url": "#education",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "align": "left",
+                "ha_advanced_tooltip_content": "I am a tooltip",
+                "ha_cmc_text": "Happy Addons",
+                "__globals__": {
+                  "button_text_color": "globals/colors?id=accent",
+                  "background_color": "globals/colors?id=e9eeddd",
+                  "button_background_hover_color": "globals/colors?id=accent",
+                  "hover_color": "globals/colors?id=e9eeddd"
+                }
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "elType": "container",
+      "id": "0a95f06",
+      "settings": {
+        "layout": "full_width",
+        "content_width": "full",
+        "background_background": "classic",
+        "background_color": "#f6efe8",
+        "flex_gap": {
+          "size": 0,
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "60",
+          "left": "0",
+          "isLinked": false
+        },
+        "_title": "Paper Intro Section",
+        "ha_advanced_tooltip_content": "I am a tooltip",
+        "ha_cmc_text": "Happy Addons"
+      },
+      "elements": [
+        {
+          "elType": "container",
+          "id": "4a4f460",
+          "settings": {
+            "content_width": "boxed",
+            "width": {
+              "unit": "px",
+              "size": 1180,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "background_background": "classic",
+            "background_color": "#fffaf6",
+            "border_radius": {
+              "unit": "px",
+              "top": "28",
+              "right": "28",
+              "bottom": "28",
+              "left": "28",
+              "isLinked": true
+            },
+            "box_shadow_box_shadow_type": "yes",
+            "box_shadow_box_shadow": {
+              "horizontal": 0,
+              "vertical": 24,
+              "blur": 50,
+              "spread": 0,
+              "color": "rgba(60,20,30,0.12)"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "40",
+              "right": "40",
+              "bottom": "40",
+              "left": "40",
+              "isLinked": true
+            },
+            "padding_mobile": {
+              "unit": "px",
+              "top": "24",
+              "right": "20",
+              "bottom": "24",
+              "left": "20",
+              "isLinked": false
+            },
+            "margin": {
+              "unit": "px",
+              "top": "-56",
+              "right": "20",
+              "bottom": "0",
+              "left": "20",
+              "isLinked": false
+            },
+            "z_index": 2,
+            "flex_gap": {
+              "size": 36,
+              "unit": "px",
+              "column": "36",
+              "row": "36",
+              "isLinked": true
+            },
+            "_title": "Paper Card",
+            "ha_advanced_tooltip_content": "I am a tooltip",
+            "ha_cmc_text": "Happy Addons"
+          },
+          "elements": [
+            {
+              "elType": "container",
+              "id": "c523e1f",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "row",
+                "flex_gap": {
+                  "size": 36,
+                  "unit": "px",
+                  "column": "36",
+                  "row": "36",
+                  "isLinked": true
+                },
+                "_title": "Split Row",
+                "ha_advanced_tooltip_content": "I am a tooltip",
+                "ha_cmc_text": "Happy Addons"
+              },
+              "elements": [
+                {
+                  "elType": "container",
+                  "id": "2818fb7",
+                  "settings": {
+                    "width": {
+                      "unit": "%",
+                      "size": 50,
+                      "sizes": []
+                    },
+                    "flex_direction": "column",
+                    "flex_gap": {
+                      "size": 16,
+                      "unit": "px",
+                      "column": "16",
+                      "row": "16",
+                      "isLinked": true
+                    },
+                    "content_width": "full",
+                    "_title": "Left Col",
+                    "ha_advanced_tooltip_content": "I am a tooltip",
+                    "ha_cmc_text": "Happy Addons"
+                  },
+                  "elements": [
+                    {
+                      "elType": "widget",
+                      "id": "1b925c2",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "What's New at Learn Look Locate — Fresh Voices, Breakthroughs, and Global Connections",
+                        "header_size": "h2",
+                        "align": "left",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_weight": "500",
+                        "ha_advanced_tooltip_content": "I am a tooltip",
+                        "ha_cmc_text": "Happy Addons",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 32,
+                          "sizes": []
+                        },
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 20,
+                          "sizes": []
+                        },
+                        "title_color": "#2a1c22"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "elType": "widget",
+                      "id": "3e2ac0d",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>At Learn Look Locate, we're always evolving to bring you the latest in trusted breast cancer education and heartfelt survivor connection. Our goal is to bridge medical expertise and emotional support, so you always feel seen, heard, and empowered.</p>\n<p>Whether you're newly diagnosed, navigating treatment, or seeking the latest in breast cancer advances, Learn Look Locate sparks awareness, turns action into hope, and transforms hope into a global movement of support and strength.</p>",
+                        "text_color": "#2a1c22",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": "22",
+                          "sizes": []
+                        },
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": "18",
+                          "sizes": []
+                        },
+                        "typography_font_weight": "300"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "elType": "container",
+                  "id": "1142311",
+                  "settings": {
+                    "width": {
+                      "unit": "%",
+                      "size": 50,
+                      "sizes": []
+                    },
+                    "flex_direction": "column",
+                    "flex_gap": {
+                      "size": 16,
+                      "unit": "px",
+                      "column": "16",
+                      "row": "16",
+                      "isLinked": true
+                    },
+                    "content_width": "full",
+                    "_title": "Right Col",
+                    "ha_advanced_tooltip_content": "I am a tooltip",
+                    "ha_cmc_text": "Happy Addons"
+                  },
+                  "elements": [
+                    {
+                      "elType": "widget",
+                      "id": "b61dce6",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>Each new addition reflects our mission to empower people worldwide through trusted, inclusive breast cancer education. From early detection, dense breast screening, and genetic testing to treatment advances, emotional recovery, and survivorship — these updates are designed to bring clarity, confidence, and connection to every stage of the breast cancer journey.</p>\n<p>Explore newly launched pages, interviews, and blogs featuring breakthrough innovations, patient experiences, and global collaborations with leading organizations and physicians. Every story, discussion, and partnership brings us closer to transforming how the world learns about breast health and breast cancer — one trusted page at a time.</p>\n<p>From newly launched web pages and inspiring survivor stories to the latest blogs and vital resources, this is where you'll find everything new guided by top oncology experts and advocates around the world.</p>\n<p>Stay connected to the newest advances, personal stories, and life-changing resources that continue to drive our mission forward.</p>",
+                        "text_color": "#2a1c22",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": "22",
+                          "sizes": []
+                        },
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": "18",
+                          "sizes": []
+                        },
+                        "typography_font_weight": "300"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "elType": "container",
+      "id": "08aeafe",
+      "settings": {
+        "layout": "full_width",
+        "content_width": "full",
+        "flex_align_items": "center",
+        "flex_justify_content": "center",
+        "flex_gap": {
+          "size": 0,
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+        },
+        "ha_advanced_tooltip_content": "I am a tooltip",
+        "ha_cmc_text": "Happy Addons",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        },
+        "background_background": "classic",
+        "background_image": {
+          "url": "https://learnlooklocate.com/wp-content/uploads/2025/09/spotlight-innovations-in-breast-cancer-care-progress-breakthroughs-learn-look-locate.jpg.png",
+          "id": "",
+          "size": "",
+          "alt": "",
+          "source": "library"
+        },
+        "background_size": "cover",
+        "background_position": "center center",
+        "background_repeat": "no-repeat",
+        "min_height": {
+          "unit": "vh",
+          "size": 60,
+          "sizes": []
+        },
+        "min_height_mobile": {
+          "unit": "vh",
+          "size": 42,
+          "sizes": []
+        },
+        "_title": "Spotlight",
+        "background_overlay_background": "classic",
+        "background_overlay_color": "rgba(32,14,22,0.65)"
+      },
+      "elements": [
+        {
+          "elType": "container",
+          "id": "e0bf978",
+          "settings": {
+            "content_width": "boxed",
+            "width": {
+              "unit": "px",
+              "size": 1180,
+              "sizes": []
+            },
+            "flex_direction": "row",
+            "flex_gap": {
+              "size": 36,
+              "unit": "px",
+              "column": "36",
+              "row": "36",
+              "isLinked": true
+            },
+            "padding": {
+              "unit": "px",
+              "top": "56",
+              "right": "20",
+              "bottom": "56",
+              "left": "20",
+              "isLinked": false
+            },
+            "ha_advanced_tooltip_content": "I am a tooltip",
+            "ha_cmc_text": "Happy Addons",
+            "flex_align_items": "center"
+          },
+          "elements": [
+            {
+              "elType": "container",
+              "id": "a0a3083",
+              "settings": {
+                "width": {
+                  "unit": "%",
+                  "size": 55,
+                  "sizes": []
+                },
+                "flex_direction": "column",
+                "flex_gap": {
+                  "size": 20,
+                  "unit": "px",
+                  "column": "20",
+                  "row": "20",
+                  "isLinked": true
+                },
+                "content_width": "full",
+                "_title": "Spot Copy",
+                "ha_advanced_tooltip_content": "I am a tooltip",
+                "ha_cmc_text": "Happy Addons"
+              },
+              "elements": [
+                {
+                  "elType": "widget",
+                  "id": "f68bdad",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Spotlight: Where Progress Meets Patients and Breakthroughs Move Forward",
+                    "header_size": "h2",
+                    "align": "left",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Montserrat",
+                    "typography_font_weight": "500",
+                    "ha_advanced_tooltip_content": "I am a tooltip",
+                    "ha_cmc_text": "Happy Addons",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 36,
+                      "sizes": []
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 21,
+                      "sizes": []
+                    },
+                    "title_color": "#ffffff"
+                  },
+                  "elements": []
+                },
+                {
+                  "elType": "widget",
+                  "id": "44239cd",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p style=\"font-size:24px;font-weight:500;font-style:italic;\">\"Shining a light on the innovations that are redefining breast cancer care and guiding patients on their journey.\"</p>",
+                    "text_color": "#ffffff",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Montserrat",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": "24",
+                      "sizes": []
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": "18",
+                      "sizes": []
+                    },
+                    "typography_font_weight": "500"
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "elType": "container",
+              "id": "bd17420",
+              "settings": {
+                "width": {
+                  "unit": "%",
+                  "size": 42,
+                  "sizes": []
+                },
+                "flex_direction": "column",
+                "flex_gap": {
+                  "size": 0,
+                  "unit": "px",
+                  "column": "0",
+                  "row": "0",
+                  "isLinked": true
+                },
+                "content_width": "full",
+                "background_background": "classic",
+                "background_color": "#ffffff",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "20",
+                  "right": "20",
+                  "bottom": "20",
+                  "left": "20",
+                  "isLinked": true
+                },
+                "box_shadow_box_shadow_type": "yes",
+                "box_shadow_box_shadow": {
+                  "horizontal": 0,
+                  "vertical": 20,
+                  "blur": 50,
+                  "spread": 0,
+                  "color": "rgba(0,0,0,0.28)"
+                },
+                "overflow": "hidden",
+                "_title": "Spot Card",
+                "custom_css": "selector{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.28);text-decoration:none;transition:transform .4s ease,box-shadow .4s ease;}\nselector:hover{transform:translateY(-8px);box-shadow:0 28px 56px rgba(0,0,0,.35);}",
+                "ha_advanced_tooltip_content": "I am a tooltip",
+                "ha_cmc_text": "Happy Addons"
+              },
+              "elements": [
+                {
+                  "elType": "widget",
+                  "id": "0a7807f",
+                  "widgetType": "image",
+                  "settings": {
+                    "image": {
+                      "url": "https://learnlooklocate.com/wp-content/uploads/2026/06/do-all-women-with-DCIS-Need-Radiation-768x768.jpg",
+                      "id": "",
+                      "size": "",
+                      "alt": "Do All Women with DCIS Need Radiation?",
+                      "source": "library"
+                    },
+                    "image_size": "full",
+                    "link_to": "custom",
+                    "link": {
+                      "url": "https://learnlooklocate.com/do-all-women-with-dcis-need-radiation/",
+                      "is_external": "",
+                      "nofollow": ""
+                    },
+                    "width": {
+                      "unit": "%",
+                      "size": 100,
+                      "sizes": []
+                    },
+                    "_css_classes": "spot-card-img",
+                    "ha_advanced_tooltip_content": "I am a tooltip",
+                    "ha_cmc_text": "Happy Addons"
+                  },
+                  "elements": []
+                },
+                {
+                  "elType": "container",
+                  "id": "45db793",
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "flex_gap": {
+                      "size": 8,
+                      "unit": "px",
+                      "column": "8",
+                      "row": "8",
+                      "isLinked": true
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "18",
+                      "right": "20",
+                      "bottom": "22",
+                      "left": "20",
+                      "isLinked": false
+                    },
+                    "_title": "Spot Card Body",
+                    "ha_advanced_tooltip_content": "I am a tooltip",
+                    "ha_cmc_text": "Happy Addons"
+                  },
+                  "elements": [
+                    {
+                      "elType": "widget",
+                      "id": "3dc8b51",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Featured",
+                        "header_size": "p",
+                        "align": "left",
+                        "title_color": "#c44b6a",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 12,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "700",
+                        "typography_text_transform": "uppercase",
+                        "typography_letter_spacing": {
+                          "unit": "px",
+                          "size": 1.5,
+                          "sizes": []
+                        },
+                        "ha_advanced_tooltip_content": "I am a tooltip",
+                        "ha_cmc_text": "Happy Addons"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "elType": "widget",
+                      "id": "fddfb05",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Do All Women with DCIS Need Radiation?",
+                        "header_size": "h3",
+                        "align": "left",
+                        "title_color": "#2a1c22",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Libre Baskerville",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 20,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "600",
+                        "ha_advanced_tooltip_content": "I am a tooltip",
+                        "ha_cmc_text": "Happy Addons"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "elType": "widget",
+                      "id": "de5e890",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>What's New: If you've just been diagnosed with DCIS (ductal carcinoma in situ), you may be wondering whether radiation is always the next step.</p>",
+                        "text_color": "#2a1c22",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": "16",
+                          "sizes": []
+                        },
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": "18",
+                          "sizes": []
+                        },
+                        "typography_font_weight": "300"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "elType": "widget",
+                      "id": "d78a0cf",
+                      "widgetType": "button",
+                      "settings": {
+                        "text": "Read More",
+                        "link": {
+                          "url": "https://learnlooklocate.com/do-all-women-with-dcis-need-radiation/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "align": "left",
+                        "ha_advanced_tooltip_content": "I am a tooltip",
+                        "ha_cmc_text": "Happy Addons",
+                        "__globals__": {
+                          "button_text_color": "globals/colors?id=accent",
+                          "background_color": "globals/colors?id=e9eeddd",
+                          "button_background_hover_color": "globals/colors?id=accent",
+                          "hover_color": "globals/colors?id=e9eeddd"
+                        }
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "elType": "container",
+      "id": "42f7289",
+      "settings": {
+        "layout": "full_width",
+        "content_width": "full",
+        "background_background": "classic",
+        "background_color": "#f6efe8",
+        "flex_gap": {
+          "size": 0,
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        },
+        "_title": "Partners",
+        "ha_advanced_tooltip_content": "I am a tooltip",
+        "ha_cmc_text": "Happy Addons"
+      },
+      "elements": [
+        {
+          "elType": "container",
+          "id": "77340c5",
+          "settings": {
+            "content_width": "boxed",
+            "width": {
+              "unit": "px",
+              "size": 1180,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_gap": {
+              "size": 28,
+              "unit": "px",
+              "column": "28",
+              "row": "28",
+              "isLinked": true
+            },
+            "padding": {
+              "unit": "px",
+              "top": "72",
+              "right": "20",
+              "bottom": "72",
+              "left": "20",
+              "isLinked": false
+            },
+            "ha_advanced_tooltip_content": "I am a tooltip",
+            "ha_cmc_text": "Happy Addons"
+          },
+          "elements": [
+            {
+              "elType": "widget",
+              "id": "322fc60",
+              "widgetType": "heading",
+              "settings": {
+                "title": "United to Empower and Educate",
+                "header_size": "h2",
+                "align": "left",
+                "typography_typography": "custom",
+                "typography_font_family": "Montserrat",
+                "typography_font_weight": "500",
+                "ha_advanced_tooltip_content": "I am a tooltip",
+                "ha_cmc_text": "Happy Addons",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 38,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 22,
+                  "sizes": []
+                },
+                "title_color": "#2a1c22"
+              },
+              "elements": []
+            },
+            {
+              "elType": "widget",
+              "id": "11ce4d9",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>Learn Look Locate and leading voices in breast health, driving our global mission to bring you clear, empowering guidance. Together, we're sharing trusted knowledge and meaningful support to help you navigate your breast health journey with clarity and confidence.</p>",
+                "text_color": "#2a1c22",
+                "typography_typography": "custom",
+                "typography_font_family": "Montserrat",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": "20",
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": "18",
+                  "sizes": []
+                },
+                "typography_font_weight": "300"
+              },
+              "elements": []
+            },
+            {
+              "elType": "widget",
+              "id": "afdc04e",
+              "widgetType": "html",
+              "settings": {
+                "html": "<div style=\"display:grid;grid-template-columns:repeat(3,1fr);gap:16px;\">\n<a href=\"https://learnlooklocate.com/breast-cancer-tumor-localization/\" class=\"lll-cover\" style=\"position:relative;min-height:280px;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;text-decoration:none;color:#fff;transition:transform .4s ease,box-shadow .4s ease;\">\n<img src=\"https://learnlooklocate.com/wp-content/uploads/2024/07/img-2.webp\" alt=\"\" style=\"position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s ease;\">\n<div style=\"position:absolute;inset:0;background:linear-gradient(180deg,rgba(40,16,28,.05),rgba(40,16,28,.78));display:flex;flex-direction:column;justify-content:flex-end;padding:18px;\">\n<img src=\"https://learnlooklocate.com/wp-content/uploads/2025/09/5.png\" alt=\"\" style=\"height:56px;width:auto;max-width:200px;object-fit:contain;background:#fff;border-radius:8px;padding:8px 14px;margin-bottom:10px;box-shadow:0 6px 16px rgba(0,0,0,.12);\">\n<h3 style=\"font-family:Libre Baskerville,Georgia,serif;font-size:18px;font-weight:600;margin:0;line-height:1.3;\">Tumor Localization for Early-Stage Breast Cancer: Surgical Marker Navigation</h3>\n</div>\n</a><a href=\"https://learnlooklocate.com/walgreens/\" class=\"lll-cover\" style=\"position:relative;min-height:280px;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;text-decoration:none;color:#fff;transition:transform .4s ease,box-shadow .4s ease;\">\n<img src=\"https://learnlooklocate.com/wp-content/uploads/2023/02/walgreensLLL-img.png\" alt=\"\" style=\"position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s ease;\">\n<div style=\"position:absolute;inset:0;background:linear-gradient(180deg,rgba(40,16,28,.05),rgba(40,16,28,.78));display:flex;flex-direction:column;justify-content:flex-end;padding:18px;\">\n<img src=\"https://learnlooklocate.com/wp-content/uploads/2025/09/4.png\" alt=\"\" style=\"height:56px;width:auto;max-width:200px;object-fit:contain;background:#fff;border-radius:8px;padding:8px 14px;margin-bottom:10px;box-shadow:0 6px 16px rgba(0,0,0,.12);\">\n<h3 style=\"font-family:Libre Baskerville,Georgia,serif;font-size:18px;font-weight:600;margin:0;line-height:1.3;\">Walgreens oncology-specialized pharmacy care team can support you beyond medication</h3>\n</div>\n</a><a href=\"https://learnlooklocate.com/your-tumor/\" class=\"lll-cover\" style=\"position:relative;min-height:280px;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;text-decoration:none;color:#fff;transition:transform .4s ease,box-shadow .4s ease;\">\n<img src=\"https://learnlooklocate.com/wp-content/uploads/2024/04/banner-new.webp\" alt=\"\" style=\"position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s ease;\">\n<div style=\"position:absolute;inset:0;background:linear-gradient(180deg,rgba(40,16,28,.05),rgba(40,16,28,.78));display:flex;flex-direction:column;justify-content:flex-end;padding:18px;\">\n<img src=\"https://learnlooklocate.com/wp-content/uploads/2025/09/2.png\" alt=\"\" style=\"height:56px;width:auto;max-width:200px;object-fit:contain;background:#fff;border-radius:8px;padding:8px 14px;margin-bottom:10px;box-shadow:0 6px 16px rgba(0,0,0,.12);\">\n<h3 style=\"font-family:Libre Baskerville,Georgia,serif;font-size:18px;font-weight:600;margin:0;line-height:1.3;\">The Role Of Genomic Testing: Unpacking A Treasure Chest Of Knowledge In Breast Cancer</h3>\n</div>\n</a><a href=\"https://learnlooklocate.com/understanding-treatment-options-for-stage-4-breast-cancer/\" class=\"lll-cover\" style=\"position:relative;min-height:280px;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;text-decoration:none;color:#fff;transition:transform .4s ease,box-shadow .4s ease;\">\n<img src=\"https://learnlooklocate.com/wp-content/uploads/2025/02/Header-image-Stage-4-Breast-Cancer.webp\" alt=\"\" style=\"position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s ease;\">\n<div style=\"position:absolute;inset:0;background:linear-gradient(180deg,rgba(40,16,28,.05),rgba(40,16,28,.78));display:flex;flex-direction:column;justify-content:flex-end;padding:18px;\">\n<img src=\"https://learnlooklocate.com/wp-content/uploads/2025/09/1.png\" alt=\"\" style=\"height:56px;width:auto;max-width:200px;object-fit:contain;background:#fff;border-radius:8px;padding:8px 14px;margin-bottom:10px;box-shadow:0 6px 16px rgba(0,0,0,.12);\">\n<h3 style=\"font-family:Libre Baskerville,Georgia,serif;font-size:18px;font-weight:600;margin:0;line-height:1.3;\">Understanding Treatment Options For Stage 4 Breast Cancer With Dr. Rahul Singh</h3>\n</div>\n</a><a href=\"https://learnlooklocate.com/lumpectomy/\" class=\"lll-cover\" style=\"position:relative;min-height:280px;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;text-decoration:none;color:#fff;transition:transform .4s ease,box-shadow .4s ease;\">\n<img src=\"https://learnlooklocate.com/wp-content/uploads/2025/11/Lumpectomy-18.png\" alt=\"\" style=\"position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s ease;\">\n<div style=\"position:absolute;inset:0;background:linear-gradient(180deg,rgba(40,16,28,.05),rgba(40,16,28,.78));display:flex;flex-direction:column;justify-content:flex-end;padding:18px;\">\n<img src=\"https://learnlooklocate.com/wp-content/uploads/2026/01/LumicellLogo.png\" alt=\"\" style=\"height:56px;width:auto;max-width:200px;object-fit:contain;background:#fff;border-radius:8px;padding:8px 14px;margin-bottom:10px;box-shadow:0 6px 16px rgba(0,0,0,.12);\">\n<h3 style=\"font-family:Libre Baskerville,Georgia,serif;font-size:18px;font-weight:600;margin:0;line-height:1.3;\">Lumpectomy: Understanding Your Options and Lighting the Path Forward</h3>\n</div>\n</a><a href=\"https://learnlooklocate.com/do-i-need-radiation-if-i-have-dcis/\" class=\"lll-cover\" style=\"position:relative;min-height:280px;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;text-decoration:none;color:#fff;transition:transform .4s ease,box-shadow .4s ease;\">\n<img src=\"https://learnlooklocate.com/wp-content/uploads/2026/06/image.avif\" alt=\"\" style=\"position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s ease;\">\n<div style=\"position:absolute;inset:0;background:linear-gradient(180deg,rgba(40,16,28,.05),rgba(40,16,28,.78));display:flex;flex-direction:column;justify-content:flex-end;padding:18px;\">\n<img src=\"https://learnlooklocate.com/wp-content/uploads/2026/06/prelude.png\" alt=\"\" style=\"height:56px;width:auto;max-width:200px;object-fit:contain;background:#fff;border-radius:8px;padding:8px 14px;margin-bottom:10px;box-shadow:0 6px 16px rgba(0,0,0,.12);\">\n<h3 style=\"font-family:Libre Baskerville,Georgia,serif;font-size:18px;font-weight:600;margin:0;line-height:1.3;\">Do I need Radiation if I have DCIS?</h3>\n</div>\n</a><a href=\"https://learnlooklocate.com/breast-cancer-recurrence-ctdna-dr-rosen/\" class=\"lll-cover\" style=\"position:relative;min-height:280px;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;text-decoration:none;color:#fff;transition:transform .4s ease,box-shadow .4s ease;\">\n<img src=\"https://learnlooklocate.com/wp-content/uploads/2023/12/img-2.webp\" alt=\"\" style=\"position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s ease;\">\n<div style=\"position:absolute;inset:0;background:linear-gradient(180deg,rgba(40,16,28,.05),rgba(40,16,28,.78));display:flex;flex-direction:column;justify-content:flex-end;padding:18px;\">\n<img src=\"https://learnlooklocate.com/wp-content/uploads/2025/09/3.png\" alt=\"\" style=\"height:56px;width:auto;max-width:200px;object-fit:contain;background:#fff;border-radius:8px;padding:8px 14px;margin-bottom:10px;box-shadow:0 6px 16px rgba(0,0,0,.12);\">\n<h3 style=\"font-family:Libre Baskerville,Georgia,serif;font-size:18px;font-weight:600;margin:0;line-height:1.3;\">Understanding Breast Cancer Recurrence: ctDNA Insights with Dr. Barry Rosen</h3>\n</div>\n</a>\n</div>\n<style>\n.lll-cover:hover>img{transform:scale(1.08)}\n.lll-cover:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(40,16,28,.22);}\n@media(max-width:900px){div[style*=\"grid-template-columns:repeat(3\"]{grid-template-columns:1fr !important;}}\n</style>",
+                "ha_advanced_tooltip_content": "I am a tooltip",
+                "ha_cmc_text": "Happy Addons"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "elType": "container",
+      "id": "e0a86b9",
+      "settings": {
+        "layout": "full_width",
+        "content_width": "full",
+        "flex_align_items": "center",
+        "flex_justify_content": "flex-end",
+        "flex_gap": {
+          "size": 0,
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+        },
+        "ha_advanced_tooltip_content": "I am a tooltip",
+        "ha_cmc_text": "Happy Addons",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        },
+        "background_background": "classic",
+        "background_image": {
+          "url": "https://learnlooklocate.com/wp-content/uploads/2025/04/Whats-New-at-Learn-Look-Locate-%E2%80%94-Fresh-Voices-Breakthroughs-and-Global-Connections-At-Learn-Look-Locate-were-always-evolving-to-bring-you-the-latest-in-trusted-breast-cancer-education-and-hea-2.jpg",
+          "id": "",
+          "size": "",
+          "alt": "",
+          "source": "library"
+        },
+        "background_size": "cover",
+        "background_position": "18% center",
+        "background_repeat": "no-repeat",
+        "min_height": {
+          "unit": "vh",
+          "size": 55,
+          "sizes": []
+        },
+        "min_height_mobile": {
+          "unit": "vh",
+          "size": 38,
+          "sizes": []
+        },
+        "_title": "Education Header",
+        "background_overlay_background": "classic",
+        "background_overlay_color": "rgba(18,8,14,0.72)"
+      },
+      "elements": [
+        {
+          "elType": "container",
+          "id": "ec9575d",
+          "settings": {
+            "content_width": "boxed",
+            "width": {
+              "unit": "px",
+              "size": 620,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_gap": {
+              "size": 16,
+              "unit": "px",
+              "column": "16",
+              "row": "16",
+              "isLinked": true
+            },
+            "padding": {
+              "unit": "px",
+              "top": "64",
+              "right": "40",
+              "bottom": "48",
+              "left": "20",
+              "isLinked": false
+            },
+            "padding_mobile": {
+              "unit": "px",
+              "top": "40",
+              "right": "20",
+              "bottom": "40",
+              "left": "20",
+              "isLinked": false
+            },
+            "_title": "Edu Copy",
+            "ha_advanced_tooltip_content": "I am a tooltip",
+            "ha_cmc_text": "Happy Addons"
+          },
+          "elements": [
+            {
+              "elType": "widget",
+              "id": "33816e8",
+              "widgetType": "heading",
+              "settings": {
+                "title": "New Medically Vetted Breast Cancer Education: Where Compassion Meets Science",
+                "header_size": "h2",
+                "align": "left",
+                "typography_typography": "custom",
+                "typography_font_family": "Montserrat",
+                "typography_font_weight": "500",
+                "ha_advanced_tooltip_content": "I am a tooltip",
+                "ha_cmc_text": "Happy Addons",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 36,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 21,
+                  "sizes": []
+                },
+                "title_color": "#ffffff"
+              },
+              "elements": []
+            },
+            {
+              "elType": "widget",
+              "id": "18c4fa0",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>We're bringing new, medically vetted breast cancer education pages to the forefront every day — created in collaboration with trusted oncologists, surgeons, radiologists, pharmacists, and survivors who share our mission to educate and empower people worldwide.</p>\n<p>Each new page reflects the evolving landscape of breast cancer care, uniting medical expertise with the heartfelt voices of real survivors. From early detection and genetic testing to dense breast screening, diagnosis, and treatment innovations — every page is designed to meet you wherever you are on your journey.</p>\n<p>You'll find expert insights on chemotherapy and hair changes, breast imaging, pathology, surgery and reconstruction, hormone therapy, and survivorship — all written in patient-friendly language and reviewed by our medical advisors for accuracy and trust.</p>\n<p>These pages represent more than information; they are living connections between patients and experts — building a compassionate, global community of understanding, one new page at a time.</p>",
+                "text_color": "#ffffff",
+                "typography_typography": "custom",
+                "typography_font_family": "Montserrat",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": "18",
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": "18",
+                  "sizes": []
+                },
+                "typography_font_weight": "300"
+              },
+              "elements": []
+            },
+            {
+              "elType": "widget",
+              "id": "7391bc0",
+              "widgetType": "button",
+              "settings": {
+                "text": "Explore What's New",
+                "link": {
+                  "url": "https://learnlooklocate.com/educate/",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "align": "left",
+                "ha_advanced_tooltip_content": "I am a tooltip",
+                "ha_cmc_text": "Happy Addons",
+                "__globals__": {
+                  "button_text_color": "globals/colors?id=accent",
+                  "background_color": "globals/colors?id=e9eeddd",
+                  "button_background_hover_color": "globals/colors?id=accent",
+                  "hover_color": "globals/colors?id=e9eeddd"
+                }
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "elType": "container",
+      "id": "d7dac3c",
+      "settings": {
+        "layout": "full_width",
+        "content_width": "full",
+        "background_background": "classic",
+        "background_color": "#f6efe8",
+        "flex_gap": {
+          "size": 0,
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        },
+        "_title": "Education Grid",
+        "ha_advanced_tooltip_content": "I am a tooltip",
+        "ha_cmc_text": "Happy Addons"
+      },
+      "elements": [
+        {
+          "elType": "container",
+          "id": "9acb364",
+          "settings": {
+            "content_width": "boxed",
+            "width": {
+              "unit": "px",
+              "size": 1180,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_gap": {
+              "size": 0,
+              "unit": "px",
+              "column": "0",
+              "row": "0",
+              "isLinked": true
+            },
+            "padding": {
+              "unit": "px",
+              "top": "36",
+              "right": "20",
+              "bottom": "60",
+              "left": "20",
+              "isLinked": false
+            },
+            "ha_advanced_tooltip_content": "I am a tooltip",
+            "ha_cmc_text": "Happy Addons"
+          },
+          "elements": [
+            {
+              "elType": "widget",
+              "id": "9296314",
+              "widgetType": "ucaddon_post_magazine_grid",
+              "settings": {
+                "ha_advanced_tooltip_content": "I am a tooltip",
+                "ha_cmc_text": "Happy Addons",
+                "post_list_imagesize": "1536x1536",
+                "grid_columns": 4,
+                "grid_gap": {
+                  "unit": "px",
+                  "size": 12,
+                  "sizes": [],
+                  "value": "12"
+                },
+                "button_text": "Read More",
+                "no_posts_found": "No posts found",
+                "cat_tax": "category",
+                "show_intro": "",
+                "meta_data_date_format": "d M, Y",
+                "comments_label": "Comments:",
+                "badge_label": "New!",
+                "image_overlay_color": "#00000000",
+                "image_overlay_color_stop": {
+                  "unit": "%",
+                  "size": 39,
+                  "sizes": []
+                },
+                "overlay_opacity": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": [],
+                  "value": "100"
+                },
+                "title_color_hover": "#FFFFFF",
+                "title_typography_typography": "custom",
+                "title_typography_font_family": "Libre Baskerville",
+                "title_typography_font_size": {
+                  "unit": "px",
+                  "size": 20,
+                  "sizes": []
+                },
+                "title_typography_font_weight": "600",
+                "title_typography_line_height": {
+                  "unit": "em",
+                  "size": 1.3,
+                  "sizes": []
+                },
+                "post_list_posttype": [
+                  "page"
+                ],
+                "post_list_include_date_meta_format": "Ymd",
+                "post_list_category": [],
+                "post_list_exclude_terms": [
+                  "1",
+                  "82",
+                  "91",
+                  "post_tag--94"
+                ],
+                "post_list_maxitems": 5,
+                "post_list_includeby": [
+                  "terms_free_selection"
+                ],
+                "post_list_include_terms_freeselect": [
+                  "84",
+                  "83",
+                  "85",
+                  "86"
+                ],
+                "item_border_border": "none",
+                "item_min_height": {
+                  "unit": "px",
+                  "size": 350,
+                  "sizes": [],
+                  "value": "350"
+                },
+                "image_overlay_background": "gradient",
+                "post_list_category_relation": "OR",
+                "post_list_orderby": "date",
+                "_padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "_background_background": "classic",
+                "_background_color": "#00000000",
+                "show_date_calendar": "",
+                "meta_data": "before",
+                "show_author": "",
+                "show_comments": "",
+                "meta_data_color": "#c44b6a",
+                "meta_data_typography_typography": "custom",
+                "meta_data_typography_font_family": "Montserrat",
+                "meta_data_typography_font_size": {
+                  "unit": "px",
+                  "size": 12,
+                  "sizes": []
+                },
+                "meta_data_typography_font_weight": "700",
+                "meta_data_spacing": {
+                  "unit": "px",
+                  "size": 8,
+                  "sizes": [],
+                  "value": "8"
+                },
+                "meta_data_gap": {
+                  "unit": "px",
+                  "size": 8,
+                  "sizes": [],
+                  "value": "8"
+                },
+                "__globals__": {
+                  "title_color": "globals/colors?id=e9eeddd",
+                  "image_overlay_color_b": "globals/colors?id=0d06d7c"
+                },
+                "custom_css": "\n.ue-grid-item{border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 14px 36px rgba(80,30,40,.08);}\n.ue-grid-item-meta-data{background:rgba(255,255,255,.75);color:#c44b6a !important;padding:4px 8px;border-radius:4px;width:fit-content;font-family:Montserrat,sans-serif;font-size:12px;font-weight:700;letter-spacing:.08em;}\n"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "elType": "container",
+      "id": "66e9d1e",
+      "settings": {
+        "layout": "full_width",
+        "content_width": "full",
+        "background_background": "classic",
+        "background_color": "#f6efe8",
+        "flex_gap": {
+          "size": 0,
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        },
+        "_title": "Quote Signup",
+        "ha_advanced_tooltip_content": "I am a tooltip",
+        "ha_cmc_text": "Happy Addons"
+      },
+      "elements": [
+        {
+          "elType": "container",
+          "id": "8925d33",
+          "settings": {
+            "content_width": "boxed",
+            "width": {
+              "unit": "px",
+              "size": 1180,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_gap": {
+              "size": 0,
+              "unit": "px",
+              "column": "0",
+              "row": "0",
+              "isLinked": true
+            },
+            "padding": {
+              "unit": "px",
+              "top": "60",
+              "right": "20",
+              "bottom": "60",
+              "left": "20",
+              "isLinked": false
+            },
+            "ha_advanced_tooltip_content": "I am a tooltip",
+            "ha_cmc_text": "Happy Addons"
+          },
+          "elements": [
+            {
+              "elType": "widget",
+              "id": "0a17e8c",
+              "widgetType": "html",
+              "settings": {
+                "html": "<div style=\"display:grid;grid-template-columns:200px 1fr;gap:28px;align-items:center;background:#2a1c22;color:#fff;border-radius:28px;padding:28px;\">\n<img src=\"https://learnlooklocate.com/wp-content/uploads/2024/08/Dr.-Yara-Robertson-.jpg\" alt=\"Dr. Yara Robertson\" style=\"width:200px;height:240px;object-fit:cover;border-radius:18px;\">\n<div>\n<h2 style=\"font-family:Montserrat,sans-serif;font-size:28px;font-weight:500;margin:0 0 12px;color:#fff;\">Stay in the Know. Stay Empowered.</h2>\n<blockquote style=\"font-family:Libre Baskerville,Georgia,serif;font-size:22px;font-weight:500;font-style:italic;margin:0 0 12px;\">\"The best patient is an empowered patient.\"</blockquote>\n<p style=\"font-family:Montserrat,sans-serif;font-size:16px;margin:0 0 8px;\">— Dr. Yara Robertson, Breast Surgical Oncologist &amp; Learn Look Locate Medical Advisor</p>\n<p style=\"font-family:Montserrat,sans-serif;font-size:16px;margin:0 0 16px;\">Sign up to receive the latest medically guided education, expert insights, and meaningful updates from Learn Look Locate — delivered with clarity and care.</p>\n<div style=\"display:flex;gap:8px;flex-wrap:wrap;\">\n<input type=\"email\" placeholder=\"Email address\" style=\"flex:1;min-width:220px;padding:14px 16px;border:1px solid #d8cfd3;border-radius:10px;font-family:Montserrat,sans-serif;font-size:14px;\">\n<button onclick=\"return false\" style=\"border:0;background:#c44b6a;color:#fff;padding:12px 36px;border-radius:999px;font-family:Montserrat,sans-serif;font-weight:500;font-size:14px;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;\">Get the latest</button>\n</div>\n</div>\n</div>\n@media(max-width:900px){.lll-quote-grid{grid-template-columns:1fr !important;}}",
+                "ha_advanced_tooltip_content": "I am a tooltip",
+                "ha_cmc_text": "Happy Addons"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "elType": "container",
+      "id": "35c6733",
+      "settings": {
+        "layout": "full_width",
+        "content_width": "full",
+        "flex_direction": "row",
+        "background_background": "classic",
+        "background_color": "#2a1c22",
+        "flex_gap": {
+          "size": 0,
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+        },
+        "min_height": {
+          "unit": "px",
+          "size": 480,
+          "sizes": []
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        },
+        "_title": "Doctors Chapter",
+        "ha_advanced_tooltip_content": "I am a tooltip",
+        "ha_cmc_text": "Happy Addons"
+      },
+      "elements": [
+        {
+          "elType": "container",
+          "id": "05ee9de",
+          "settings": {
+            "width": {
+              "unit": "%",
+              "size": 46,
+              "sizes": []
+            },
+            "content_width": "full",
+            "background_background": "classic",
+            "background_image": {
+              "url": "https://learnlooklocate.com/wp-content/uploads/2025/04/Whats-New-at-Learn-Look-Locate-%E2%80%94-Fresh-Voices-Breakthroughs-and-Global-Connections-At-Learn-Look-Locate-were-always-evolving-to-bring-you-the-latest-in-trusted-breast-cancer-education-and-hea-6.jpg",
+              "id": "",
+              "size": "",
+              "alt": "",
+              "source": "library"
+            },
+            "background_size": "cover",
+            "background_position": "center center",
+            "min_height": {
+              "unit": "px",
+              "size": 480,
+              "sizes": []
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            },
+            "_title": "Doctors Photo",
+            "ha_advanced_tooltip_content": "I am a tooltip",
+            "ha_cmc_text": "Happy Addons"
+          },
+          "elements": []
+        },
+        {
+          "elType": "container",
+          "id": "59e45a1",
+          "settings": {
+            "width": {
+              "unit": "%",
+              "size": 54,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_gap": {
+              "size": 16,
+              "unit": "px",
+              "column": "16",
+              "row": "16",
+              "isLinked": true
+            },
+            "content_width": "full",
+            "padding": {
+              "unit": "px",
+              "top": "56",
+              "right": "48",
+              "bottom": "56",
+              "left": "48",
+              "isLinked": false
+            },
+            "padding_mobile": {
+              "unit": "px",
+              "top": "40",
+              "right": "20",
+              "bottom": "40",
+              "left": "20",
+              "isLinked": false
+            },
+            "_title": "Doctors Copy",
+            "ha_advanced_tooltip_content": "I am a tooltip",
+            "ha_cmc_text": "Happy Addons"
+          },
+          "elements": [
+            {
+              "elType": "widget",
+              "id": "7604ecb",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Discussions with Doctors",
+                "header_size": "h2",
+                "align": "left",
+                "typography_typography": "custom",
+                "typography_font_family": "Montserrat",
+                "typography_font_weight": "500",
+                "ha_advanced_tooltip_content": "I am a tooltip",
+                "ha_cmc_text": "Happy Addons",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 36,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 21,
+                  "sizes": []
+                },
+                "title_color": "#ffffff"
+              },
+              "elements": []
+            },
+            {
+              "elType": "widget",
+              "id": "892d93b",
+              "widgetType": "heading",
+              "settings": {
+                "title": "\"Real Conversations. Trusted Experts. Deeper Answers.\"",
+                "header_size": "h3",
+                "align": "left",
+                "typography_typography": "custom",
+                "typography_font_family": "Montserrat",
+                "typography_font_weight": "500",
+                "ha_advanced_tooltip_content": "I am a tooltip",
+                "ha_cmc_text": "Happy Addons",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 24,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 20,
+                  "sizes": []
+                },
+                "title_color": "#ffffff"
+              },
+              "elements": []
+            },
+            {
+              "elType": "widget",
+              "id": "e8cde9a",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>At Learn Look Locate, Discussions with Doctors is more than an interview series — it's a global platform for education, compassion, and connection. As a breast cancer survivor and founder, I know how valuable it is to hear directly from trusted medical experts. That's why every discussion is personally conducted by me with leading oncologists, surgeons, radiologists, pharmacists, and researchers.</p>\n<p>Together, we explore the latest in breast cancer detection, diagnosis, treatment, and survivorship in a way that's clear, caring, and easy to understand. What makes this series different is its authenticity and accessibility. Each episode is medically vetted and globally accessible, so patients everywhere can feel informed and supported.</p>",
+                "text_color": "#ffffff",
+                "typography_typography": "custom",
+                "typography_font_family": "Montserrat",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": "18",
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": "18",
+                  "sizes": []
+                },
+                "typography_font_weight": "300"
+              },
+              "elements": []
+            },
+            {
+              "elType": "widget",
+              "id": "96198fd",
+              "widgetType": "button",
+              "settings": {
+                "text": "Watch Now",
+                "link": {
+                  "url": "https://learnlooklocate.com/educate/patient-education/",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "align": "left",
+                "ha_advanced_tooltip_content": "I am a tooltip",
+                "ha_cmc_text": "Happy Addons",
+                "__globals__": {
+                  "button_text_color": "globals/colors?id=accent",
+                  "background_color": "globals/colors?id=e9eeddd",
+                  "button_background_hover_color": "globals/colors?id=accent",
+                  "hover_color": "globals/colors?id=e9eeddd"
+                }
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "elType": "container",
+      "id": "52b19d3",
+      "settings": {
+        "layout": "full_width",
+        "content_width": "full",
+        "background_background": "classic",
+        "background_color": "#f6efe8",
+        "flex_gap": {
+          "size": 0,
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        },
+        "_title": "Doctors Text Grid",
+        "ha_advanced_tooltip_content": "I am a tooltip",
+        "ha_cmc_text": "Happy Addons"
+      },
+      "elements": [
+        {
+          "elType": "container",
+          "id": "0a5701b",
+          "settings": {
+            "content_width": "boxed",
+            "width": {
+              "unit": "px",
+              "size": 1180,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_gap": {
+              "size": 24,
+              "unit": "px",
+              "column": "24",
+              "row": "24",
+              "isLinked": true
+            },
+            "padding": {
+              "unit": "px",
+              "top": "60",
+              "right": "20",
+              "bottom": "60",
+              "left": "20",
+              "isLinked": false
+            },
+            "ha_advanced_tooltip_content": "I am a tooltip",
+            "ha_cmc_text": "Happy Addons"
+          },
+          "elements": [
+            {
+              "elType": "widget",
+              "id": "2889f1a",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>We talk openly about dense breast screening, imaging, treatment side effects, new technologies, and life after cancer — giving you answers that truly matter. These conversations go beyond surface-level information. They are heartfelt exchanges designed to empower patients, build trust, and offer hope. Discussions with Doctors connects people worldwide with reliable, patient-friendly breast cancer education. Each episode strengthens the bridge between medical expertise and emotional understanding, helping viewers feel confident in their journey.</p>",
+                "text_color": "#2a1c22",
+                "typography_typography": "custom",
+                "typography_font_family": "Montserrat",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": "20",
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": "18",
+                  "sizes": []
+                },
+                "typography_font_weight": "300"
+              },
+              "elements": []
+            },
+            {
+              "elType": "widget",
+              "id": "590b2f8",
+              "widgetType": "ucaddon_post_magazine_grid",
+              "settings": {
+                "ha_advanced_tooltip_content": "I am a tooltip",
+                "ha_cmc_text": "Happy Addons",
+                "post_list_imagesize": "1536x1536",
+                "grid_columns": 4,
+                "grid_gap": {
+                  "unit": "px",
+                  "size": 12,
+                  "sizes": [],
+                  "value": "12"
+                },
+                "button_text": "Read More",
+                "no_posts_found": "No posts found",
+                "cat_tax": "category",
+                "show_intro": "",
+                "meta_data_date_format": "d M, Y",
+                "comments_label": "Comments:",
+                "badge_label": "New!",
+                "image_overlay_color": "#00000000",
+                "image_overlay_color_stop": {
+                  "unit": "%",
+                  "size": 39,
+                  "sizes": []
+                },
+                "overlay_opacity": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": [],
+                  "value": "100"
+                },
+                "title_color_hover": "#FFFFFF",
+                "title_typography_typography": "custom",
+                "title_typography_font_family": "Libre Baskerville",
+                "title_typography_font_size": {
+                  "unit": "px",
+                  "size": 20,
+                  "sizes": []
+                },
+                "title_typography_font_weight": "600",
+                "title_typography_line_height": {
+                  "unit": "em",
+                  "size": 1.3,
+                  "sizes": []
+                },
+                "post_list_posttype": [
+                  "page"
+                ],
+                "post_list_include_date_meta_format": "Ymd",
+                "post_list_category": [],
+                "post_list_exclude_terms": [
+                  "1",
+                  "82",
+                  "91",
+                  "post_tag--94"
+                ],
+                "post_list_maxitems": 5,
+                "post_list_includeby": [
+                  "terms_free_selection"
+                ],
+                "post_list_include_terms_freeselect": [
+                  "84",
+                  "83",
+                  "85",
+                  "86"
+                ],
+                "item_border_border": "none",
+                "item_min_height": {
+                  "unit": "px",
+                  "size": 350,
+                  "sizes": [],
+                  "value": "350"
+                },
+                "image_overlay_background": "gradient",
+                "post_list_category_relation": "OR",
+                "post_list_orderby": "date",
+                "_padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "_background_background": "classic",
+                "_background_color": "#00000000",
+                "show_date_calendar": "",
+                "meta_data": "before",
+                "show_author": "",
+                "show_comments": "",
+                "meta_data_color": "#c44b6a",
+                "meta_data_typography_typography": "custom",
+                "meta_data_typography_font_family": "Montserrat",
+                "meta_data_typography_font_size": {
+                  "unit": "px",
+                  "size": 12,
+                  "sizes": []
+                },
+                "meta_data_typography_font_weight": "700",
+                "meta_data_spacing": {
+                  "unit": "px",
+                  "size": 8,
+                  "sizes": [],
+                  "value": "8"
+                },
+                "meta_data_gap": {
+                  "unit": "px",
+                  "size": 8,
+                  "sizes": [],
+                  "value": "8"
+                },
+                "__globals__": {
+                  "title_color": "globals/colors?id=e9eeddd",
+                  "image_overlay_color_b": "globals/colors?id=0d06d7c"
+                },
+                "custom_css": "\n.ue-grid-item{border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 14px 36px rgba(80,30,40,.08);}\n.ue-grid-item-meta-data{background:rgba(255,255,255,.75);color:#c44b6a !important;padding:4px 8px;border-radius:4px;width:fit-content;font-family:Montserrat,sans-serif;font-size:12px;font-weight:700;letter-spacing:.08em;}\n"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "elType": "container",
+      "id": "29de003",
+      "settings": {
+        "layout": "full_width",
+        "content_width": "full",
+        "flex_align_items": "center",
+        "flex_justify_content": "flex-start",
+        "flex_gap": {
+          "size": 0,
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+        },
+        "ha_advanced_tooltip_content": "I am a tooltip",
+        "ha_cmc_text": "Happy Addons",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        },
+        "background_background": "classic",
+        "background_image": {
+          "url": "https://learnlooklocate.com/wp-content/uploads/2025/04/Whats-New-at-Learn-Look-Locate-%E2%80%94-Fresh-Voices-Breakthroughs-and-Global-Connections-At-Learn-Look-Locate-were-always-evolving-to-bring-you-the-latest-in-trusted-breast-cancer-education-and-hea-4.jpg",
+          "id": "",
+          "size": "",
+          "alt": "",
+          "source": "library"
+        },
+        "background_size": "cover",
+        "background_position": "center center",
+        "background_repeat": "no-repeat",
+        "_title": "Survivors",
+        "background_overlay_background": "classic",
+        "background_overlay_color": "rgba(246,239,232,0.82)"
+      },
+      "elements": [
+        {
+          "elType": "container",
+          "id": "cd5cf88",
+          "settings": {
+            "content_width": "boxed",
+            "width": {
+              "unit": "px",
+              "size": 1180,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_gap": {
+              "size": 28,
+              "unit": "px",
+              "column": "28",
+              "row": "28",
+              "isLinked": true
+            },
+            "padding": {
+              "unit": "px",
+              "top": "72",
+              "right": "20",
+              "bottom": "72",
+              "left": "20",
+              "isLinked": false
+            },
+            "ha_advanced_tooltip_content": "I am a tooltip",
+            "ha_cmc_text": "Happy Addons"
+          },
+          "elements": [
+            {
+              "elType": "container",
+              "id": "1c205d6",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                  "size": 16,
+                  "unit": "px",
+                  "column": "16",
+                  "row": "16",
+                  "isLinked": true
+                },
+                "background_background": "classic",
+                "background_color": "rgba(255,250,246,0.92)",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "28",
+                  "right": "28",
+                  "bottom": "28",
+                  "left": "28",
+                  "isLinked": true
+                },
+                "box_shadow_box_shadow_type": "yes",
+                "box_shadow_box_shadow": {
+                  "horizontal": 0,
+                  "vertical": 18,
+                  "blur": 40,
+                  "spread": 0,
+                  "color": "rgba(60,20,30,0.1)"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "36",
+                  "right": "36",
+                  "bottom": "36",
+                  "left": "36",
+                  "isLinked": true
+                },
+                "margin": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "28",
+                  "left": "0",
+                  "isLinked": false
+                },
+                "_title": "Survivors Panel",
+                "ha_advanced_tooltip_content": "I am a tooltip",
+                "ha_cmc_text": "Happy Addons"
+              },
+              "elements": [
+                {
+                  "elType": "widget",
+                  "id": "11469d7",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Survivor Conversations",
+                    "header_size": "h2",
+                    "align": "left",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Montserrat",
+                    "typography_font_weight": "500",
+                    "ha_advanced_tooltip_content": "I am a tooltip",
+                    "ha_cmc_text": "Happy Addons",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 36,
+                      "sizes": []
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 21,
+                      "sizes": []
+                    },
+                    "title_color": "#2a1c22"
+                  },
+                  "elements": []
+                },
+                {
+                  "elType": "widget",
+                  "id": "bd25934",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "New Medically Vetted Breast Cancer Education: Where Compassion Meets Science",
+                    "header_size": "h3",
+                    "align": "left",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Montserrat",
+                    "typography_font_weight": "500",
+                    "ha_advanced_tooltip_content": "I am a tooltip",
+                    "ha_cmc_text": "Happy Addons",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 24,
+                      "sizes": []
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 20,
+                      "sizes": []
+                    },
+                    "title_color": "#2a1c22"
+                  },
+                  "elements": []
+                },
+                {
+                  "elType": "widget",
+                  "id": "173a53b",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Explore the newest breast cancer education resources from Learn Look Locate — all medically vetted and created with our trusted oncologists, surgeons, radiologists, pharmacists, and survivors.</p>\n<p>Each page blends trusted medical expertise with real survivor voices, offering guidance across every stage of the journey — from early detection, genetic testing, and dense breast screening to diagnosis, treatment innovations, and survivorship.</p>\n<p>Find expert insights on chemotherapy and hair changes, breast imaging, pathology, surgery and reconstruction, hormone therapy, and recovery — all written in patient-friendly language and reviewed by medical professionals for accuracy and trust.</p>\n<p>Powered by breast cancer survivor and founder Cynthia Jordan and a network of 22 Learn Look Locate medical advisors, these continually expanding resources reflect the evolving landscape of breast cancer care and our mission to deliver trusted, medically reviewed education to people worldwide.</p>",
+                    "text_color": "#2a1c22",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Montserrat",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": "18",
+                      "sizes": []
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": "18",
+                      "sizes": []
+                    },
+                    "typography_font_weight": "300"
+                  },
+                  "elements": []
+                },
+                {
+                  "elType": "widget",
+                  "id": "468000f",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "Learn More",
+                    "link": {
+                      "url": "https://learnlooklocate.com/survivor-stories/",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "align": "left",
+                    "ha_advanced_tooltip_content": "I am a tooltip",
+                    "ha_cmc_text": "Happy Addons",
+                    "__globals__": {
+                      "button_text_color": "globals/colors?id=accent",
+                      "background_color": "globals/colors?id=e9eeddd",
+                      "button_background_hover_color": "globals/colors?id=accent",
+                      "hover_color": "globals/colors?id=e9eeddd"
+                    }
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "elType": "widget",
+              "id": "7301ae6",
+              "widgetType": "ucaddon_post_magazine_grid",
+              "settings": {
+                "ha_advanced_tooltip_content": "I am a tooltip",
+                "ha_cmc_text": "Happy Addons",
+                "post_list_imagesize": "1536x1536",
+                "grid_columns": 4,
+                "grid_gap": {
+                  "unit": "px",
+                  "size": 12,
+                  "sizes": [],
+                  "value": "12"
+                },
+                "button_text": "Read More",
+                "no_posts_found": "No posts found",
+                "cat_tax": "category",
+                "show_intro": "",
+                "meta_data_date_format": "d M, Y",
+                "comments_label": "Comments:",
+                "badge_label": "New!",
+                "image_overlay_color": "#00000000",
+                "image_overlay_color_stop": {
+                  "unit": "%",
+                  "size": 39,
+                  "sizes": []
+                },
+                "overlay_opacity": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": [],
+                  "value": "100"
+                },
+                "title_color_hover": "#FFFFFF",
+                "title_typography_typography": "custom",
+                "title_typography_font_family": "Libre Baskerville",
+                "title_typography_font_size": {
+                  "unit": "px",
+                  "size": 20,
+                  "sizes": []
+                },
+                "title_typography_font_weight": "600",
+                "title_typography_line_height": {
+                  "unit": "em",
+                  "size": 1.3,
+                  "sizes": []
+                },
+                "post_list_posttype": [
+                  "page"
+                ],
+                "post_list_include_date_meta_format": "Ymd",
+                "post_list_category": [],
+                "post_list_exclude_terms": [
+                  "1",
+                  "82",
+                  "91",
+                  "post_tag--94"
+                ],
+                "post_list_maxitems": 5,
+                "post_list_includeby": [
+                  "terms_free_selection"
+                ],
+                "post_list_include_terms_freeselect": [
+                  "84",
+                  "83",
+                  "85",
+                  "86"
+                ],
+                "item_border_border": "none",
+                "item_min_height": {
+                  "unit": "px",
+                  "size": 350,
+                  "sizes": [],
+                  "value": "350"
+                },
+                "image_overlay_background": "gradient",
+                "post_list_category_relation": "OR",
+                "post_list_orderby": "date",
+                "_padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "_background_background": "classic",
+                "_background_color": "#00000000",
+                "show_date_calendar": "",
+                "meta_data": "before",
+                "show_author": "",
+                "show_comments": "",
+                "meta_data_color": "#c44b6a",
+                "meta_data_typography_typography": "custom",
+                "meta_data_typography_font_family": "Montserrat",
+                "meta_data_typography_font_size": {
+                  "unit": "px",
+                  "size": 12,
+                  "sizes": []
+                },
+                "meta_data_typography_font_weight": "700",
+                "meta_data_spacing": {
+                  "unit": "px",
+                  "size": 8,
+                  "sizes": [],
+                  "value": "8"
+                },
+                "meta_data_gap": {
+                  "unit": "px",
+                  "size": 8,
+                  "sizes": [],
+                  "value": "8"
+                },
+                "__globals__": {
+                  "title_color": "globals/colors?id=e9eeddd",
+                  "image_overlay_color_b": "globals/colors?id=0d06d7c"
+                },
+                "custom_css": "\n.ue-grid-item{border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 14px 36px rgba(80,30,40,.08);}\n.ue-grid-item-meta-data{background:rgba(255,255,255,.75);color:#c44b6a !important;padding:4px 8px;border-radius:4px;width:fit-content;font-family:Montserrat,sans-serif;font-size:12px;font-weight:700;letter-spacing:.08em;}\n"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "elType": "container",
+      "id": "bc4b17a",
+      "settings": {
+        "layout": "full_width",
+        "content_width": "full",
+        "background_background": "classic",
+        "background_color": "#f6efe8",
+        "flex_gap": {
+          "size": 0,
+          "unit": "px",
+          "column": "0",
+          "row": "0",
+          "isLinked": true
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        },
+        "_title": "Blogs",
+        "ha_advanced_tooltip_content": "I am a tooltip",
+        "ha_cmc_text": "Happy Addons"
+      },
+      "elements": [
+        {
+          "elType": "container",
+          "id": "e7cfdb6",
+          "settings": {
+            "content_width": "boxed",
+            "width": {
+              "unit": "px",
+              "size": 1180,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_gap": {
+              "size": 36,
+              "unit": "px",
+              "column": "36",
+              "row": "36",
+              "isLinked": true
+            },
+            "padding": {
+              "unit": "px",
+              "top": "72",
+              "right": "20",
+              "bottom": "72",
+              "left": "20",
+              "isLinked": false
+            },
+            "ha_advanced_tooltip_content": "I am a tooltip",
+            "ha_cmc_text": "Happy Addons"
+          },
+          "elements": [
+            {
+              "elType": "container",
+              "id": "8f78912",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "row",
+                "flex_gap": {
+                  "size": 40,
+                  "unit": "px",
+                  "column": "40",
+                  "row": "40",
+                  "isLinked": true
+                },
+                "flex_align_items": "center",
+                "_title": "Blogs Split Row",
+                "ha_advanced_tooltip_content": "I am a tooltip",
+                "ha_cmc_text": "Happy Addons"
+              },
+              "elements": [
+                {
+                  "elType": "container",
+                  "id": "889482f",
+                  "settings": {
+                    "width": {
+                      "unit": "%",
+                      "size": 52,
+                      "sizes": []
+                    },
+                    "flex_direction": "column",
+                    "flex_gap": {
+                      "size": 16,
+                      "unit": "px",
+                      "column": "16",
+                      "row": "16",
+                      "isLinked": true
+                    },
+                    "content_width": "full",
+                    "_title": "Blogs Text",
+                    "ha_advanced_tooltip_content": "I am a tooltip",
+                    "ha_cmc_text": "Happy Addons"
+                  },
+                  "elements": [
+                    {
+                      "elType": "widget",
+                      "id": "e3a232e",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Latest Breast Cancer Blogs",
+                        "header_size": "h2",
+                        "align": "left",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_weight": "500",
+                        "ha_advanced_tooltip_content": "I am a tooltip",
+                        "ha_cmc_text": "Happy Addons",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 36,
+                          "sizes": []
+                        },
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 21,
+                          "sizes": []
+                        },
+                        "title_color": "#2a1c22"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "elType": "widget",
+                      "id": "cd4a2df",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Breakthroughs in Breast Care",
+                        "header_size": "h3",
+                        "align": "left",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_weight": "500",
+                        "ha_advanced_tooltip_content": "I am a tooltip",
+                        "ha_cmc_text": "Happy Addons",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 24,
+                          "sizes": []
+                        },
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 20,
+                          "sizes": []
+                        },
+                        "title_color": "#2a1c22"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "elType": "widget",
+                      "id": "fa3f134",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>These are the newest blogs on Learn Look Locate — created to support you with the latest breast cancer research, expert insights, and survivor stories. Each post is medically vetted and written with compassion to help you navigate every stage of your breast cancer journey — from early detection and diagnosis to treatment, recovery, and life after cancer.</p>\n<p>Our goal is to keep you informed, empowered, and connected to the latest breakthroughs in breast cancer care and support.</p>",
+                        "text_color": "#2a1c22",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": "18",
+                          "sizes": []
+                        },
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": "18",
+                          "sizes": []
+                        },
+                        "typography_font_weight": "300"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "elType": "widget",
+                      "id": "b668846",
+                      "widgetType": "button",
+                      "settings": {
+                        "text": "Learn More",
+                        "link": {
+                          "url": "https://learnlooklocate.com/blog/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "align": "left",
+                        "ha_advanced_tooltip_content": "I am a tooltip",
+                        "ha_cmc_text": "Happy Addons",
+                        "__globals__": {
+                          "button_text_color": "globals/colors?id=accent",
+                          "background_color": "globals/colors?id=e9eeddd",
+                          "button_background_hover_color": "globals/colors?id=accent",
+                          "hover_color": "globals/colors?id=e9eeddd"
+                        }
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "elType": "container",
+                  "id": "9cf0b42",
+                  "settings": {
+                    "width": {
+                      "unit": "%",
+                      "size": 45,
+                      "sizes": []
+                    },
+                    "flex_direction": "column",
+                    "content_width": "full",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "28",
+                      "right": "4",
+                      "bottom": "28",
+                      "left": "4",
+                      "isLinked": false
+                    },
+                    "overflow": "hidden",
+                    "min_height": {
+                      "unit": "px",
+                      "size": 380,
+                      "sizes": []
+                    },
+                    "background_background": "classic",
+                    "background_image": {
+                      "url": "https://learnlooklocate.com/wp-content/uploads/2025/04/Whats-New-at-Learn-Look-Locate-%E2%80%94-Fresh-Voices-Breakthroughs-and-Global-Connections-At-Learn-Look-Locate-were-always-evolving-to-bring-you-the-latest-in-trusted-breast-cancer-education-and-hea-5.jpg",
+                      "id": "",
+                      "size": "",
+                      "alt": "",
+                      "source": "library"
+                    },
+                    "background_size": "cover",
+                    "background_position": "center center",
+                    "_title": "Blogs Frame",
+                    "ha_advanced_tooltip_content": "I am a tooltip",
+                    "ha_cmc_text": "Happy Addons"
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "elType": "widget",
+              "id": "874ac36",
+              "widgetType": "ucaddon_post_magazine_grid",
+              "settings": {
+                "ha_advanced_tooltip_content": "I am a tooltip",
+                "ha_cmc_text": "Happy Addons",
+                "post_list_imagesize": "1536x1536",
+                "grid_columns": 4,
+                "grid_gap": {
+                  "unit": "px",
+                  "size": 12,
+                  "sizes": [],
+                  "value": "12"
+                },
+                "button_text": "Read More",
+                "no_posts_found": "No posts found",
+                "cat_tax": "category",
+                "show_intro": "",
+                "meta_data_date_format": "d M, Y",
+                "comments_label": "Comments:",
+                "badge_label": "New!",
+                "image_overlay_color": "#00000000",
+                "image_overlay_color_stop": {
+                  "unit": "%",
+                  "size": 39,
+                  "sizes": []
+                },
+                "overlay_opacity": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": [],
+                  "value": "100"
+                },
+                "title_color_hover": "#FFFFFF",
+                "title_typography_typography": "custom",
+                "title_typography_font_family": "Libre Baskerville",
+                "title_typography_font_size": {
+                  "unit": "px",
+                  "size": 20,
+                  "sizes": []
+                },
+                "title_typography_font_weight": "600",
+                "title_typography_line_height": {
+                  "unit": "em",
+                  "size": 1.3,
+                  "sizes": []
+                },
+                "post_list_posttype": [
+                  "page"
+                ],
+                "post_list_include_date_meta_format": "Ymd",
+                "post_list_category": [],
+                "post_list_exclude_terms": [
+                  "1",
+                  "82",
+                  "91",
+                  "post_tag--94"
+                ],
+                "post_list_maxitems": 5,
+                "post_list_includeby": [
+                  "terms_free_selection"
+                ],
+                "post_list_include_terms_freeselect": [
+                  "84",
+                  "83",
+                  "85",
+                  "86"
+                ],
+                "item_border_border": "none",
+                "item_min_height": {
+                  "unit": "px",
+                  "size": 350,
+                  "sizes": [],
+                  "value": "350"
+                },
+                "image_overlay_background": "gradient",
+                "post_list_category_relation": "OR",
+                "post_list_orderby": "date",
+                "_padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "_background_background": "classic",
+                "_background_color": "#00000000",
+                "show_date_calendar": "",
+                "meta_data": "before",
+                "show_author": "",
+                "show_comments": "",
+                "meta_data_color": "#c44b6a",
+                "meta_data_typography_typography": "custom",
+                "meta_data_typography_font_family": "Montserrat",
+                "meta_data_typography_font_size": {
+                  "unit": "px",
+                  "size": 12,
+                  "sizes": []
+                },
+                "meta_data_typography_font_weight": "700",
+                "meta_data_spacing": {
+                  "unit": "px",
+                  "size": 8,
+                  "sizes": [],
+                  "value": "8"
+                },
+                "meta_data_gap": {
+                  "unit": "px",
+                  "size": 8,
+                  "sizes": [],
+                  "value": "8"
+                },
+                "__globals__": {
+                  "title_color": "globals/colors?id=e9eeddd",
+                  "image_overlay_color_b": "globals/colors?id=0d06d7c"
+                },
+                "custom_css": "\n.ue-grid-item{border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 14px 36px rgba(80,30,40,.08);}\n.ue-grid-item-meta-data{background:rgba(255,255,255,.75);color:#c44b6a !important;padding:4px 8px;border-radius:4px;width:fit-content;font-family:Montserrat,sans-serif;font-size:12px;font-weight:700;letter-spacing:.08em;}\n"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
